@@ -1,5 +1,9 @@
 $primary-color: #716ab1;
+$header-font: "Raleway";
+$subheader-font: "supermarketregular";
+$content-font: "cordia_newregular";
 
 body {
+  font-family: $header-font, sans-serif;
   background: $primary-color;
 }
