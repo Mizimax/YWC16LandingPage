@@ -1,11 +1,7 @@
-$primary-color: #716ab1;
-$header-font: "Raleway";
-$subheader-font: "supermarketregular";
-$content-font: "cordia_newregular";
+@import "variables.scss";
 
 body {
   font-family: $header-font, sans-serif;
-  background: $primary-color;
 }
 
 @import "initial-variables.sass";
