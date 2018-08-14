@@ -1,0 +1,26 @@
+@import "mixins";
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom right, transparent, #e7e5f3);
+  background-image: url(/images/bgComing.png);
+  background: linear-gradient(to bottom right, transparent, #e7e5f3),
+    url(/images/bgComing.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  background-size: 100% auto;
+}
+
+.middle {
+  @include middle();
+}
+
+.comingsoon_svg {
+  max-width: 500px;
+  width: 70%;
+}

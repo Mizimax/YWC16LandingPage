@@ -1,9 +1,23 @@
 @import "variables.scss";
 @import "fonts";
+@import "mixins";
+
+html {
+  height: 100%;
+}
 
 body {
   font-family: $content-font, sans-serif;
   font-size: $content-font-size;
+  min-height: 100%;
+}
+
+#main > div {
+  padding-top: 30px;
+}
+
+.middle {
+  @include middle();
 }
 
 @import "bulma/initial-variables.sass";
@@ -14,4 +28,5 @@ body {
 
 @import "layouts/grid.scss";
 @import "layouts/whatisywc.scss";
+@import "layouts/register.scss";
 @import "components/label.scss";
