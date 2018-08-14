@@ -19,20 +19,20 @@ gulp.task("connect", function() {
 
 gulp.task("sass", function() {
   return gulp
-    .src("./src/sass/*.scss")
+    .src("src/sass/*.scss")
     .pipe(wait(500))
     .pipe(sass({ errLogToConsole: true }))
     .on("error", swallowError)
-    .pipe(gulp.dest("./src/css"));
+    .pipe(gulp.dest("src/css"));
 });
 
 gulp.task("livereload", function() {
-  gulp.src("./src/**/*").pipe(connect.reload());
+  gulp.src("src/**/*").pipe(connect.reload());
 });
 
 gulp.task("watch", function() {
-  gulp.watch("./src/sass/**/*.scss", ["sass"]);
-  gulp.watch("./src/**/*", ["livereload"]);
+  gulp.watch("src/sass/**/*.scss", ["sass"]);
+  gulp.watch("src/**/*", ["livereload"]);
 });
 
 gulp.task("default", ["connect", "watch", "sass"]);
