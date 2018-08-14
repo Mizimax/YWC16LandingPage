@@ -2,6 +2,13 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var connect = require("gulp-connect");
 var wait = require("gulp-wait");
+var plumber = require("gulp-plumber");
+
+function swallowError(error) {
+  console.log(error.toString());
+
+  this.emit("end");
+}
 
 gulp.task("connect", function() {
   connect.server({
@@ -15,6 +22,7 @@ gulp.task("sass", function() {
     .src("./src/sass/*.scss")
     .pipe(wait(500))
     .pipe(sass({ errLogToConsole: true }))
+    .on("error", swallowError)
     .pipe(gulp.dest("./src/css"));
 });
 
