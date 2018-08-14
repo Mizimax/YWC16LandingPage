@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "fonts";
 
 body {
   font-family: $content-font, sans-serif;
@@ -8,3 +9,5 @@ body {
 @import "bulma/derived-variables.sass";
 @import "bulma/mixins.sass";
 @import "bulma/columns.sass";
+
+@import "components/label";
