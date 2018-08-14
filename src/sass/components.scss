@@ -1,8 +1,8 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 .label {
-  font-family: $header-font, sans-serif;
-  font-size: $header-font-size;
+  @include header-font();
   font-weight: bold;
   background-color: #f7f6fb;
   color: $primary-color;

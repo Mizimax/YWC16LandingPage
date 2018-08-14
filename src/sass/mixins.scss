@@ -1,0 +1,4 @@
+@mixin header-font {
+  font-family: $header-font, sans-serif;
+  font-size: $header-font-size;
+}
