@@ -11,6 +11,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.5.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "gulp-wait": "0.0.2"
   }
 }
