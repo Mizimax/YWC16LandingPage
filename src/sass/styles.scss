@@ -3,11 +3,15 @@
 
 body {
   font-family: $content-font, sans-serif;
+  font-size: $content-font-size;
 }
 
 @import "bulma/initial-variables.sass";
 @import "bulma/derived-variables.sass";
 @import "bulma/mixins.sass";
 @import "bulma/columns.sass";
+@import "bulma/container.sass";
 
-@import "components/label";
+@import "layouts/grid.scss";
+@import "layouts/whatisywc.scss";
+@import "components/label.scss";
