@@ -1,35 +1,35 @@
-@fonts-face {
-  fonts-family: "cordia_newregular";
-  src: url("../fonts/CordiaNew/cordia_0-webfonts.eot");
-  src: url("../fonts/CordiaNew/cordia_0-webfonts.eot?#iefix")
+@font-face {
+  font-family: "cordia_newregular";
+  src: url("../fonts/CordiaNew/cordia_0-webfont.eot");
+  src: url("../fonts/CordiaNew/cordia_0-webfont.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/CordiaNew/cordia_0-webfonts.woff2") format("woff2"),
-    url("../fonts/CordiaNew/cordia_0-webfonts.woff") format("woff"),
-    url("../fonts/CordiaNew/cordia_0-webfonts.ttf") format("truetype"),
-    url("../fonts/CordiaNew/cordia_0-webfonts.svg#cordia_newregular")
+    url("../fonts/CordiaNew/cordia_0-webfont.woff2") format("woff2"),
+    url("../fonts/CordiaNew/cordia_0-webfont.woff") format("woff"),
+    url("../fonts/CordiaNew/cordia_0-webfont.ttf") format("truetype"),
+    url("../fonts/CordiaNew/cordia_0-webfont.svg#cordia_newregular")
       format("svg");
-  fonts-weight: normal;
-  fonts-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
-@fonts-face {
-  fonts-family: "supermarketregular";
-  src: url("../fonts/Supermarket/supermarket-webfonts.eot");
-  src: url("../fonts/Supermarket/supermarket-webfonts.eot?#iefix")
+@font-face {
+  font-family: "supermarketregular";
+  src: url("../fonts/Supermarket/supermarket-webfont.eot");
+  src: url("../fonts/Supermarket/supermarket-webfont.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/Supermarket/supermarket-webfonts.woff2") format("woff2"),
-    url("../fonts/Supermarket/supermarket-webfonts.woff") format("woff"),
-    url("../fonts/Supermarket/supermarket-webfonts.ttf") format("truetype"),
-    url("../fonts/Supermarket/supermarket-webfonts.svg#supermarketregular")
+    url("../fonts/Supermarket/supermarket-webfont.woff2") format("woff2"),
+    url("../fonts/Supermarket/supermarket-webfont.woff") format("woff"),
+    url("../fonts/Supermarket/supermarket-webfont.ttf") format("truetype"),
+    url("../fonts/Supermarket/supermarket-webfont.svg#supermarketregular")
       format("svg");
-  fonts-weight: normal;
-  fonts-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
-@fonts-face {
-  fonts-family: "Raleway";
-  fonts-style: normal;
-  fonts-weight: 600;
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
   src: url("../fonts/Raleway/raleway-v12-latin-600.eot");
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"),
     url("../fonts/Raleway/raleway-v12-latin-600.eot?#iefix")
@@ -40,10 +40,10 @@
     url("../fonts/Raleway/raleway-v12-latin-600.svg#Raleway") format("svg");
 }
 
-@fonts-face {
-  fonts-family: "Raleway";
-  fonts-style: normal;
-  fonts-weight: 700;
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
   src: url("../fonts/Raleway/raleway-v12-latin-700.eot");
   src: local("Raleway Bold"), local("Raleway-Bold"),
     url("../fonts/Raleway/raleway-v12-latin-700.eot?#iefix")
