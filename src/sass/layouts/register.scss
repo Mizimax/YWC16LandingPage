@@ -3,19 +3,16 @@ $designer-color: #f7c778;
 $programming-color: #78c8f4;
 $marketing-color: #f797aa;
 
-$number-regis-color: #6d65ac;
-
-.register__label__sub {
-  font-family: $subheader-font, sans-serif;
-  color: #6d65ac;
-  font-size: $sub-header-font-size;
-}
-
 .register__branch__name {
-  font-family: $header-font, sans-serif;
+  @include headerFont();
   font-size: 18px;
   font-weight: 700;
+  margin-top: 0;
   margin-bottom: 5px;
+}
+
+.register__branch__image {
+  transform: translateY(20px);
 }
 
 .register__branch__content__name {
@@ -36,7 +33,7 @@ $number-regis-color: #6d65ac;
 
 .register__branch__no {
   font-family: $subheader-font, sans-serif;
-  color: $number-regis-color;
+  color: $primary-color;
   font-weight: 500;
 }
 

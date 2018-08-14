@@ -16,8 +16,30 @@ body {
   padding-top: 30px;
 }
 
+.label--sub {
+  font-family: $subheader-font, sans-serif;
+  color: #6d65ac;
+  font-size: $sub-header-font-size;
+}
+
+.header-font {
+  @include headerFont();
+}
+
+.sub-header-font {
+  @include subHeaderFont();
+}
+
+.content-font {
+  @include contentFont();
+}
+
 .middle {
   @include middle();
+}
+
+.has-grayscale {
+  @include enableGrayscale();
 }
 
 @import "bulma/initial-variables.sass";
@@ -28,5 +50,7 @@ body {
 
 @import "layouts/grid.scss";
 @import "layouts/whatisywc.scss";
+@import "layouts/timeline.scss";
 @import "layouts/register.scss";
+@import "layouts/location.scss";
 @import "components/label.scss";

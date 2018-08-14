@@ -2,7 +2,8 @@
 @import "mixins.scss";
 
 .label {
-  @include header-font();
+  @include headerFont();
+  font-size: $header-font-size;
   font-weight: bold;
   background-color: #f7f6fb;
   color: $primary-color;
@@ -13,12 +14,6 @@
   -webkit-box-shadow: 8px 8px 0px 0px rgba(227, 224, 241, 1);
   -moz-box-shadow: 8px 8px 0px 0px rgba(227, 224, 241, 1);
   box-shadow: 8px 8px 0px 0px rgba(227, 224, 241, 1);
-}
-.label-sub {
-  color: black;
-  font-size: 20px;
-  font-weight: 200;
-  font-family: $subheader-font, sans-serif;
 }
 
 .register__label {

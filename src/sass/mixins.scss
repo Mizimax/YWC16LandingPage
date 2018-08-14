@@ -1,11 +1,29 @@
-@mixin header-font {
-  font-family: $header-font, sans-serif;
-  font-size: $header-font-size;
-}
-
 @mixin middle {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin headerFont {
+  font-family: $header-font, sans-serif;
+}
+
+@mixin subHeaderFont {
+  font-family: $subheader-font, sans-serif;
+}
+
+@mixin contentFont {
+  font-family: $content-font, sans-serif;
+}
+
+@mixin enableGrayscale {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+@mixin disableGrayscale {
+  -webkit-filter: grayscale(0);
+  filter: none;
 }

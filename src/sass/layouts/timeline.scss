@@ -1,0 +1,26 @@
+.timeline__phase {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  color: #7b7b7b;
+}
+
+.timeline__phase__3__step {
+  margin-top: 32px;
+}
+
+.timeline__phase__5__step {
+  margin-top: 23px;
+}
+
+.timeline__phase__step {
+  @include subHeaderFont();
+  font-weight: bold;
+}
+
+.timeline__phase__date {
+  @include subHeaderFont();
+}
+
+.active-color {
+  color: $primary-color;
+}

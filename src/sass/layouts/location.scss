@@ -1,0 +1,43 @@
+.location__map {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.location__map:hover > .location__map__icon {
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.location__map__image {
+  max-width: 600px;
+  width: 100%;
+}
+
+.location__map__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: 0.2s all;
+}
+
+.location__map__icon__container {
+  width: 100%;
+}
+
+.location__map__icon__container__image {
+  max-width: 160px;
+  width: 20%;
+}
+
+.location__map__icon__container__openmap {
+  @include headerFont();
+  font-size: $header-font-size;
+  color: $primary-color;
+}
