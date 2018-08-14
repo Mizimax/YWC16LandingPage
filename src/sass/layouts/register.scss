@@ -1,0 +1,51 @@
+$content-color: #81b77d;
+$designer-color: #f7c778;
+$programming-color: #78c8f4;
+$marketing-color: #f797aa;
+
+$number-regis-color: #6d65ac;
+
+.register__label__sub {
+  font-family: $subheader-font, sans-serif;
+  color: #6d65ac;
+  font-size: $sub-header-font-size;
+}
+
+.register__branch__name {
+  font-family: $header-font, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.register__branch__content__name {
+  color: $content-color;
+}
+
+.register__branch__designer__name {
+  color: $designer-color;
+}
+
+.register__branch__programming__name {
+  color: $programming-color;
+}
+
+.register__branch__marketing__name {
+  color: $marketing-color;
+}
+
+.register__branch__no {
+  font-family: $subheader-font, sans-serif;
+  color: $number-regis-color;
+  font-weight: 500;
+}
+
+.register__branch__no__regis {
+  font-size: 50px;
+}
+
+.register__branch__desc {
+  font-family: $subheader-font, sans-serif;
+  font-size: 18px;
+  color: #333;
+}
