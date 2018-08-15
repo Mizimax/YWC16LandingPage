@@ -31,8 +31,8 @@ gulp.task("livereload", function() {
 });
 
 gulp.task("watch", function() {
-  gulp.watch("src/sass/**/*.scss", ["sass"]);
-  gulp.watch("src/**/*", ["livereload"]);
+  gulp.watch("src/sass/**/*.scss", gulp.parallel("sass"));
+  gulp.watch("src/**/*", gulp.parallel("livereload"));
 });
 
-gulp.task("default", ["connect", "watch", "sass"]);
+gulp.task("default", gulp.parallel("connect", "watch", "sass"));
