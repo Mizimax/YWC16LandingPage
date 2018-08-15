@@ -12,9 +12,9 @@ body {
     url(/images/bgComing.png);
   background-repeat: no-repeat;
   background-position: top left;
-
+ 
   background-size: 100% auto;
-}
+} 
 
 .middle {
   @include middle();
