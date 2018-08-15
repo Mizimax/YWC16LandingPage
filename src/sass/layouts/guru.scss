@@ -1,0 +1,58 @@
+.guru__container {
+  max-width: 800px;
+  width: 90%;
+}
+
+.guru__main {
+  position: relative;
+  margin-top: 60px;
+  border-radius: 15px;
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #f7f6fb;
+  background-image: url(../images/guruBg.png);
+}
+
+.guru__main__pic {
+  flex: 0 0 280px;
+}
+
+.guru__main__pic__img {
+  width: 200px;
+}
+
+.guru__main__info {
+  position: relative;
+}
+
+.guru__middle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.guru__main__info__name {
+  @include subHeaderFont();
+  color: $primary-color;
+  font-size: 38px;
+}
+
+.guru__main__info__corp {
+  @include subHeaderFont();
+  font-size: 24px;
+  color: #9490b3;
+}
+
+@include mobile() {
+  .guru__main__pic,
+  .guru__main__info {
+    text-align: center;
+  }
+  .guru__main__info {
+    padding: 70px 0;
+    margin-top: -30px;
+  }
+}
