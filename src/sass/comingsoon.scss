@@ -1,4 +1,11 @@
 @import "mixins";
+@import "fonts";
+@import "variables";
+
+@import "bulma/initial-variables.sass";
+@import "bulma/derived-variables.sass";
+@import "bulma/mixins.sass";
+
 html {
   height: 100%;
 }
@@ -14,13 +21,52 @@ body {
   background-position: top left;
 
   background-size: auto 100%;
+
+  overflow: hidden;
 }
 
 .middle {
   @include middle();
 }
 
-.comingsoon_svg {
+.comingsoon__text {
+  font-family: $header-font, sans-serif;
+  color: $primary-color;
+  transform: translate(10px, 200%);
+  font-size: 15px;
+}
+
+.comingsoon__tower {
   max-width: 500px;
-  width: 70%;
+  width: 100%;
+}
+
+.comingsoon__logo {
+  transform: translateY(-70%);
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  .comingsoon__text {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 550px) {
+  .comingsoon__text {
+    font-size: 24px;
+  }
+}
+
+@include tablet() {
+  .comingsoon__text {
+    font-size: 32px;
+  }
+}
+
+@include desktop() {
+  .comingsoon__text {
+    font-size: 36px;
+  }
 }
