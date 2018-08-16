@@ -42,6 +42,10 @@ body {
   @include enableGrayscale();
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 @import "bulma/initial-variables.sass";
 @import "bulma/derived-variables.sass";
 @import "bulma/mixins.sass";

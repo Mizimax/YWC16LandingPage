@@ -46,6 +46,35 @@
   color: #9490b3;
 }
 
+.guru__children {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.guru__child,
+.guru__child img {
+  max-width: 120px;
+  width: 100%;
+  height: 150px;
+}
+
+.guru__child {
+  flex: 0 0 120px;
+  padding: 20px 20.5px 0 0;
+}
+
+@include desktop() {
+  .guru__children {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .guru__children .guru__child--final {
+    padding-right: 0;
+  }
+}
+
 @include mobile() {
   .guru__main__pic,
   .guru__main__info {
