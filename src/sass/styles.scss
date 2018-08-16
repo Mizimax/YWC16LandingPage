@@ -10,9 +10,10 @@ body {
   font-family: $content-font, sans-serif;
   font-size: $content-font-size;
   min-height: 100%;
+  margin: 0;
 }
 
-#main > div {
+#main > div:not(.header) {
   padding-top: 30px;
 }
 
@@ -52,6 +53,7 @@ body {
 @import "bulma/columns.sass";
 @import "bulma/container.sass";
 
+@import "layouts/header.scss";
 @import "layouts/grid.scss";
 @import "layouts/whatisywc.scss";
 @import "layouts/timeline.scss";

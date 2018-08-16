@@ -3,6 +3,14 @@ $designer-color: #f7c778;
 $programming-color: #78c8f4;
 $marketing-color: #f797aa;
 
+.register {
+  padding-bottom: 500px;
+  background-image: url(/images/bg/bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+}
+
 .register__branch__name {
   @include headerFont();
   font-size: 18px;
