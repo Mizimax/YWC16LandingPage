@@ -47,11 +47,13 @@ body {
 @import "bulma/mixins.sass";
 @import "bulma/columns.sass";
 @import "bulma/container.sass";
+@import "bulma-extensions/bulma-carousel/bulma-carousel.sass";
 
 @import "layouts/grid.scss";
 @import "layouts/whatisywc.scss";
 @import "layouts/timeline.scss";
 @import "layouts/register.scss";
 @import "layouts/location.scss";
+@import "layouts/gallery.scss";
 @import "layouts/sponsors.scss";
 @import "components/label.scss";
