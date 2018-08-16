@@ -1,0 +1,113 @@
+@import "../bulma/container.sass";
+@import "../bulma/elements/icon.sass";
+@import "../bulma/elements/box.sass";
+@import "../bulma/components/card.sass";
+/*** Our framework ***/
+@import "../variables.scss";
+@import "../fonts";
+@import "../mixins";
+
+.faq__container{
+  background-color: white;
+  @extend .container;
+  @extend .box;
+  border: none;
+  padding: 0;
+  padding: 0;
+
+ 
+
+  .faq__question{
+    border-bottom: solid 1px $primary-color;
+
+    .faq__question--header, .faq__question--content{
+      padding-left: $sub-header-font-size * 2;
+      padding-right: $sub-header-font-size * 2;
+    }
+
+    .faq__question--header{
+      @extend .card-header;
+      padding-top: $sub-header-font-size * .75;
+      padding-bottom: $sub-header-font-size * .75;
+      box-shadow: none;      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .faq__question--header--title{
+        flex: 1;
+        @include headerFont();
+        color: $secondary-color;
+        font-size: $sub-header-font-size;
+        font-weight: normal;
+        text-align: left;
+        line-height: $sub-header-font-size * 2;
+        min-height: $sub-header-font-size * 2;
+        margin: 0;
+        vertical-align: middle;
+      }
+
+      .faq__question--header-icon{
+        flex: 0 0 $sub-header-font-size * 2;
+
+        .icon{
+          width: $sub-header-font-size * 2;
+          height: $sub-header-font-size * 2;
+          border-radius: $sub-header-font-size * 2;
+          background-color: $secondary-color;
+
+
+          .fa-angle-down{
+            width: $sub-header-font-size * 1.5;
+            height: $sub-header-font-size * 1.5;
+            margin: $sub-header-font-size * .25;
+            background-image: url("../images/icon/angle-down-solid.svg");
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            transform: rotateZ(0);
+          }
+        }
+      }
+
+    }
+
+    .faq__question--content{
+      @include contentFont();
+      color: black;
+      font-size: $content-font-size;
+      text-align: left;
+      margin: 0;
+
+      max-height: 0;
+      opacity: 0;
+      padding-bottom: 0;
+    }
+
+    /**** Transition ****/
+    .faq__question--header .faq__question--header--title, 
+    .faq__question--header .faq__question--header-icon .icon .fa-angle-down, 
+    .faq__question--content{
+      transition: all 0.5s, padding-bottom 0.01s;
+
+    }
+
+    &.active{
+      .faq__question--header{
+        .faq__question--header--title{
+          color: $primary-color;
+          font-weight: bold;
+        }
+        .faq__question--header-icon .icon .fa-angle-down{
+          transform: rotateZ(180deg);
+        }
+      }
+      .faq__question--content{
+        max-height: 100vh;
+        opacity: 1;
+        padding-bottom: $content-font-size;
+      }
+    }
+  }
+}
