@@ -47,6 +47,12 @@ body {
   width: 100%;
 }
 
+.js--comingsoon__text {
+  width: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
 @media (min-width: 400px) {
   .comingsoon__text {
     font-size: 19px;
