@@ -2,6 +2,13 @@
 .gallery__carousel {
   margin-top: 8%;
 }
+
+.slide-container {
+  position: relative;
+  left: 10%;
+  display: flex;
+  align-items: center;
+}
 #carousel {
   width: 80%;
 }
