@@ -5,9 +5,14 @@
 
 .slide-container {
   position: relative;
-  left: 10%;
+  left: 8%;
   display: flex;
   align-items: center;
+}
+
+.carousel-nav-left, .carousel-nav-right {
+  font-size: 2rem;
+  color: #969393;
 }
 #carousel {
   width: 80%;
