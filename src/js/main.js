@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Guru change
-  var next = $(".guru__child").next(":first");
+  var next = $(".guru__child:first").next(":first");
   setInterval(function() {
     var pic = next.children(":first").attr("src");
     var name = next.children(":first").attr("name");
@@ -16,6 +16,9 @@ $(document).ready(function() {
       $(".js--guru_fade").fadeIn(200);
     });
     next = next.next(":first");
+    if (next.length === 0) {
+      next = $(".guru__child:first");
+    }
   }, 5000);
 
   $(".faq__question--header").click(function(e) {
