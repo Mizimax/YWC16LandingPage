@@ -20,6 +20,7 @@
 
 .guru__main__pic__img {
   width: 200px;
+  height: 188px;
 }
 
 .guru__main__info {
@@ -51,6 +52,7 @@
   margin-top: 20px;
   flex-wrap: nowrap;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .guru__child,
@@ -63,6 +65,15 @@
 .guru__child {
   flex: 0 0 120px;
   padding: 20px 20.5px 0 0;
+}
+
+.guru__child {
+  @include enableGrayscale();
+  cursor: pointer;
+}
+
+.guru__child.active {
+  @include disableGrayscale();
 }
 
 @include desktop() {
