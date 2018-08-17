@@ -1,0 +1,17 @@
+@import "../mixins";
+
+.footer__content{
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	text-align: center;
+	@include subHeaderFont();
+
+	p{
+		width: 100%;
+		margin: 0;
+	}
+
+	.footer__content--copyright{
+		font-weight: bold;
+	}
+}
