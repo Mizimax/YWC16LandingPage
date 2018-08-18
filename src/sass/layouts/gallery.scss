@@ -1,0 +1,73 @@
+@import "../slick/slick.scss";
+$slick-font-path: "../fonts/";
+$slick-loader-path: "../images/icon";
+@import "../slick/slick-theme.scss";
+
+.sponser-all{
+  
+
+
+
+
+
+
+
+/* 
+  @extend .container;
+  .sponser-all__main, .sponser-all__sub {
+    justify-content: center;
+    align-items: center;
+  }
+  .sponser-all__main__child, .sponser-all__sub__child{
+    a{
+      background-color: white;
+      @extend .image;
+      img{
+       @extend .is-rounded;
+      }
+    }
+  }
+
+  .sponser-all__main{
+    margin-top: 10vh;
+
+    .sponser-all__main__child{
+      @include desktop() {
+        height: 180px;
+        width: 180px;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        flex-grow: 0;
+      } 
+      a{
+        @include desktop() {
+          height: 180px;
+          width: 180px;
+          padding: 0;
+        }
+      }    
+    }
+  }
+
+  .sponser-all__sub{
+    margin-top: 5vh;
+    
+    .sponser-all__sub__child{
+      @include desktop() {
+        height: 150px;
+        width: 150px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        flex-grow: 0;
+      } 
+
+      a{
+        @include desktop() {
+          height: 150px;
+          width: 150px;
+          padding: 0;
+        } 
+      }
+    }
+  } */
+}

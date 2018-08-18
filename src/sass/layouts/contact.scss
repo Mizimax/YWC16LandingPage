@@ -1,4 +1,15 @@
 .contact{
-	.columns{
+	.contact__social__label{
+		margin-bottom: 10vh;
+	}
+	.contact__social{
+		margin-bottom: 15vh;
+		a{
+			text-decoration: none;
+
+			.ywc16-icon{
+				font-size: 3.75rem;
+			}
+		}
 	}
 }
