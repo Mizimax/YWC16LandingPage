@@ -8,5 +8,5 @@ var isComing = function() {
 };
 
 $(document).ready(function() {
-  setInterval(isComing, 1000);
+  setInterval(isComing, 400);
 });
