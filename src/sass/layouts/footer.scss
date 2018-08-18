@@ -1,0 +1,24 @@
+@import "../mixins";
+
+.footer__content{
+	margin-top: 13vh;
+	margin-bottom: 20vh;
+	text-align: center;
+	@include headerFont();
+
+	p{
+		width: 100%;
+		margin: 0;
+		font-size: 1.5rem;
+	}
+
+	.footer__content--copyright{
+		font-weight: bold;
+	}
+
+	.footer__content--sosumi{
+		line-height: 3rem;
+		margin-top: -0.2rem;
+		font-weight: lighter;
+	}
+}
