@@ -1,0 +1,22 @@
+.label {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #f7f6fb;
+  color: #6d65ac;
+  display: inline-block;
+  width: 275px;
+  padding: 15px 0 15px 0;
+  text-align: center;
+  -webkit-box-shadow: 8px 8px 0px 0px #e3e0f1;
+  -moz-box-shadow: 8px 8px 0px 0px #e3e0f1;
+  box-shadow: 8px 8px 0px 0px #e3e0f1; }
+
+.label-sub {
+  color: black;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "supermarketregular", sans-serif; }
+
+.register__label {
+  padding: 15px 0 5px 0; }
