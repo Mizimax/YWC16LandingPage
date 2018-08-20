@@ -26,7 +26,14 @@ body {
 }
 
 .middle {
-  @include middle();
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comingsoon__middle {
 }
 
 .comingsoon__text {
@@ -38,13 +45,13 @@ body {
 
 .comingsoon__tower {
   max-width: 500px;
-  width: 100%;
+  width: 80%;
 }
 
 .comingsoon__logo {
   transform: translateY(-70%);
   max-width: 600px;
-  width: 100%;
+  width: 80%;
 }
 
 .js--comingsoon__text {
