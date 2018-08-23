@@ -37,7 +37,7 @@
       .faq__question--header--title{
         flex: 1;
         @include subHeaderFont();
-        color: $secondary-color;
+        color: $primary-color;
         font-size: $sub-header-font-size;
         font-weight: normal;
         text-align: left;
