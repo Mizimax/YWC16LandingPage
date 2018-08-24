@@ -1,0 +1,18 @@
+$separator-ratio: ((531/1366) * 0.45);
+/* In the background file, 55% is white (with unwanted transparent). 
+So, I use CSS background size to crop those 55% out from the scene. */
+section.gallery-sponsor-faq{
+	margin-top: calc( 100vw * #{$separator-ratio}  ); /* normal margin + separator's height */
+	padding-top: 0 !important; /* fight with #main > div:not(.header) */
+	padding-bottom: 20vh;
+
+	background-color: $light-color;
+	&:before{
+		height: 100vw * $separator-ratio;
+		top: calc( ( 100vw * #{$separator-ratio} ) * -1 ) ;
+		background-color: $light-color;
+		background-image: url('../images/separator/separator_gallery.svg');
+		background-size: 100vw auto;
+		background-position: bottom center;
+	}
+}
