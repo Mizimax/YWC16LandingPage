@@ -36,8 +36,8 @@
 
       .faq__question--header--title{
         flex: 1;
-        @include headerFont();
-        color: $secondary-color;
+        @include subHeaderFont();
+        color: $primary-color;
         font-size: $sub-header-font-size;
         font-weight: normal;
         text-align: left;
@@ -89,7 +89,7 @@
     .faq__question--header .faq__question--header--title, 
     .faq__question--header .faq__question--header-icon .icon .fa-angle-down, 
     .faq__question--content{
-      transition: all 0.5s, padding-bottom 0.01s;
+      transition: all 0.5s, padding-bottom 0.001s;
 
     }
 

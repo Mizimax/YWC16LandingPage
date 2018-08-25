@@ -37,6 +37,13 @@
 .location__map__icon__container__image {
   max-width: 160px;
   width: 20%;
+  /* 
+   * Push Icon <object> below <span> to be able to use <a>. 
+   * I tried to use <img> but there's some conflict with dimension inside SVG.
+   * read: https://stackoverflow.com/a/12732030/5561570 for more detail 
+   */
+  position: relative; 
+  z-index: -1;
 }
 
 .location__map__icon__container__openmap {

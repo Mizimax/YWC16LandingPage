@@ -1,0 +1,15 @@
+section{
+	position: relative;
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+@import "layouts/section-gallery-sponsor-faq.scss";
+@import "layouts/section-contact-footer.scss";
