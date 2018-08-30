@@ -54,4 +54,5 @@ $(document).ready(function() {
       $(".js--guru_fade").fadeIn(200);
     });
   });
+  var carousels = bulmaCarousel.attach();
 });
