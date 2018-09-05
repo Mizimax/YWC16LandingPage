@@ -1,19 +1,18 @@
-$separator-ratio: (140/1366);
+$separator-ratio: (1457/1366);
+$separator-margin-ratio: (140/1366);
 section.contact-footer{
-	margin-top: calc( 100vw * #{$separator-ratio}  ); /* normal margin + separator's height */
-	padding-top: 10.25vh !important; /* fight with #main > div:not(.header) */
+	overflow-x: hidden;
+
+	padding-top: calc( ( 100vw * #{$separator-margin-ratio} ) + 10.25vh ) !important; /* fight with #main > div:not(.header) */
 	padding-bottom: 20vh;
 
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fdfdfd+0,eceaf5+91 */
-	background: rgb(253,253,253); /* Old browsers */
-	background: -moz-linear-gradient(-71deg, #FBFBFD 0%, rgb(236,234,245) 91%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-71deg, #FBFBFD 0%,rgb(236,234,245) 91%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(#{180-71}deg, #FBFBFD 0%,rgb(236,234,245) 91%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBFBFD', endColorstr='#eceaf5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-color: $light-color;
+	background-image: url('../images/separator/separator_contact-full.svg');
+	background-size: 100% auto;
+	background-position: top center;
+	background-repeat: no-repeat;
 
 	&:before{
-		height: 100vw * $separator-ratio;
-		top: calc( ( 100vw * #{$separator-ratio} ) * -1 ) ;
-		background-image: url('../images/separator/separator_contact.svg');
+		display: none;
 	}
 }
