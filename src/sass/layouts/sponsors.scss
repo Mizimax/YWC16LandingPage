@@ -9,10 +9,11 @@
   }
   .sponser-all__main__child, .sponser-all__sub__child{
     a{
-      background-color: white;
+      /* background-color: white; */
       @extend .image;
       img{
-       @extend .is-rounded;
+        @extend .is-rounded;
+        background: none;
       }
     }
   }

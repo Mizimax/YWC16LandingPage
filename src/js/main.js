@@ -21,16 +21,23 @@ $(document).ready(function() {
     }
   }, 5000);
 
-  $(".faq__question--header").click(function(e) {
-    e.preventDefault();
-
-    var parentElem = $(this).parent();
+  function showHideQuestion(parentElem){
     if (parentElem.hasClass("active")) {
       parentElem.removeClass("active");
     } else {
       $(".faq__question.active").removeClass("active");
       parentElem.addClass("active");
     }
+  }
+
+  $(".faq__question--header").click(function(e) {
+    e.preventDefault();
+    showHideQuestion($(this).parent());
+  });
+  $(".faq__question").click(function(e) {
+    e.preventDefault();
+    if(!$(this).hasClass("active"))
+      showHideQuestion($(this));
   });
 
   $(".guru__child").click(function() {
