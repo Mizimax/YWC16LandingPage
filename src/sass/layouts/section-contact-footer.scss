@@ -1,11 +1,18 @@
 $separator-ratio: (1457/1366);
 $separator-margin-ratio: (140/1366);
 section.contact-footer{
+	overflow-x: hidden;
+
 	padding-top: calc( ( 100vw * #{$separator-margin-ratio} ) + 10.25vh ) !important; /* fight with #main > div:not(.header) */
 	padding-bottom: 20vh;
 
 	background-color: $light-color;
 	background-image: url('../images/separator/separator_contact-full.svg');
-	background-size: cover;
+	background-size: 100% auto;
 	background-position: top center;
+	background-repeat: no-repeat;
+
+	&:before{
+		display: none;
+	}
 }
