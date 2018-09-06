@@ -2,9 +2,7 @@
 @import "fonts";
 @import "variables";
 
-@import "bulma/initial-variables.sass";
-@import "bulma/derived-variables.sass";
-@import "bulma/mixins.sass";
+@import "bulma/utilities/_all.sass";
 
 html {
   height: 100%;

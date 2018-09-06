@@ -71,5 +71,5 @@ $(document).ready(function() {
     var nextEle = $(this).next(":first");
     guruInterval = setGuruInterval(nextEle);
   });
-  var carousels = bulmaCarousel.attach();
+  window.carousels = bulmaCarousel.attach();
 });

@@ -47,11 +47,14 @@ body {
   cursor: pointer;
 }
 
-@import "bulma/initial-variables.sass";
-@import "bulma/derived-variables.sass";
-@import "bulma/mixins.sass";
+.hide {
+  display: none;
+}
+
+@import "bulma/utilities/_all.sass";
 @import "bulma/columns.sass";
 @import "bulma/container.sass";
+@import "bulma/base/_all.sass";
 @import "bulma-extensions/bulma-carousel/bulma-carousel.sass";
 
 @import "layouts/header.scss";

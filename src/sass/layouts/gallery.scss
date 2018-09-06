@@ -70,9 +70,31 @@ $slick-loader-path: "../images/icon";
 
 .slide-container {
   position: relative;
-  left: 8%;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.carousel {
+  position: initial;
+}
+
+.navigator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(0, -50%);
+}
+
+.carousel-nav-left {
+  float: left;
+  margin-left: 8%;
+}
+
+.carousel-nav-right {
+  float: right;
+  margin-right: 8%;
 }
 
 .carousel-nav-left,
