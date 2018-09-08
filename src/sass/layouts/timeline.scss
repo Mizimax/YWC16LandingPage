@@ -1,3 +1,8 @@
+.timeline {
+  margin-top: -10%;
+  margin-bottom: 50px;
+}
+
 .timeline__phase {
   margin-top: 70px;
   margin-bottom: 50px;
@@ -21,6 +26,33 @@
   @include subHeaderFont();
 }
 
+.timeline__container {
+  width: 90%;
+}
+
 .active-color {
   color: $primary-color;
+}
+
+#ywc--bg {
+  position: relative;
+  // transform: translateY(-55vh);
+  // padding-top: 30%;
+  // margin-bottom: -45%;
+  // padding-bottom: 20%;
+  // background: transparent;
+  // .ywc--bg__image {
+  //   background-color: linear-gradient(to bottom right, transparent, #e7e5f3);
+  //   background-image: url(/images/bgComing.png);
+  //   background-color: linear-gradient(to bottom right, transparent, #e7e5f3),
+  //     url(/images/bgComing.png);
+  //   background-repeat: no-repeat;
+  //   background-position: top left;
+  //   background-size: cover;
+  //   height: 100%;
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   z-index: -1;
+  // }
 }

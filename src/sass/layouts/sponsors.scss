@@ -1,62 +1,69 @@
 @import "../bulma/container.sass";
 @import "../bulma/elements/image.sass";
 
-.sponser-all{
-  @extend .container;
-  .sponser-all__main, .sponser-all__sub {
+.sponser-all {
+  margin-top: 90px;
+  .sponser-all--container {
+    max-width: 800px;
+    width: 90%;
+  }
+  .sponser-all__main,
+  .sponser-all__sub {
     justify-content: center;
     align-items: center;
   }
-  .sponser-all__main__child, .sponser-all__sub__child{
-    a{
+  .sponser-all__main__child,
+  .sponser-all__sub__child {
+    max-width: 250px;
+    a {
       /* background-color: white; */
       @extend .image;
-      img{
+      img {
         @extend .is-rounded;
         background: none;
       }
     }
   }
 
-  .sponser-all__main{
-    margin-top: 10vh;
+  .sponser-all__main {
+    margin-top: 60px;
 
-    .sponser-all__main__child{
+    .sponser-all__main__child {
       @include desktop() {
         height: 180px;
         width: 180px;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
         flex-grow: 0;
-      } 
-      a{
+      }
+      a {
         @include desktop() {
           height: 180px;
           width: 180px;
           padding: 0;
         }
-      }    
+      }
     }
   }
 
-  .sponser-all__sub{
+  .sponser-all__sub {
     margin-top: 5vh;
-    
-    .sponser-all__sub__child{
+
+    .sponser-all__sub__child {
       @include desktop() {
         height: 150px;
         width: 150px;
         margin-left: 1rem;
         margin-right: 1rem;
         flex-grow: 0;
-      } 
+      }
 
-      a{
+      a {
         @include desktop() {
           height: 150px;
           width: 150px;
           padding: 0;
-        } 
+        }
       }
     }
   }
