@@ -10,11 +10,57 @@
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
   <script src='js/bulma-carousel.min.js'></script>
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/smooth-scroll.min.js"></script>
 </head>
 
 <body>
   <div id="main">
-
+    <div class="navbar">
+      <div class="navbar__sidenav">
+        <ul class="navbar__sidenav__menu">
+          <a data-scroll href="#whatisywc">
+            <li id="whatisywc-nav" class="active">
+              <span>What is YWC ?</span>
+            </li>
+          </a>
+          <a data-scroll href="#register">
+            <li id="register-nav">
+              <span>Register</span>
+            </li>
+          </a>
+          <a data-scroll href="#timeline">
+            <li id="timeline-nav">
+              <span>Timeline</span>
+            </li>
+          </a>
+          <a data-scroll href="#location">
+            <li id="location-nav">
+              <span>Location</span>
+            </li>
+          </a>
+          <a data-scroll href="#guru">
+            <li id="guru-nav">
+              <span>Guru</span>
+            </li>
+          </a>
+          <a data-scroll href="#gallery">
+            <li id="gallery-nav">
+              <span>Gallery</span>
+            </li>
+          </a>
+          <a data-scroll href="#sponsor">
+            <li id="sponsor-nav">
+              <span>Sponsor</span>
+            </li>
+          </a>
+          <a data-scroll href="#qa">
+            <li id="qa-nav">
+              <span>Q & A</span>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
     <div class="header" align="center">
       <div class="navbar">
         <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -61,7 +107,7 @@
         </div>
       </div>
     </div>
-    <div class="whatisywc" align="center">
+    <div id="whatisywc" class="whatisywc" align="center">
       <div class="whatisywc__label">
         <img src="images/title/titleWIY.png" alt="What is ywc ?" width="275">
       </div>
@@ -75,7 +121,7 @@
         </div>
       </div>
     </div>
-    <div class="register" align="center">
+    <div id="register" class="register" align="center">
       <div class="register__label">
         <img src="images/title/titleRegis.png" alt="Register" width="220">
         <div class="register__label__sub label--sub">สมัครค่าย</div>
@@ -161,7 +207,7 @@
     </div>
     <section id="ywc--bg">
       <div class="ywc--bg__image"></div>
-      <div class="timeline" align="center">
+      <div id="timeline" class="timeline" align="center">
         <div class="timeline__label">
           <img src="images/title/titleTimeline.png" alt="Timeline" width="220">
         </div>
@@ -195,7 +241,7 @@
           </div>
         </div>
       </div>
-      <div class="location" align="center">
+      <div id="location" class="location" align="center">
         <div class="location__label">
           <img src="images/title/titleLocation.png" alt="Location" width="220">
           <div class="label--sub">มหาวิทยาลัยกรุงเทพ (รังสิต)</div>
@@ -215,7 +261,7 @@
           </a>
         </div>
       </div>
-      <div class="guru" align="center">
+      <div id="guru" class="guru" align="center">
         <div class="guru__label">
           <img src="images/title/titleGuru.png" alt="Guru" width="200">
         </div>
@@ -277,7 +323,7 @@
 
 
     <section class="gallery-sponsor-faq">
-      <div class="gallery" align="center">
+      <div id="gallery" class="gallery" align="center">
         <div class="gallery__label">
           <img src="images/title/titleGallery.png" alt="Gallery" width="200">
         </div>
@@ -458,7 +504,7 @@
           </div>
         </div>
       </div>
-      <div class="sponser-all" align="center">
+      <div id="sponsor" class="sponser-all" align="center">
         <div class="sponser-all__label">
           <img src="images/title/titleSpon.png" alt="Sponsor" width="200">
         </div>
@@ -531,7 +577,7 @@
           </div>
         </div>
       </div>
-      <div class="faq" align="center">
+      <div id="qa" class="faq" align="center">
         <div class="faq__label">
           <img src="images/title/titleQa.png" alt="Faq" width="200">
         </div>

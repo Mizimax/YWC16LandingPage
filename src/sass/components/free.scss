@@ -1,0 +1,50 @@
+.free {
+  position: fixed;
+  z-index: 999;
+  width: 20%;
+  min-width: 100px;
+  max-width: 200px;
+  left: 5vw;
+  top: 5vh;
+  .free__image {
+    width: 100%;
+  }
+  .free__text {
+    @include subHeaderFont();
+    top: 48%;
+    .free__text__free {
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .free__text__camp {
+      color: $primary-color;
+      font-size: 14px;
+      margin-top: -15px;
+    }
+    @media (min-width: 530px) {
+      .free__text__camp {
+        font-size: 16px;
+      }
+      .free__text__free {
+        font-size: 24px;
+      }
+    }
+    @include tablet() {
+      .free__text__camp {
+        font-size: 22px;
+      }
+      .free__text__free {
+        font-size: 34px;
+      }
+    }
+    @media (min-width: 950px) {
+      .free__text__camp {
+        font-size: 28px;
+      }
+      .free__text__free {
+        font-size: 40px;
+      }
+    }
+  }
+}

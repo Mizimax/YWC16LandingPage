@@ -3,9 +3,11 @@
 
 .sponser-all {
   margin-top: 90px;
-  .sponser-all--container {
-    max-width: 800px;
-    width: 90%;
+  @include mobile() {
+    .sponser-all--container {
+      max-width: 800px;
+      width: 90%;
+    }
   }
   .sponser-all__main,
   .sponser-all__sub {

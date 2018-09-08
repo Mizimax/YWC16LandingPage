@@ -1,6 +1,6 @@
 .location__map {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   width: 90%;
   margin-top: 25px;
   margin-bottom: 50px;
@@ -13,7 +13,7 @@
 }
 
 .location__map__image {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
 
   border: 3px solid $primary-color;
@@ -42,7 +42,7 @@
    * I tried to use <img> but there's some conflict with dimension inside SVG.
    * read: https://stackoverflow.com/a/12732030/5561570 for more detail 
    */
-  position: relative; 
+  position: relative;
   z-index: -1;
 }
 

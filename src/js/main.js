@@ -1,6 +1,60 @@
 var guruInterval;
 
 $(document).ready(function() {
+  var scroll = new SmoothScroll('a[href*="#"]');
+
+  $(window).scroll(function(e) {
+    var whatisywc = $("#whatisywc").offset().top - 50;
+    var register = $("#register").offset().top - 50;
+    var timeline = $("#timeline").offset().top - 50;
+    var location = $("#location").offset().top - 50;
+    var guru = $("#guru").offset().top - 50;
+    var gallery = $("#gallery").offset().top - 50;
+    var sponsor = $("#sponsor").offset().top - 50;
+    var qa = $("#qa").offset().top - 50;
+
+    var current = "";
+
+    if ($(this).scrollTop() > qa && current !== "qa") {
+      current = "qa";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#qa-nav").addClass("active");
+    } else if ($(this).scrollTop() > sponsor && current !== "sponsor") {
+      current = "sponsor";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#sponsor-nav").addClass("active");
+    } else if ($(this).scrollTop() > gallery && current !== "gallery") {
+      current = "gallery";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#gallery-nav").addClass("active");
+    } else if ($(this).scrollTop() > guru && current !== "guru") {
+      current = "guru";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#guru-nav").addClass("active");
+    } else if ($(this).scrollTop() > location && current !== "location") {
+      current = "location";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#location-nav").addClass("active");
+    } else if ($(this).scrollTop() > timeline && current !== "timeline") {
+      current = "timeline";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#timeline-nav").addClass("active");
+    } else if ($(this).scrollTop() > register && current !== "register") {
+      current = "register";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#register-nav").addClass("active");
+    } else if ($(this).scrollTop() > whatisywc && current !== "whatisywc") {
+      current = "whatisywc";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#whatisywc-nav").addClass("active");
+    }
+  });
+
+  $(".navbar__sidenav__menu li").click(function() {
+    $(".navbar__sidenav__menu li.active").removeClass("active");
+    $(this).addClass("active");
+  });
+
   function showHideQuestion(parentElem) {
     if (parentElem.hasClass("active")) {
       parentElem.removeClass("active");
@@ -71,5 +125,6 @@ $(document).ready(function() {
     var nextEle = $(this).next(":first");
     guruInterval = setGuruInterval(nextEle);
   });
+
   window.carousels = bulmaCarousel.attach();
 });
