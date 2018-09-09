@@ -1,15 +1,19 @@
 .header {
   padding-top: 0;
-  .header__video{
-      margin-bottom: -16.5vw;
-      z-index: 1;
-      position: relative;
+  .header__logo--margin {
+    margin-top: calc(20vh);
   }
-  .header__logo, .header__sponser--main{
+  .header__video {
+    margin-bottom: -16.5vw;
+    z-index: -1;
+    position: relative;
+  }
+  .header__logo,
+  .header__sponser--main {
     position: relative;
     z-index: 2;
   }
-  .header__sponser--main{
+  .header__sponser--main {
     margin-top: 8vh;
   }
   .header__video__url {
@@ -88,9 +92,6 @@
 
   .header__sponsor--main--right {
     justify-content: flex-start;
-  }
-  .header__sponsor--main {
-    transform: translateY(-30px);
   }
   .footer > .header__sponsor--main {
     transform: translateY(0);
