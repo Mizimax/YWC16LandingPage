@@ -85,7 +85,7 @@ $(document).ready(function() {
       next.addClass("active");
 
       $(".js--guru_fade").fadeOut(200, function() {
-        $(".guru__main__pic__img").attr("src", pic);
+        $(".guru__main__pic").css("background-image", "url(" + pic + ")");
         $(".guru__main__info__name").text(name);
         $(".guru__main__info__corp").text(corp);
         $(".js--guru_fade").fadeIn(200);
@@ -109,7 +109,7 @@ $(document).ready(function() {
     $(this).addClass("active");
 
     $(".js--guru_fade").fadeOut(200, function() {
-      $(".guru__main__pic__img").attr("src", pic);
+      $(".guru__main__pic").css("background-image", "url(" + pic + ")");
       $(".guru__main__info__name").text(name);
       $(".guru__main__info__corp").text(corp);
       $(".js--guru_fade").fadeIn(200);
