@@ -1,6 +1,9 @@
 .navbar {
   padding-top: 0 !important;
   .navbar__sidenav {
+    @include mobile() {
+      display: none;
+    }
     position: fixed;
     right: 20px;
     top: 50%;
