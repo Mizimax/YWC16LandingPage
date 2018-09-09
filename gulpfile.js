@@ -13,7 +13,8 @@ function swallowError(error) {
 gulp.task("connect", function() {
   connect.server({
     root: "src",
-    livereload: true
+    livereload: true,
+    port: 8888
   });
 });
 
