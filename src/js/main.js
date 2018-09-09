@@ -64,13 +64,13 @@ $(document).ready(function() {
     }
   }
 
-  $(".faq__question--header").click(function(e) {
-    e.preventDefault();
-    showHideQuestion($(this).parent());
-  });
+  // $(".faq__question--header").click(function(e) {
+  //   e.preventDefault();
+  //   showHideQuestion($(this).parent());
+  // });
   $(".faq__question").click(function(e) {
     e.preventDefault();
-    if (!$(this).hasClass("active")) showHideQuestion($(this));
+    showHideQuestion($(this));
   });
 
   // Guru change
