@@ -1,6 +1,7 @@
 var guruInterval;
 
 $(document).ready(function() {
+<<<<<<< HEAD
   var scroll = new SmoothScroll('a[href*="#"]');
 
   $(window).scroll(function(e) {
@@ -54,6 +55,25 @@ $(document).ready(function() {
     $(".navbar__sidenav__menu li.active").removeClass("active");
     $(this).addClass("active");
   });
+=======
+  // Change main video 
+  function changeVideoSrc(resolution){
+    // Detect video support
+    // src: https://davidwalsh.name/detect-supported-video-formats-javascript
+    var videoObj = $("#header-video"),
+        videoExtension = "mp4";
+    if(videoObj[0].canPlayType('video/webm; codecs="vp9"') == "probably"){
+      videoExtension = "webm";
+    }
+
+    videoObj.attr("src", "videos/cityanimate-"+resolution+"p."+videoExtension);
+  }
+
+  var windowSize = $(window).width();
+  if(windowSize > 720) changeVideoSrc(1080);
+  else if(windowSize > 480) changeVideoSrc(720);
+  else changeVideoSrc(480);
+>>>>>>> d45381ba7d5e11c734989e5ec074b50fbc6b5ac1
 
   function showHideQuestion(parentElem) {
     if (parentElem.hasClass("active")) {
