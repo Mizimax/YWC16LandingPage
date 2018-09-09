@@ -9,10 +9,14 @@
 
 .faq {
   margin-top: 90px;
-  // .faq__container {
-  //   min-width: 90%;
-  //   max-width:
-  // }
+  .faq__container {
+    @include mobile() {
+      width: 90%;
+    }
+    @include tablet() {
+      width: 90%;
+    }
+  }
   .faq__container--margin {
     margin-top: 60px;
   }

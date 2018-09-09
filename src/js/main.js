@@ -64,22 +64,22 @@ $(document).ready(function() {
     }
   }
 
-  // $(".faq__question--header").click(function(e) {
-  //   e.preventDefault();
-  //   showHideQuestion($(this).parent());
-  // });
-  $(".faq__question").click(function(e) {
+  $(".faq__question--header").click(function(e) {
     e.preventDefault();
-    showHideQuestion($(this));
+    showHideQuestion($(this).parent());
   });
+  // $(".faq__question").click(function(e) {
+  //   e.preventDefault();
+  //   showHideQuestion($(this));
+  // });
 
   // Guru change
   var nextEle = $(".guru__child:first").next(":first");
   var setGuruInterval = function(next) {
     var guruInterval = setInterval(function() {
-      var pic = next.children(":first").attr("src");
-      var name = next.children(":first").attr("name");
-      var corp = next.children(":first").attr("corp");
+      var pic = next.attr("src");
+      var name = next.attr("name");
+      var corp = next.attr("corp");
 
       $(".guru__child.active").removeClass("active");
       next.addClass("active");
@@ -101,15 +101,9 @@ $(document).ready(function() {
   guruInterval = setGuruInterval(nextEle);
 
   $(".guru__child").click(function() {
-    var pic = $(this)
-      .children(":first")
-      .attr("src");
-    var name = $(this)
-      .children(":first")
-      .attr("name");
-    var corp = $(this)
-      .children(":first")
-      .attr("corp");
+    var pic = $(this).attr("src");
+    var name = $(this).attr("name");
+    var corp = $(this).attr("corp");
 
     $(".guru__child.active").removeClass("active");
     $(this).addClass("active");

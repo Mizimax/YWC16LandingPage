@@ -1,21 +1,21 @@
 @import "../bulma/container.sass";
 @import "../bulma/elements/image.sass";
 
-.sponser-all {
+.sponsor-all {
   margin-top: 90px;
   @include mobile() {
-    .sponser-all--container {
+    .sponsor-all--container {
       max-width: 800px;
       width: 90%;
     }
   }
-  .sponser-all__main,
-  .sponser-all__sub {
+  .sponsor-all__main,
+  .sponsor-all__sub {
     justify-content: center;
     align-items: center;
   }
-  .sponser-all__main__child,
-  .sponser-all__sub__child {
+  .sponsor-all__main__child,
+  .sponsor-all__sub__child {
     max-width: 250px;
     a {
       /* background-color: white; */
@@ -27,31 +27,34 @@
     }
   }
 
-  .sponser-all__main {
+  .sponsor-all__main {
     margin-top: 60px;
 
-    .sponser-all__main__child {
-      @include desktop() {
-        height: 180px;
-        width: 180px;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        flex-grow: 0;
-      }
+    .sponsor-all__main__child {
+      // @include desktop() {
+      position: relative;
+      border-radius: 50%;
+      background: white;
+      flex: 0 0 180px;
+      height: 180px;
+      width: 180px;
+      margin: 1.5rem;
+      flex-grow: 0;
+      // }
       a {
-        @include desktop() {
-          height: 180px;
-          width: 180px;
-          padding: 0;
-        }
+        @extend .middle;
+        // @include desktop() {
+        width: 160px;
+        padding: 0;
+        // }
       }
     }
   }
 
-  .sponser-all__sub {
+  .sponsor-all__sub {
     margin-top: 5vh;
 
-    .sponser-all__sub__child {
+    .sponsor-all__sub__child {
       @include desktop() {
         height: 150px;
         width: 150px;

@@ -16,12 +16,30 @@
 
 .guru__main__pic {
   flex: 0 0 280px;
+  margin-left: 50px;
 }
 
 .guru__main__pic__img {
-  width: 200px;
   height: 188px;
   margin-top: 12px;
+}
+
+.guru__child {
+  background-repeat: no-repeat !important;
+}
+
+@for $i from 1 through 13 {
+  @if $i != 11 {
+    .guru__child__img--#{$i} {
+      background: url("/images/guru/"+$i+".jpg");
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+}
+
+.guru__child__img--11 {
+  background: url(/images/guru/11.png) !important;
 }
 
 .guru__main__info {
@@ -39,12 +57,12 @@
 .guru__main__info__name {
   @include subHeaderFont();
   color: $primary-color;
-  font-size: 38px;
+  font-size: 44px;
 }
 
 .guru__main__info__corp {
   @include subHeaderFont();
-  font-size: 24px;
+  font-size: 32px;
   color: #9490b3;
 }
 
@@ -58,15 +76,51 @@
 
 .guru__child,
 .guru__child img {
-  max-width: 136px;
+  max-width: 150px;
   width: 100%;
-  height: 150px;
+  height: 180px;
+}
+
+.guru__child img {
+  display: none;
+}
+
+.guru__child__img--1 {
+  background-position: center;
+  background-size: 100%;
+}
+
+.guru__child__img--2 {
+  background-position: center;
+  background-size: 200%;
+}
+
+.guru__child__img--5 {
+  background-position: 30% top;
+  background-size: 200%;
+}
+
+.guru__child__img--6 {
+  background-position: 80% top;
+  background-size: 200%;
+}
+
+.guru__child__img--7 {
+  background-position: center top;
+}
+
+.guru__child__img--12 {
+  background-size: 190%;
+}
+
+.guru__child__img--13 {
+  background-size: 200%;
 }
 
 .guru__child {
-  flex: 0 0 136px;
+  flex: 0 0 141.5px;
   padding: 0;
-  margin: 20px 20.5px 20px 0;
+  margin: 7px 15px 7px 0;
 }
 
 .guru__child {
