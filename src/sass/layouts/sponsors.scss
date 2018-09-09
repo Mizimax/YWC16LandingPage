@@ -2,7 +2,7 @@
 @import "../bulma/elements/image.sass";
 
 .sponsor-all {
-  margin-top: 90px;
+  margin-top: 80px;
   @include mobile() {
     .sponsor-all--container {
       max-width: 800px;
@@ -28,7 +28,7 @@
   }
 
   .sponsor-all__main {
-    margin-top: 60px;
+    margin-top: 50px;
 
     .sponsor-all__main__child {
       // @include desktop() {

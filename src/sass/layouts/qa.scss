@@ -8,7 +8,7 @@
 @import "../mixins";
 
 .faq {
-  margin-top: 90px;
+  margin-top: 80px;
   .faq__container {
     @include mobile() {
       width: 90%;
@@ -18,7 +18,7 @@
     }
   }
   .faq__container--margin {
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .faq__container {
     background-color: white;

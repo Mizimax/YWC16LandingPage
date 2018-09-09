@@ -5,7 +5,7 @@
 
 .guru__main {
   position: relative;
-  margin-top: 60px;
+  margin-top: 50px;
   border-radius: 15px;
   background-size: 100% auto;
   background-position: bottom;
@@ -31,16 +31,16 @@
 @for $i from 1 through 13 {
   @if $i != 11 {
     .guru__child__img--#{$i} {
-      background: url("/images/guru/"+$i+".jpg");
+      background: url("../images/guru/"+$i+".jpg");
       background-position: center;
       background-size: 100%;
     }
   }
 }
 
-.guru__child__img--11 {
-  background: url(/images/guru/11.png) !important;
-}
+// .guru__child__img--11 {
+//   background: url(../images/guru/11.png) !important;
+// }
 
 .guru__main__info {
   position: relative;

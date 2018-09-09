@@ -20,10 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-#main > div:not(.header) {
-  padding-top: 30px;
-}
-
 .label--sub {
   font-family: $subheader-font, sans-serif;
   color: #6d65ac;
