@@ -1,9 +1,20 @@
 .header {
   padding-top: 0;
-}
-
-.header__video__url {
-  width: 100%;
+  .header__video{
+      margin-bottom: -16.5vw;
+      z-index: 1;
+      position: relative;
+  }
+  .header__logo, .header__sponser--main{
+    position: relative;
+    z-index: 2;
+  }
+  .header__sponser--main{
+    margin-top: 8vh;
+  }
+  .header__video__url {
+    width: 100%;
+  }
 }
 
 .header__sponser--main,
