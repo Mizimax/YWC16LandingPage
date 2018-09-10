@@ -69,6 +69,7 @@ $(document).ready(function() {
       "src",
       "videos/cityanimate-" + resolution + "p." + videoExtension
     );
+    videoObj[0].play();
   }
 
   var windowSize = $(window).width();
