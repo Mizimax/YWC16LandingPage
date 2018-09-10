@@ -49,7 +49,6 @@ $slick-loader-path: "../images/icon";
   font-size: 2rem;
   color: #969393;
 }
-<<<<<<< HEAD
 #carousel {
   width: 80%;
 }
@@ -58,12 +57,12 @@ $slick-loader-path: "../images/icon";
 }
 
 /* For Slick  */
-#carousel-nav{
+#carousel-nav {
   height: 18vh;
   width: 70%;
   margin-top: 2rem;
 
-  .carousel-thumbnail{
+  .carousel-thumbnail {
     height: 18vh;
     width: 18vh;
     margin-left: 0.25rem;
@@ -73,7 +72,8 @@ $slick-loader-path: "../images/icon";
     background-repeat: no-repeat;
   }
 
-  .slick-prev:before, .slick-next:before {
+  .slick-prev:before,
+  .slick-next:before {
     font-family: "Font Awesome 5 Free";
     font-size: 2rem;
     line-height: 1;
@@ -83,18 +83,16 @@ $slick-loader-path: "../images/icon";
     -moz-osx-font-smoothing: grayscale;
     font-weight: 900;
   }
-  .slick-prev{
+  .slick-prev {
     left: -50px;
   }
-  .slick-next{
+  .slick-next {
     right: -50px;
   }
-  .slick-prev:before{
+  .slick-prev:before {
     content: "\f104";
   }
-  .slick-next:before{
+  .slick-next:before {
     content: "\f105";
   }
 }
-=======
->>>>>>> 814b67db3c036953494ac150dee6834893ecf3fa
