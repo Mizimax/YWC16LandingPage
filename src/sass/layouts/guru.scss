@@ -15,17 +15,22 @@
 }
 
 .js--guru_fade {
-  height: 300px;
+  min-height: 300px;
 }
 
 .guru__main__pic {
   flex: 0 0 280px;
   margin: 20px;
   margin-left: 50px;
+  height: 300px;
   background: url(../images/speaker/1.jpg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
+  @include mobile() {
+    background-size: auto 90%;
+    background-position: bottom;
+  }
 }
 
 .guru__main__pic__img {
@@ -150,7 +155,7 @@
     text-align: center;
   }
   .guru__main__info {
-    padding: 70px 0;
+    padding: 100px 0;
     margin-top: -30px;
   }
 }
