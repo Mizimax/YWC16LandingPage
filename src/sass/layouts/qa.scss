@@ -56,19 +56,19 @@
           font-size: $sub-header-font-size;
           font-weight: normal;
           text-align: left;
-          line-height: $sub-header-font-size * 2;
-          min-height: $sub-header-font-size * 2;
+          line-height: $sub-header-font-size * 1.7;
+          min-height: $sub-header-font-size * 1.7;
           margin: 0;
           vertical-align: middle;
         }
 
         .faq__question--header-icon {
-          flex: 0 0 $sub-header-font-size * 2;
+          flex: 0 0 $sub-header-font-size * 1.7;
 
           .icon {
-            width: $sub-header-font-size * 2;
-            height: $sub-header-font-size * 2;
-            border-radius: $sub-header-font-size * 2;
+            width: $sub-header-font-size * 1.7;
+            height: $sub-header-font-size * 1.7;
+            border-radius: $sub-header-font-size * 1.7;
             background-color: $sub-color;
 
             .fa-angle-down {
