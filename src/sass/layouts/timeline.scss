@@ -24,6 +24,7 @@
 .timeline__phase__step {
   @include subHeaderFont();
   font-weight: bold;
+  font-size: 28px;
 }
 
 .timeline__phase__date {
@@ -42,13 +43,28 @@
   position: relative;
   /* overflow: hidden; */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e3e0f1+50,ffffff+75 */
-  background: rgba(255,255,255,0); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgb(227,224,241) 50%, rgba(255,255,255,0) 75%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgb(227,224,241) 50%,rgba(255,255,255,0) 75%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(227,224,241) 50%,rgba(255,255,255,0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: rgba(255, 255, 255, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(227, 224, 241) 50%,
+    rgba(255, 255, 255, 0) 75%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(227, 224, 241) 50%,
+    rgba(255, 255, 255, 0) 75%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(227, 224, 241) 50%,
+    rgba(255, 255, 255, 0) 75%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
-  &:before{
+  &:before {
     content: "\e916"; /* YWC pure logo */
     position: absolute;
     width: 120%;
@@ -60,6 +76,5 @@
 
     @extend .ywc16-icon;
     font-size: 70vw;
-
   }
 }

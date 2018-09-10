@@ -4,10 +4,9 @@
     padding: 50px 100px;
     color: #5a538e;
   }
-}
-
-@include mobile() {
-  .whatisywc__container__desc {
-    padding: 50px 50px;
+  @include mobile() {
+    .whatisywc__container__desc {
+      padding: 30px;
+    }
   }
 }
