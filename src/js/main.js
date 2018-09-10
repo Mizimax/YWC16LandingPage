@@ -70,7 +70,7 @@ $(document).ready(function() {
       "videos/cityanimate-" + resolution + "p." + videoExtension
     );
     videoObj[0].load();
-    setTimeout(function(){ videoObj[0].load(); }, 500);
+    setTimeout(function(){ videoObj[0].load(); $("#header-video").trigger('play'); }, 500);
   }
 
   var windowSize = $(window).width();
