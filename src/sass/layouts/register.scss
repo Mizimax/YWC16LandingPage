@@ -53,11 +53,13 @@ $marketing-color: #f797aa;
   background-color: $primary-color;
 }
 
-// .register__branch__image {
-//   transform: translateY(20px);
-// }
+.register__branch__image {
+  margin-top: 20px;
+  max-width: 85%;
+}
 
 .register__branch__content__name {
+  padding-top: 2px;
   color: $content-color;
 }
 
@@ -66,10 +68,12 @@ $marketing-color: #f797aa;
 }
 
 .register__branch__programming__name {
+  padding-top: 9px;
   color: $programming-color;
 }
 
 .register__branch__marketing__name {
+  padding-top: 9px;
   color: $marketing-color;
 }
 

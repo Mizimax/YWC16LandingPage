@@ -10,19 +10,14 @@
 .faq {
   margin-top: 80px;
   .faq__container {
-    @include mobile() {
-      width: 90%;
-    }
-    @include tablet() {
-      width: 90%;
-    }
+    max-width: 900px;
+    width: 90%;
   }
   .faq__container--margin {
     margin-top: 50px;
   }
   .faq__container {
     background-color: white;
-    @extend .container;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(227, 224, 241, 1);
     -moz-box-shadow: 5px 5px 5px 0px rgba(227, 224, 241, 1);
     box-shadow: 5px 5px 5px 0px rgba(227, 224, 241, 1);
@@ -72,8 +67,8 @@
             background-color: $sub-color;
 
             .fa-angle-down {
-              width: $sub-header-font-size * 1.5;
-              height: $sub-header-font-size * 1.5;
+              width: $sub-header-font-size * 1.25;
+              height: $sub-header-font-size * 1.25;
               margin: $sub-header-font-size * 0.25;
               background-image: url("../images/icon/angle-down-solid.svg");
               background-size: contain;
