@@ -3,6 +3,11 @@ $slick-font-path: "../fonts/";
 $slick-loader-path: "../images/icon";
 @import "../slick/slick-theme.scss";
 
+.gallery__container {
+  max-width: 900px;
+  width: 90%;
+}
+
 .gallery__carousel {
   margin-top: 60px;
 }
@@ -33,12 +38,10 @@ $slick-loader-path: "../images/icon";
 
 .carousel-nav-left {
   float: left;
-  margin-left: 8%;
 }
 
 .carousel-nav-right {
   float: right;
-  margin-right: 8%;
 }
 
 .carousel-nav-left,
@@ -54,12 +57,12 @@ $slick-loader-path: "../images/icon";
 }
 
 /* For Slick  */
-#carousel-nav{
+#carousel-nav {
   height: 18vh;
   width: 70%;
   margin-top: 2rem;
 
-  .carousel-thumbnail{
+  .carousel-thumbnail {
     height: 18vh;
     width: 18vh;
     margin-left: 0.25rem;
@@ -69,7 +72,8 @@ $slick-loader-path: "../images/icon";
     background-repeat: no-repeat;
   }
 
-  .slick-prev:before, .slick-next:before {
+  .slick-prev:before,
+  .slick-next:before {
     font-family: "Font Awesome 5 Free";
     font-size: 2rem;
     line-height: 1;
@@ -79,16 +83,16 @@ $slick-loader-path: "../images/icon";
     -moz-osx-font-smoothing: grayscale;
     font-weight: 900;
   }
-  .slick-prev{
+  .slick-prev {
     left: -50px;
   }
-  .slick-next{
+  .slick-next {
     right: -50px;
   }
-  .slick-prev:before{
+  .slick-prev:before {
     content: "\f104";
   }
-  .slick-next:before{
+  .slick-next:before {
     content: "\f105";
   }
 }
