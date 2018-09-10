@@ -51,24 +51,24 @@
           font-size: $sub-header-font-size;
           font-weight: normal;
           text-align: left;
-          line-height: $sub-header-font-size * 1.7;
-          min-height: $sub-header-font-size * 1.7;
+          line-height: $sub-header-font-size * 2;
+          min-height: $sub-header-font-size * 2;
           margin: 0;
           vertical-align: middle;
         }
 
         .faq__question--header-icon {
-          flex: 0 0 $sub-header-font-size * 1.7;
+          flex: 0 0 $sub-header-font-size * 2;
 
           .icon {
-            width: $sub-header-font-size * 1.7;
-            height: $sub-header-font-size * 1.7;
-            border-radius: $sub-header-font-size * 1.7;
+            width: $sub-header-font-size * 2;
+            height: $sub-header-font-size * 2;
+            border-radius: $sub-header-font-size * 2;
             background-color: $sub-color;
 
             .fa-angle-down {
-              width: $sub-header-font-size * 1.5;
-              height: $sub-header-font-size * 1.5;
+              width: $sub-header-font-size * 1.25;
+              height: $sub-header-font-size * 1.25;
               margin: $sub-header-font-size * 0.25;
               background-image: url("../images/icon/angle-down-solid.svg");
               background-size: contain;
