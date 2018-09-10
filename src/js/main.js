@@ -1,4 +1,5 @@
 var guruInterval;
+$(function(){ $(".loading-screen").fadeOut(); });
 
 $(document).ready(function() {
   var scroll = new SmoothScroll('a[href*="#"]');
@@ -68,6 +69,7 @@ $(document).ready(function() {
       "src",
       "videos/cityanimate-" + resolution + "p." + videoExtension
     );
+    videoObj[0].play();
   }
 
   var windowSize = $(window).width();
@@ -88,10 +90,6 @@ $(document).ready(function() {
     e.preventDefault();
     showHideQuestion($(this).parent());
   });
-  // $(".faq__question").click(function(e) {
-  //   e.preventDefault();
-  //   showHideQuestion($(this));
-  // });
 
   // Guru change
   var nextEle = $(".guru__child:first").next(":first");

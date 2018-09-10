@@ -54,6 +54,55 @@ body {
   display: none;
 }
 
+.header-label{
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  h2{
+    display: inline-block;
+    box-sizing: content-box;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: $light-color;
+    color: $primary-color;
+    @include headerFont();
+    font-size: 1.75rem;
+    font-weight: bolder;
+    line-height: 1.75rem;
+    border-radius: 0.25em;
+    text-transform: uppercase;
+
+    &:before, &:after{
+      content: " ";
+      width: 24px;
+      height: 36px;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:before{
+      right: 1px;
+      top: -18px;
+      background-image: url(../images/title/title-right.svg);
+    }
+
+    &:after{
+      left: -16px;
+      bottom: -18px;
+      width: 20px;
+      background-image: url(../images/title/title-left.svg);
+    }
+  }
+}
+
 @import "layouts/header.scss";
 @import "layouts/grid.scss";
 @import "layouts/section.scss";
