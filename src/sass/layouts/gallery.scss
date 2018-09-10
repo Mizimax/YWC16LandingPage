@@ -24,6 +24,10 @@ $slick-loader-path: "../images/icon";
   align-items: center;
 }
 
+.slick-slide {
+  margin: 0 10px;
+}
+
 .carousel {
   position: initial;
 }
@@ -50,23 +54,25 @@ $slick-loader-path: "../images/icon";
   color: #969393;
 }
 #carousel {
-  width: 80%;
+  // width: 80%;
 }
 #carousel-slide {
-  width: 80%;
+  // width: 80%;
 }
 
 /* For Slick  */
 #carousel-nav {
-  height: 18vh;
-  width: 70%;
+  height: 25vh;
+  width: calc(100% - 100px);
   margin-top: 2rem;
 
+  @media (max-width: 550px) {
+    display: none;
+  }
+
   .carousel-thumbnail {
-    height: 18vh;
-    width: 18vh;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+    height: 25vh;
+    width: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
