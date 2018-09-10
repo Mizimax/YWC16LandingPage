@@ -69,6 +69,9 @@ $(document).ready(function() {
       "src",
       "videos/cityanimate-" + resolution + "p." + videoExtension
     );
+
+    videoObj[0].load();
+    videoObj[0].autoplay = true;
     videoObj[0].play();
   }
 
