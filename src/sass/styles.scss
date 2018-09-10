@@ -6,7 +6,8 @@
 @import "bulma/columns.sass";
 @import "bulma/container.sass";
 @import "bulma/base/_all.sass";
-@import "bulma-extensions/bulma-carousel/bulma-carousel.sass";
+@import "slick/slick.scss";
+@import "slick/slick-theme.scss";
 
 html {
   height: 100%;

@@ -81,6 +81,10 @@
               background-repeat: no-repeat;
 
               transform: rotateZ(0);
+
+              &:before{
+                display: none;
+              }
             }
           }
         }

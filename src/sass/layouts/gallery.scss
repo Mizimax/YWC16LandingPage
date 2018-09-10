@@ -52,3 +52,43 @@ $slick-loader-path: "../images/icon";
 #carousel-slide {
   width: 80%;
 }
+
+/* For Slick  */
+#carousel-nav{
+  height: 18vh;
+  width: 70%;
+  margin-top: 2rem;
+
+  .carousel-thumbnail{
+    height: 18vh;
+    width: 18vh;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+    line-height: 1;
+    color: $primary-color;
+    opacity: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 900;
+  }
+  .slick-prev{
+    left: -50px;
+  }
+  .slick-next{
+    right: -50px;
+  }
+  .slick-prev:before{
+    content: "\f104";
+  }
+  .slick-next:before{
+    content: "\f105";
+  }
+}

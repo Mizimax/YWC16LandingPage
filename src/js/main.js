@@ -69,7 +69,8 @@ $(document).ready(function() {
       "src",
       "videos/cityanimate-" + resolution + "p." + videoExtension
     );
-    videoObj[0].play();
+    videoObj[0].load();
+    setTimeout(function(){ videoObj[0].load(); }, 500);
   }
 
   var windowSize = $(window).width();
@@ -138,5 +139,22 @@ $(document).ready(function() {
     guruInterval = setGuruInterval(nextEle);
   });
 
-  window.carousels = bulmaCarousel.attach();
+   $('#carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    asNavFor: '#carousel-nav'
+  });
+  $('#carousel-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '#carousel',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+  
 });
