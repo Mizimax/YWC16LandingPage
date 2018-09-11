@@ -9,7 +9,7 @@ $slick-loader-path: "../images/icon";
 }
 
 .gallery__carousel {
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .carousel-nav-right,
@@ -54,7 +54,18 @@ $slick-loader-path: "../images/icon";
   color: #969393;
 }
 #carousel {
-  // width: 80%;
+  .carousel-item{
+      @include from($desktop) {
+        height: 550px; /* I don't know why, but it doesn't work with `vh` :(  */
+        height: calc( 85vh - 3rem - 20vh);
+        width: auto;
+
+        img{
+          height: 100%;
+          width: auto;
+        }
+    }
+  }
 }
 #carousel-slide {
   // width: 80%;
@@ -62,16 +73,16 @@ $slick-loader-path: "../images/icon";
 
 /* For Slick  */
 #carousel-nav {
-  height: 160px;
+  height: 20vh;
   width: calc(100% - 100px);
   margin-top: 2rem;
 
-  @media (max-width: 550px) {
+  @include mobile(){
     display: none;
   }
 
   .carousel-thumbnail {
-    height: 160px;
+    height: 20vh;
     width: 100%;
     background-size: cover;
     background-position: center center;

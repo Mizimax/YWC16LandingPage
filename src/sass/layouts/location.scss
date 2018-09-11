@@ -1,3 +1,9 @@
+@if $is-location-show == false {
+  .location{
+    display: none;
+  }
+}
+
 .location__map {
   position: relative;
   max-width: 900px;
