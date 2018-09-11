@@ -67,6 +67,7 @@
   @include subHeaderFont();
   color: $primary-color;
   font-size: 44px;
+
 }
 
 .guru__main__info__corp {
@@ -163,5 +164,12 @@
   }
   .guru__main__info {
     padding: 20px 0;
+  }
+  .guru__main__info__name{
+    font-size: 2rem;
+  }
+
+  .guru__main__info__corp{
+    font-size: 1.5rem;
   }
 }
