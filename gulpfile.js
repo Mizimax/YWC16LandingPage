@@ -44,6 +44,7 @@ gulp.task("copy", function() {
     '*src/css/**/*',
     '*src/fonts/**/*',
     '*src/js/**/*',
+    '*src/images/**/*',
     '*src/videos/**/*',
   ], {base: "./src/"})
   .pipe(gulp.dest('dist/'));
