@@ -1,20 +1,29 @@
 .contact {
   .contact__social__label {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
   }
   .contact__social {
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
     .contact__social__cols {
       justify-content: center;
     }
     .contact__social__col {
-      flex: 0 0 160px;
+      flex: 0 0 100px;
+    }
+
+    @include mobile() {
+      .contact__social__label {
+        margin-bottom: 3rem;
+      }
+      .contact__social__col {
+        display: inline-block;
+      }
     }
     a {
       text-decoration: none;
 
       .ywc16-icon {
-        font-size: 3rem;
+        font-size: 2.2rem;
         text-shadow: 0 0 0 $secondary-color;
         transition: all 0.5s;
       }

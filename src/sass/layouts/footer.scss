@@ -1,24 +1,27 @@
 @import "../mixins";
 
 .footer__content {
-  margin-top: 13vh;
+  margin-top: 5vh;
   /* margin-bottom: 20vh; */ /* moved to section */
   text-align: center;
   @include headerFont();
 
   p {
     width: 100%;
-    margin: 0;
-    font-size: 1.3rem;
+    margin: 0 auto;
+    font-size: 1rem;
   }
 
   .footer__content--copyright {
-    font-weight: 600;
+    font-weight: normal;
   }
 
   .footer__content--sosumi {
-    line-height: 3rem;
-    margin-top: -0.2rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: lighter;
+    width: 90%;
   }
 }
