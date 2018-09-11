@@ -3,6 +3,7 @@ var sass = require("gulp-sass");
 var connect = require("gulp-connect");
 var wait = require("gulp-wait");
 var plumber = require("gulp-plumber");
+const htmlmin = require('gulp-htmlmin');
 
 function swallowError(error) {
   console.log(error.toString());
@@ -27,6 +28,27 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("src/css"));
 });
 
+gulp.task('minify', () => {
+  return gulp.src('src/index.html')
+    .pipe(htmlmin({ 
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: false
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task("copy", function() {
+  return gulp.src([
+    '*src/css/**/*',
+    '*src/fonts/**/*',
+    '*src/js/**/*',
+    '*src/videos/**/*',
+  ], {base: "./src/"})
+  .pipe(gulp.dest('dist/'));
+});
+
 gulp.task("livereload", function() {
   gulp.src("src/**/*").pipe(connect.reload());
 });
@@ -35,5 +57,12 @@ gulp.task("watch", function() {
   gulp.watch("src/sass/**/*.scss", gulp.parallel("sass"));
   gulp.watch("src/**/*", gulp.parallel("livereload"));
 });
+
+gulp.task("build", 
+  gulp.series(
+    gulp.parallel("minify", "sass"),
+    'copy'
+  )
+);
 
 gulp.task("default", gulp.parallel("connect", "watch", "sass"));

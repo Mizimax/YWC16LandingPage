@@ -1,4 +1,5 @@
 node_modules
+dist
 src/css
 package-lock.json
 DONT_COMMIT
