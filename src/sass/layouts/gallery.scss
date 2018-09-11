@@ -24,6 +24,10 @@ $slick-loader-path: "../images/icon";
   align-items: center;
 }
 
+.slick-slide {
+  margin: 0 10px;
+}
+
 .carousel {
   position: initial;
 }
@@ -50,29 +54,32 @@ $slick-loader-path: "../images/icon";
   color: #969393;
 }
 #carousel {
-  width: 80%;
+  // width: 80%;
 }
 #carousel-slide {
-  width: 80%;
+  // width: 80%;
 }
 
 /* For Slick  */
-#carousel-nav{
-  height: 18vh;
-  width: 70%;
+#carousel-nav {
+  height: 25vh;
+  width: calc(100% - 100px);
   margin-top: 2rem;
 
-  .carousel-thumbnail{
-    height: 18vh;
-    width: 18vh;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  .carousel-thumbnail {
+    height: 25vh;
+    width: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
 
-  .slick-prev:before, .slick-next:before {
+  .slick-prev:before,
+  .slick-next:before {
     font-family: "Font Awesome 5 Free";
     font-size: 2rem;
     line-height: 1;
@@ -82,16 +89,16 @@ $slick-loader-path: "../images/icon";
     -moz-osx-font-smoothing: grayscale;
     font-weight: 900;
   }
-  .slick-prev{
+  .slick-prev {
     left: -50px;
   }
-  .slick-next{
+  .slick-next {
     right: -50px;
   }
-  .slick-prev:before{
+  .slick-prev:before {
     content: "\f104";
   }
-  .slick-next:before{
+  .slick-next:before {
     content: "\f105";
   }
 }

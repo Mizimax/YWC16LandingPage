@@ -5,11 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="/images/icon/favicon.png" />
+  <meta property="og:url" content="https://ywc.in.th" />
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="Young Webmaster Camp #16 : Ready to Disrupt" />
+  <meta property="og:description" content="Young Webmaster Camp #16 Ready to Disrupt" />
+  <meta property="og:image" content="/images/OGImage.png" />
   <title>YWC16: Ready to Disrupt</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?_version=0.1">
   <style>
     /* Loading screen - critical section */
-    .loading-screen{
+
+    .loading-screen {
       position: fixed;
       left: 0;
       top: 0;
@@ -20,7 +27,8 @@
       background: white;
       z-index: 9998;
     }
-    .loading-screen:before{
+
+    .loading-screen:before {
       content: " ";
       position: absolute;
       width: 10vw;
@@ -32,7 +40,8 @@
       background-image: url(data:image/png;base64,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);
     }
   </style>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src='js/slick.min.js'></script>
   <script src="js/smooth-scroll.min.js"></script>
@@ -57,11 +66,6 @@
           <a data-scroll href="#timeline">
             <li id="timeline-nav">
               <span>Timeline</span>
-            </li>
-          </a>
-          <a data-scroll href="#location">
-            <li id="location-nav">
-              <span>Location</span>
             </li>
           </a>
           <a data-scroll href="#guru">
@@ -271,7 +275,7 @@
           </div>
         </div>
       </div>
-      <div id="location" class="location" align="center">
+      <!-- <div id="location" class="location" align="center">
         <div class="location__label header-label">
           <h2>Location</h2>
           <div class="label--sub">มหาวิทยาลัยกรุงเทพ (รังสิต)</div>
@@ -279,7 +283,6 @@
         <div class="location__map">
           <img src="images/bangkokU.png" class="location__map__image" alt="มหาวิทยาลัยกรุงเทพ (รังสิต)">
           <a href="https://goo.gl/maps/JgrkALpwmsA2" class="location__map__icon">
-            <!--  <div class="location__map__icon"> -->
             <div class="location__map__icon__container middle">
               <span>
                 <object class="location__map__icon__container__image" data="images/icon/iconLocation.svg" type="image/svg+xml">
@@ -287,10 +290,9 @@
               </span>
               <div class="location__map__icon__container__openmap">OPEN MAP</div>
             </div>
-            <!-- </div> -->
           </a>
         </div>
-      </div>
+      </div> -->
       <div id="guru" class="guru" align="center">
         <div class="guru__label header-label">
           <h2>Guru</h2>
@@ -302,47 +304,40 @@
               </div>
               <div class="guru__main__info column" align="left">
                 <div class="guru__middle">
-                  <div class="guru__main__info__name">เจริญ ลักษณ์เลิศกุล</div>
-                  <div class="guru__main__info__corp">ผู้ช่วยผู้อำนวยการ ฝ่ายการวางแผนกลยุทธ์ ทรู มีเดีย</div>
+                  <div class="guru__main__info__name">เจริญ ลักษณ์เลิศกุล (เจ)</div>
+                  <div class="guru__main__info__corp">Assistant Director - Strategic planning and Digital business : Online Station, True Media</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="guru__children columns">
-            <div class="guru__child guru__child__img--1 column active" src="./images/guru/1.jpg" name="เจริญ ลักษณ์เลิศกุล (เจ)" corp="Assistant Director - Strategic planning and Digital business : Online Station, True Media">
-            </div>
-            <div class="guru__child guru__child__img--2 column" src="./images/guru/2.jpg" name="อินทนนท์ ปัญญาโสภา (เบนซ์)" corp="Co-founder at Grappik"
-              alt="อินทนนท์ ปัญญาโสภา (เบนซ์)">
-            </div>
-            <div class="guru__child guru__child__img--3 column" src="./images/guru/3.jpg" name="ขจร เจียรนัยพานิชย์ (เอ็ม)" corp="Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker">
-            </div>
-            <div class="guru__child guru__child__img--4 column" src="./images/guru/4.jpg" name="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)" corp="Managing Director of Bold Biznet Co., Ltd."
-              alt="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)">
-            </div>
-            <div class="guru__child guru__child__img--5 column" src="./images/guru/5.jpg" name="วโรรส โรจนะ (โน้ต)" corp="CEO Dek-D Interactive Co., LTD.">
-            </div>
-            <div class="guru__child guru__child__img--6 guru__child--final column" src="./images/guru/6.jpg" name="วรัทธน์ วงศ์มณีกิจ (ตั้ง)"
-              corp="Product owner of WISESIGHT Insight platform">
-            </div>
-            <div class="guru__child guru__child__img--7 column" src="./images/guru/7.jpg" name="อภิศิลป์ ตรุงกานนท์ (บอย)" corp="Co-founder & CTO, Pantip.com">
-            </div>
-            <div class="guru__child guru__child__img--8 column" src="./images/guru/8.jpg" name="จักรพงษ์ คงมาลัย (ปอง)" corp="Managing Director, Moonshot Digital Co., Ltd">
-            </div>
-            <div class="guru__child guru__child__img--9 column" src="./images/guru/9.jpg" name="ภาวุธ  พงษ์วิทยภานุ (ป้อม)" corp="CEO & Founder Tarad Dot Com Group"
-              alt="ภาวุธ  พงษ์วิทยภานุ (ป้อม)">
-            </div>
-            <div class="guru__child guru__child__img--10 column" src="./images/guru/10.jpg" name="ศิวัตร เชาวรียวงษ์ (ป้อม)" corp="นายกสมาคมโฆษณาดิจิทัล (ประเทศไทย)">
-            </div>
-            <div class="guru__child guru__child__img--11 column" src="./images/guru/11.jpg" name="เมธปริยา คำนวนวุฒิ (ว่าน)" corp="ผู้จัดการฝ่ายการตลาด บริษัท แอลเอ็นดับเบิ้ลยู จำกัด และ กรรมการสมาคมผู้ดูแลเว็บไทย">
-            </div>
-            <div class="guru__child guru__child__img--12 guru__child--final column" src="./images/guru/12.jpg" name="คนที่หนึ่ง แสงหิรัญ (หนึ่ง)"
-              corp="Co-Founder  - Fulfeel Design and Construction Co., Ltd">
-            </div>
-            <div class="guru__child guru__child__img--13 column" src="./images/guru/13.jpg" name="ศิระ สัจจินานนท์ (ฮันท์)" corp="CTO and Co-Founder Jitta">
-            </div>
+            <div class="guru__child guru__child__img--1 column active" src="./images/speaker/1.jpg" style="background-image: url('./images/speaker/1.jpg');"
+              name="เจริญ ลักษณ์เลิศกุล (เจ)" corp="Assistant Director - Strategic planning and Digital business : Online Station, True Media"></div>
+            <div class="guru__child guru__child__img--2 column" src="./images/speaker/2.jpg" style="background-image: url('./images/speaker/2.jpg');"
+              name="วรัทธน์ วงศ์มณีกิจ (ตั้ง)" corp="Product owner of WISESIGHT Insight platform"></div>
+            <div class="guru__child guru__child__img--3 column" src="./images/speaker/3.jpg" style="background-image: url('./images/speaker/3.jpg');"
+              name="วโรรส โรจนะ (โน้ต)" corp="CEO Dek-D Interactive Co., LTD."></div>
+            <div class="guru__child guru__child__img--4 column" src="./images/speaker/4.jpg" style="background-image: url('./images/speaker/4.jpg');"
+              name="อภิศิลป์ ตรุงกานนท์ (บอย)" corp="Co-founder & CTO, Pantip.com"></div>
+            <div class="guru__child guru__child__img--5 column" src="./images/speaker/5.jpg" style="background-image: url('./images/speaker/5.jpg');"
+              name="อินทนนท์ ปัญญาโสภา (เบนซ์)" corp="Co-founder at Grappik"></div>
+            <div class="guru__child guru__child--final  guru__child__img--6  column" src="./images/speaker/6.jpg" style="background-image: url('./images/speaker/6.jpg');"
+              name="จักรพงษ์ คงมาลัย (ปอง)" corp="Managing Director, Moonshot Digital Co., Ltd"></div>
+            <div class="guru__child guru__child__img--7 column" src="./images/speaker/7.jpg" style="background-image: url('./images/speaker/7.jpg');"
+              name="ภาวุธ  พงษ์วิทยภานุ (ป้อม)" corp="CEO & Founder Tarad Dot Com Group"></div>
+            <div class="guru__child guru__child__img--8 column" src="./images/speaker/8.jpg" style="background-image: url('./images/speaker/8.jpg');"
+              name="ศิวัตร เชาวรียวงษ์ (ป้อม)" corp="นายกสมาคมโฆษณาดิจิทัล (ประเทศไทย)"></div>
+            <div class="guru__child guru__child__img--9 column" src="./images/speaker/9.jpg" style="background-image: url('./images/speaker/9.jpg');"
+              name="เมธปริยา คำนวนวุฒิ (ว่าน)" corp="ผู้จัดการฝ่ายการตลาด บริษัท แอลเอ็นดับเบิ้ลยู จำกัด และ กรรมการสมาคมผู้ดูแลเว็บไทย"></div>
+            <div class="guru__child guru__child__img--10 column" src="./images/speaker/10.jpg" style="background-image: url('./images/speaker/10.jpg');"
+              name="คนที่หนึ่ง แสงหิรัญ (หนึ่ง)" corp="Co-Founder - Fulfeel Design and Construction Co., Ltd"></div>
+            <div class="guru__child guru__child__img--11 column" src="./images/speaker/11.jpg" style="background-image: url('./images/speaker/11.jpg');"
+              name="ขจร เจียรนัยพานิชย์ (เอ็ม)" corp="Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker"></div>
+            <div class="guru__child guru__child--final guru__child__img--12 column" src="./images/speaker/12.jpg" style="background-image: url('./images/speaker/12.jpg');"
+              name="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)" corp="Managing Director of Bold Biznet Co., Ltd."></div>
+            <div class="guru__child guru__child__img--13 column" src="./images/speaker/13.jpg" style="background-image: url('./images/speaker/13.jpg');"
+              name="ศิระ สัจจินานนท์ (ฮันท์)" corp="CTO and Co-Founder Jitta"></div>
           </div>
-
-
         </div>
       </div>
     </section>
@@ -426,9 +421,24 @@
             </div> -->
           </div>
           <div class="sponsor-all__sub columns">
+            <div class="sponsor-all__sub__sub__child column is-hidden-mobile">
+              <a href="#">
+                <img src="images/sponsor/Mangozero.svg" alt="">
+              </a>
+            </div>
             <div class="sponsor-all__sub__child column">
               <a href="#">
                 <img src="images/sponsor/Uppercuz.svg" alt="">
+              </a>
+            </div>
+            <div class="sponsor-all__sub__sub__child column is-hidden-tablet">
+              <a href="#">
+                <img src="images/sponsor/Mangozero.svg" alt="">
+              </a>
+            </div>
+            <div class="sponsor-all__sub__sub__child column">
+              <a href="#">
+                <img src="images/sponsor/Pantip.svg" alt="">
               </a>
             </div>
             <!-- <div class="sponsor-all__sub__child column">
@@ -447,19 +457,10 @@
               </a>
             </div> -->
           </div>
-          <div class="sponsor-all__sub__sub columns">
-            <div class="sponsor-all__sub__sub__child column">
-              <a href="#">
-                <img src="images/sponsor/Mangozero.svg" alt="">
-              </a>
-            </div>
-            <div class="sponsor-all__sub__sub__child column">
-              <a href="#">
-                <img src="images/sponsor/Pantip.svg" alt="">
-              </a>
-            </div>
+          <!-- <div class="sponsor-all__sub__sub columns">
+            
 
-          </div>
+          </div> -->
         </div>
       </div>
       <div id="qa" class="faq" align="center">
@@ -600,7 +601,7 @@
     </section>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?_version=0.2"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42284958-1"></script>
   <script>

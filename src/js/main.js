@@ -1,5 +1,7 @@
 var guruInterval;
-$(function(){ $(".loading-screen").fadeOut(); });
+$(function() {
+  $(".loading-screen").fadeOut();
+});
 
 $(document).ready(function() {
   var scroll = new SmoothScroll('a[href*="#"]');
@@ -8,7 +10,7 @@ $(document).ready(function() {
     var whatisywc = $("#whatisywc").offset().top - 50;
     var register = $("#register").offset().top - 50;
     var timeline = $("#timeline").offset().top - 50;
-    var location = $("#location").offset().top - 50;
+    // var location = $("#location").offset().top - 50;
     var guru = $("#guru").offset().top - 50;
     var gallery = $("#gallery").offset().top - 50;
     var sponsor = $("#sponsor").offset().top - 50;
@@ -40,10 +42,10 @@ $(document).ready(function() {
       current = "timeline";
       $(".navbar__sidenav__menu li.active").removeClass("active");
       $("#timeline-nav").addClass("active");
-    } else if ($(this).scrollTop() > register && current !== "register") {
-      current = "register";
-      $(".navbar__sidenav__menu li.active").removeClass("active");
-      $("#register-nav").addClass("active");
+      // } else if ($(this).scrollTop() > register && current !== "register") {
+      //   current = "register";
+      //   $(".navbar__sidenav__menu li.active").removeClass("active");
+      //   $("#register-nav").addClass("active");
     } else if ($(this).scrollTop() > whatisywc && current !== "whatisywc") {
       current = "whatisywc";
       $(".navbar__sidenav__menu li.active").removeClass("active");
@@ -70,7 +72,10 @@ $(document).ready(function() {
       "videos/cityanimate-" + resolution + "p." + videoExtension
     );
     videoObj[0].load();
-    setTimeout(function(){ videoObj[0].load(); }, 500);
+    setTimeout(function() {
+      videoObj[0].load();
+      $("#header-video").trigger("play");
+    }, 500);
   }
 
   var windowSize = $(window).width();
@@ -139,22 +144,37 @@ $(document).ready(function() {
     guruInterval = setGuruInterval(nextEle);
   });
 
-   $('#carousel').slick({
+  $("#carousel").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: false,
     autoplay: true,
     autoplaySpeed: 4000,
-    asNavFor: '#carousel-nav'
+    asNavFor: "#carousel-nav"
   });
-  $('#carousel-nav').slick({
+  $("#carousel-nav").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    asNavFor: '#carousel',
+    asNavFor: "#carousel",
     dots: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
-  
 });

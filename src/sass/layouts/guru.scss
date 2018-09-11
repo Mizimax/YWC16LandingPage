@@ -15,17 +15,23 @@
 }
 
 .js--guru_fade {
-  height: 300px;
+  min-height: 300px;
+  margin: 0;
 }
 
 .guru__main__pic {
   flex: 0 0 280px;
-  margin: 20px;
-  margin-left: 50px;
-  background: url(../images/guru/1.jpg);
-  background-size: auto 100%;
+  margin-left: 20px;
+  height: 300px;
+  background: url(../images/speaker/1.jpg);
+  background-size: auto 80%;
   background-repeat: no-repeat;
   background-position: center;
+  @include mobile() {
+    background-size: auto 90%;
+    background-position: bottom;
+    margin-left: 0;
+  }
 }
 
 .guru__main__pic__img {
@@ -35,21 +41,10 @@
 
 .guru__child {
   background-repeat: no-repeat !important;
+  background-size: auto 100%;
+  background-image: attr(src url);
+  background-position: center;
 }
-
-@for $i from 1 through 13 {
-  @if $i != 11 {
-    .guru__child__img--#{$i} {
-      background: url("../images/guru/"+$i+".jpg");
-      background-position: center;
-      background-size: auto 100%;
-    }
-  }
-}
-
-// .guru__child__img--11 {
-//   background: url(../images/guru/11.png) !important;
-// }
 
 .guru__main__info {
   position: relative;
@@ -60,7 +55,12 @@
   top: 50%;
   left: 0;
   width: 100%;
+  padding: 10px;
   transform: translateY(-50%);
+  @include mobile() {
+    position: relative;
+    transform: translateY(0);
+  }
 }
 
 .guru__main__info__name {
@@ -77,6 +77,7 @@
 
 .guru__children {
   display: flex;
+  margin: 0;
   margin-top: 20px;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -129,8 +130,9 @@
 
 .guru__child {
   flex: 0 0 141.5px;
+  // flex: 0 0 calc(16.67% - 15.1px);
   padding: 0;
-  margin: 7px 15px 7px 0;
+  margin: 5px 10px 5px 0;
 }
 
 .guru__child {
@@ -160,7 +162,6 @@
     text-align: center;
   }
   .guru__main__info {
-    padding: 70px 0;
-    margin-top: -30px;
+    padding: 20px 0;
   }
 }
