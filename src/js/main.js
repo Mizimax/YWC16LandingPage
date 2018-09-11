@@ -34,18 +34,18 @@ $(document).ready(function() {
       current = "guru";
       $(".navbar__sidenav__menu li.active").removeClass("active");
       $("#guru-nav").addClass("active");
-    } else if ($(this).scrollTop() > location && current !== "location") {
-      current = "location";
-      $(".navbar__sidenav__menu li.active").removeClass("active");
-      $("#location-nav").addClass("active");
+      // } else if ($(this).scrollTop() > location && current !== "location") {
+      //   current = "location";
+      //   $(".navbar__sidenav__menu li.active").removeClass("active");
+      //   $("#location-nav").addClass("active");
     } else if ($(this).scrollTop() > timeline && current !== "timeline") {
       current = "timeline";
       $(".navbar__sidenav__menu li.active").removeClass("active");
       $("#timeline-nav").addClass("active");
-      // } else if ($(this).scrollTop() > register && current !== "register") {
-      //   current = "register";
-      //   $(".navbar__sidenav__menu li.active").removeClass("active");
-      //   $("#register-nav").addClass("active");
+    } else if ($(this).scrollTop() > register && current !== "register") {
+      current = "register";
+      $(".navbar__sidenav__menu li.active").removeClass("active");
+      $("#register-nav").addClass("active");
     } else if ($(this).scrollTop() > whatisywc && current !== "whatisywc") {
       current = "whatisywc";
       $(".navbar__sidenav__menu li.active").removeClass("active");
