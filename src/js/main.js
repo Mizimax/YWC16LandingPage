@@ -78,10 +78,10 @@ $(document).ready(function() {
     }, 500);
   }
 
-  var windowSize = $(window).width();
+  /*var windowSize = $(window).width();
   if (windowSize > 720) changeVideoSrc(1080);
   else if (windowSize > 480) changeVideoSrc(720);
-  else changeVideoSrc(480);
+  else changeVideoSrc(480);*/
 
   function showHideQuestion(parentElem) {
     if (parentElem.hasClass("active")) {
