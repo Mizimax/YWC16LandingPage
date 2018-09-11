@@ -16,6 +16,14 @@
     align-items: center;
   }
   .sponsor-all__main__child,
+  .sponsor-all__sponsor__child a img,
+  .sponsor-all__partner__child{
+    border-color: $primary-color;
+    border-width: 2px;
+    border-style: solid;
+    @extend .is-rounded;
+  }
+  .sponsor-all__main__child,
   .sponsor-all__sponsor__child {
     a {
       /* background-color: white; */
@@ -28,7 +36,7 @@
   }
 
   .sponsor-all__main {
-    margin-top: 50px;
+    margin-top: 3.15rem;
 
     .sponsor-all__main__child {
       // @include desktop() {
@@ -49,7 +57,7 @@
       a {
         @extend .middle;
         // @include desktop() {
-        width: 160px;
+        width: $sponsor-size-vip * 0.889;
         padding: 0;
         // }
       }
@@ -67,6 +75,7 @@
       margin-left: 1rem;
       margin-right: 1rem;
       flex-grow: 0;
+      box-sizing: content-box;
       // }
 
       @include mobile() {
