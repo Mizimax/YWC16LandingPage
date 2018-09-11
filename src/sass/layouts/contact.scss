@@ -10,6 +10,15 @@
     .contact__social__col {
       flex: 0 0 160px;
     }
+
+    @include mobile() {
+      .contact__social__label {
+        margin-bottom: 3rem;
+      }
+      .contact__social__col {
+        display: inline-block;
+      }
+    }
     a {
       text-decoration: none;
 
