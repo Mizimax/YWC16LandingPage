@@ -3,6 +3,11 @@ $slick-font-path: "../fonts/";
 $slick-loader-path: "../images/icon";
 @import "../slick/slick-theme.scss";
 
+.gallery__container {
+  max-width: 900px;
+  width: 90%;
+}
+
 .gallery__carousel {
   margin-top: 60px;
 }
@@ -33,12 +38,10 @@ $slick-loader-path: "../images/icon";
 
 .carousel-nav-left {
   float: left;
-  margin-left: 8%;
 }
 
 .carousel-nav-right {
   float: right;
-  margin-right: 8%;
 }
 
 .carousel-nav-left,
