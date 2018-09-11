@@ -3,12 +3,22 @@
     margin-bottom: 10vh;
   }
   .contact__social {
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
+    margin-bottom: calc( 10vh - 20px );
     .contact__social__cols {
       justify-content: center;
     }
     .contact__social__col {
       flex: 0 0 160px;
+    }
+    
+    @include mobile() {
+      .contact__social__label {
+        margin-bottom: 3rem;
+      }
+      .contact__social__col {
+        display: inline-block;
+      }
     }
     a {
       text-decoration: none;

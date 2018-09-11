@@ -4,7 +4,7 @@ section.contact-footer{
 	overflow-x: hidden;
 
 	padding-top: calc( ( 100vw * #{$separator-margin-ratio} ) + 10.25vh ) !important; /* fight with #main > div:not(.header) */
-	padding-bottom: 20vh;
+	padding-bottom: 10vh;
 
 	background-color: #ebe9f5;
 	background-image: url('../images/separator/separator_contact-full.svg');
