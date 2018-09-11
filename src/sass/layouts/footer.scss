@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .footer__content {
-  margin-top: 13vh;
+  margin-top: 5vh;
   /* margin-bottom: 20vh; */ /* moved to section */
   text-align: center;
   @include headerFont();
@@ -20,5 +20,6 @@
     line-height: 3rem;
     margin-top: -0.2rem;
     font-weight: lighter;
+    width: 90%;
   }
 }
