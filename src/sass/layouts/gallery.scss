@@ -62,7 +62,7 @@ $slick-loader-path: "../images/icon";
 
 /* For Slick  */
 #carousel-nav {
-  height: 25vh;
+  height: 160px;
   width: calc(100% - 100px);
   margin-top: 2rem;
 
@@ -71,7 +71,7 @@ $slick-loader-path: "../images/icon";
   }
 
   .carousel-thumbnail {
-    height: 25vh;
+    height: 160px;
     width: 100%;
     background-size: cover;
     background-position: center center;

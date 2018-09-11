@@ -115,10 +115,10 @@
 
 .header__sponsor--main{
   .sponsor--twa{
-    padding-bottom: 15px; /* Yes, you can set padding with <img> ! It's blew my mind! */
+    padding-bottom: 25px; /* Yes, you can set padding with <img> ! It's blew my mind! */
   }
 }
-.sponsor-all__main{
+.sponsor-all .sponsor-all__main .sponsor-all__main__child{
   .sponsor--twa{
     border-radius: 0;
     width: calc( 100% - 20px);
