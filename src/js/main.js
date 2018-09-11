@@ -151,7 +151,16 @@ $(document).ready(function() {
     fade: false,
     autoplay: true,
     autoplaySpeed: 4000,
-    asNavFor: "#carousel-nav"
+    asNavFor: "#carousel-nav",
+    centerMode: false,
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          centerMode: true
+        }
+      }
+    ]
   });
   $("#carousel-nav").slick({
     slidesToShow: 4,
