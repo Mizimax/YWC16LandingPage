@@ -79,7 +79,7 @@ $(document).ready(function() {
   }
 
   document.querySelector("#header-video").addEventListener('play', function(e) {
-      $(".header__video__poster").fadeOut();
+      $(".header__video__poster").addClass('video-play');
   }, true);
 
   /*var windowSize = $(window).width();
