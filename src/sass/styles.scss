@@ -70,6 +70,12 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     background-color: $light-color;
+    background-image: url('../images/title/title.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+    padding-right: 2rem;
     color: $primary-color;
     @include headerFont();
     font-size: 1.75rem;
