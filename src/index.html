@@ -12,6 +12,10 @@
   <meta property="og:description" content="ค่ายสร้างเว็บเพียงหนึ่งเดียวของไทย พร้อมค้นหาสายเลือดใหม่ ที่พร้อมจะ Disrupt ทุกการความเคลื่อนไหวบนโลกดิจิทัลไปพร้อมกับพวกเรา" />
   <meta property="og:image" content="https://ywc16.ywc.in.th/images/OGImage.png" />
   <title>16th Young Webmaster Camp: Ready to Disrupt</title>
+  <link rel="preload" href="css/styles.css?_version=1.0" as="style">
+  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff"  as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.ttf"   as="font" crossorigin="anonymous">
   <style>
     /* Loading screen - critical section */
 
@@ -39,8 +43,8 @@
       background-image: url(data:image/png;base64,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);
     }
   </style>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">    
+  <link rel="stylesheet" async href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <link rel="stylesheet" async href="css/styles.css?_version=1.0">
 </head>
 
@@ -269,7 +273,7 @@
       </div>
       <div id="location" class="location" align="center">
         <div class="location__label header-label">
-          <img src="images/title/titleLocation.png" width="200">
+          <h2>Location</h2>
           <div class="label--sub">เร็วๆ นี้</div>
         </div>
         <div class="location__map">

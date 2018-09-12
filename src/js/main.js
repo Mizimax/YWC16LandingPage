@@ -1,5 +1,5 @@
 var guruInterval;
-$(function() {
+$(window).on('load', function () {
   $(".loading-screen").fadeOut();
 });
 
