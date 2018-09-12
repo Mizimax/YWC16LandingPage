@@ -40,13 +40,13 @@
   background-color: $secondary-color;
   position: relative;
 
-  &:before{
+  &:before {
     content: " ";
     position: absolute;
     left: 6px;
     top: 6px;
-    width: calc( 100% - 12px);
-    height: calc( 100% - 12px);
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
     margin: 0;
     padding: 0;
     background: white;
@@ -55,13 +55,20 @@
     z-index: 1;
   }
 
-  @include mobile(){
+  @include mobile() {
     display: inline-block;
-    margin-left: 0;
-    margin-right: 1rem;
-    flex: 0 0 ( $sponsor-size-vip * $sponsor-mobile-resize-ratio);
-    height: ( $sponsor-size-vip * $sponsor-mobile-resize-ratio);
-    width: ( $sponsor-size-vip * $sponsor-mobile-resize-ratio);
+    &:first-child {
+      margin-left: 0;
+      margin-right: 3vw;
+    }
+    &:last-child {
+      margin-right: 0;
+      margin-left: 3vw;
+    }
+
+    flex: 0 0 ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
+    height: ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
+    width: ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
   }
 }
 
@@ -88,7 +95,7 @@
 
 .header__video {
   position: relative;
-  .header__video__poster{
+  .header__video__poster {
     position: absolute;
     width: 100%;
     height: auto;
@@ -104,11 +111,14 @@
   bottom: 11vw; /* Video size is depended on monitor's width. */
   left: 50%;
   transform: translateX(-50%);
-  height: calc( 80vw * 0.1938 );
-  
-  @include mobile(){ width: 70vw; bottom: 12vw; }
+  height: calc(80vw * 0.1938);
 
-  .header__video__logo--camp_name{
+  @include mobile() {
+    width: 70vw;
+    bottom: 12vw;
+  }
+
+  .header__video__logo--camp_name {
     margin: 0;
     width: 50%;
     height: 100%;
@@ -116,14 +126,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('../images/icon/logo.svg');
+    background-image: url("../images/icon/logo.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     color: transparent;
   }
 
-  .header__video__logo--slogan{
+  .header__video__logo--slogan {
     margin: 0;
     width: 47.125%;
     position: absolute;
@@ -136,13 +146,13 @@
     font-size: 4.25vw;
     @include headerFont();
 
-    @include mobile(){ 
+    @include mobile() {
       font-size: 3.75vw;
       line-height: 6vw;
     }
   }
 
-  .header__video__logo--taglines{
+  .header__video__logo--taglines {
     margin: 0;
     width: 47.125%;
     position: absolute;
@@ -156,15 +166,16 @@
     @include subHeaderFont();
   }
 
-  @media (min-width: 812.5px) { // (100/80)*650
+  @media (min-width: 812.5px) {
+    // (100/80)*650
     width: 650px;
     height: 126px;
 
-    .header__video__logo--slogan{
+    .header__video__logo--slogan {
       font-size: 2.2rem;
     }
-    .header__video__logo--taglines{
-        font-size: 1.45rem;
+    .header__video__logo--taglines {
+      font-size: 1.45rem;
     }
   }
 }
