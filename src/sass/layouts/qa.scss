@@ -28,7 +28,9 @@
 
     .faq__question {
       border-bottom: solid 1px $primary-color;
-
+      &:last-child {
+        border-bottom: 0;
+      }
       .faq__question--header,
       .faq__question--content {
         padding-left: $sub-header-font-size * 1.75;
