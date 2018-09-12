@@ -4,6 +4,7 @@ var connect = require("gulp-connect");
 var wait = require("gulp-wait");
 var plumber = require("gulp-plumber");
 const htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
 
 function swallowError(error) {
   console.log(error.toString());
@@ -28,7 +29,7 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("src/css"));
 });
 
-gulp.task('minify', () => {
+gulp.task('minify_html', () => {
   return gulp.src('src/index.html')
     .pipe(htmlmin({ 
       collapseWhitespace: true,
@@ -37,6 +38,12 @@ gulp.task('minify', () => {
       removeComments: false
     }))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify_js', () => {
+  return gulp.src('src/js/main.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task("copy", function() {
@@ -61,8 +68,8 @@ gulp.task("watch", function() {
 
 gulp.task("build", 
   gulp.series(
-    gulp.parallel("minify", "sass"),
-    'copy'
+    gulp.parallel("minify_html", "sass"),
+    gulp.series('copy', 'minify_js')
   )
 );
 
