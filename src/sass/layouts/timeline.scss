@@ -11,6 +11,16 @@
   .column {
     flex: 0 0 190px;
   }
+
+  @include mobile(){
+    margin-top: 0;
+    .column{
+      margin-bottom: 2rem;
+    }
+    img{
+      margin-bottom: -2rem;
+    }
+  }
 }
 
 .timeline__phase__3__step {

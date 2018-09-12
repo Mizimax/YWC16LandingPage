@@ -46,6 +46,7 @@
     margin-top: 3.15rem;
     @include mobile(){
       margin-top: 2vh;
+      margin-bottom: 0;
     }
 
     .sponsor-all__main__child {
@@ -64,7 +65,12 @@
       }
 
       @include mobile(){
+        margin-left: 1rem;
         margin-right: 0;
+        margin-bottom: 0;
+        flex: 0 0 ( $sponsor-size-vip * $sponsor-mobile-resize-ratio);
+        height: ( $sponsor-size-vip * $sponsor-mobile-resize-ratio);
+        width: ( $sponsor-size-vip * $sponsor-mobile-resize-ratio);
       }
 
       // }
@@ -82,7 +88,7 @@
   .sponsor-all__partner {
     margin-top: 5vh;
     @include mobile(){
-      margin-top: 2vh;
+      margin-top: 0;
     }
     .sponsor-all__sponsor__child {
       flex: 0 0 $sponsor-size-sponsor;
@@ -97,6 +103,11 @@
 
       @include mobile() {
         margin: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex: 0 0 ( $sponsor-size-sponsor * $sponsor-mobile-resize-ratio);
+        height: ( $sponsor-size-sponsor * $sponsor-mobile-resize-ratio);
+        width: ( $sponsor-size-sponsor * $sponsor-mobile-resize-ratio);
       }
 
       a,
@@ -120,6 +131,11 @@
       // }
       @include mobile() {
         margin: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex: 0 0 ( $sponsor-size-partner * $sponsor-mobile-resize-ratio);
+        height: ( $sponsor-size-partner * $sponsor-mobile-resize-ratio);
+        width: ( $sponsor-size-partner * $sponsor-mobile-resize-ratio);
       }
 
       a {
@@ -141,12 +157,13 @@
 
 .header__sponsor--main{
   .sponsor--twa{
-    padding-bottom: 25px; /* Yes, you can set padding with <img> ! It's blew my mind! */
+    padding-bottom: 27px; /* Yes, you can set padding with <img> ! It's blew my mind! */
   }
 }
 .sponsor-all .sponsor-all__main .sponsor-all__main__child{
   .sponsor--twa{
     border-radius: 0;
-    width: calc( 100% - 20px);
+    width: calc( 100% - 25px);
+    margin-top: -10px;
   }
 }
