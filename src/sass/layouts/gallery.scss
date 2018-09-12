@@ -6,6 +6,9 @@ $slick-loader-path: "../images/icon";
 .gallery__container {
   max-width: 900px;
   width: 90%;
+  @include mobile(){
+    width: 100%;
+  }
 }
 
 .gallery__carousel {

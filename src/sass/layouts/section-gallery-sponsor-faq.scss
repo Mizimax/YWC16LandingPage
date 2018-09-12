@@ -9,6 +9,12 @@ section.gallery-sponsor-faq {
   padding-bottom: 20vh;
 
   background-color: $light-color;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f6fb+0,f7f6fb+98,ebe9f5+100 */
+  background: $light-color; /* Old browsers */
+  background: -moz-linear-gradient(top, $light-color 0%, $light-color 98%, #ebe9f5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $light-color 0%,$light-color 98%,#ebe9f5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $light-color 0%,$light-color 98%,#ebe9f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f6fb', endColorstr='#ebe9f5',GradientType=0 ); /* IE6-9 */
   &:before {
     height: 100vw * $separator-ratio;
     top: calc((100vw * #{$separator-ratio}) * -1);

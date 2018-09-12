@@ -23,6 +23,13 @@
     border-style: solid;
     @extend .is-rounded;
   }
+
+  .sponsor-all__main .sponsor-all__main__child,
+  .sponsor-all__partner .sponsor-all__partner__child{
+    @include mobile(){
+      display: inline-block;
+    }
+  }
   .sponsor-all__main__child,
   .sponsor-all__sponsor__child {
     a {
@@ -37,6 +44,9 @@
 
   .sponsor-all__main {
     margin-top: 3.15rem;
+    @include mobile(){
+      margin-top: 2vh;
+    }
 
     .sponsor-all__main__child {
       // @include desktop() {
@@ -53,6 +63,10 @@
         margin: 0 1.5rem;
       }
 
+      @include mobile(){
+        margin-right: 0;
+      }
+
       // }
       a {
         @extend .middle;
@@ -67,6 +81,9 @@
   .sponsor-all__sponsor,
   .sponsor-all__partner {
     margin-top: 5vh;
+    @include mobile(){
+      margin-top: 2vh;
+    }
     .sponsor-all__sponsor__child {
       flex: 0 0 $sponsor-size-sponsor;
       // @include desktop() {
