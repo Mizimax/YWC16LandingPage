@@ -48,16 +48,6 @@
   padding: 0 10px;
 }
 
-// .header__sponsor--main--left > .header__sponsor--main__child:first-child,
-// .header__sponsor--main--right > .header__sponsor--main__child:first-child {
-//   margin: 40px 40px 40px 10px;
-// }
-
-// .header__sponsor--main--left > .header__sponsor--main__child:last-child,
-// .header__sponsor--main--right > .header__sponsor--main__child:last-child {
-//   margin: 40px 10px 40px 40px;
-// }
-
 .header__sponsor--main__child img {
   width: 180px;
   height: 100%;
@@ -77,12 +67,69 @@
 }
 
 .header__video__logo {
-  max-width: 650px;
-  width: 80%;
+  width: 80vw;
   position: absolute;
-  bottom: 16%;
+  bottom: 18%;
+  bottom: 11vw; /* Video size is depended on monitor's width. */
   left: 50%;
   transform: translateX(-50%);
+  height: calc( 80vw * 0.1938 );
+  
+
+  .header__video__logo--camp_name{
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/icon/logo.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: transparent;
+  }
+
+  .header__video__logo--slogan{
+    margin: 0;
+    width: 47.125%;
+    position: absolute;
+    right: 0;
+    top: 29%;
+    height: 40%;
+    color: white;
+    background: $primary-color;
+    font-weight: 700;
+    font-size: 4.25vw;
+    @include headerFont();
+  }
+
+  .header__video__logo--taglines{
+    margin: 0;
+    width: 47.125%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 25%;
+    color: $primary-color;
+    opacity: 0.95;
+    font-weight: 400;
+    font-size: 2.6vw;
+    @include subHeaderFont();
+  }
+
+  @media (min-width: 812.5px) { // (100/80)*650
+    width: 650px;
+    height: 126px;
+
+    .header__video__logo--slogan{
+      font-size: 2.2rem;
+    }
+    .header__video__logo--taglines{
+        font-size: 1.45rem;
+    }
+  }
 }
 
 @media (min-width: 1113px) {
