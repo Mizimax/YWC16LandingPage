@@ -2,6 +2,9 @@
   padding-top: 0;
   .header__logo--margin {
     margin-top: calc(20vh);
+    @include mobile() {
+      margin-top: 7.5vh;
+    }
   }
   .header__video {
     margin-bottom: -16.5vw;
@@ -57,16 +60,11 @@
 
   @include mobile() {
     display: inline-block;
-    &:first-child {
-      margin: 0 3vw 0 1.5vw;
-    }
-    &:last-child {
-      margin: 0 1.5vw 0 3vw;
-    }
-
-    flex: 0 0 ($sponsor-size-header * $sponsor-mobile-resize-ratio);
-    height: ($sponsor-size-header * $sponsor-mobile-resize-ratio);
-    width: ($sponsor-size-header * $sponsor-mobile-resize-ratio);
+    margin-left: 0;
+    margin-right: 1rem;
+    flex: 0 0 ($sponsor-size-vip * $sponsor-header-mobile-resize-ratio);
+    height: ($sponsor-size-vip * $sponsor-header-mobile-resize-ratio);
+    width: ($sponsor-size-vip * $sponsor-header-mobile-resize-ratio);
   }
 }
 
@@ -83,6 +81,10 @@
   height: 100%;
   position: relative;
   z-index: 2;
+
+  @include mobile() {
+    width: ($sponsor-size-vip * $sponsor-header-mobile-resize-ratio);
+  }
 }
 
 .img-responsive {
@@ -93,12 +95,32 @@
 
 .header__video {
   position: relative;
+  @include mobile() {
+    height: calc(100vw * (3 / 4));
+  }
   .header__video__poster {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: calc(100vw * (9 / 16));
     left: 0;
     top: 0;
+    opacity: 1;
+    transition: opacity 0.5s;
+    background-image: url("../images/cityanimate-poster.jpg");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mobile() {
+      height: calc(100vw * (4 / 3));
+      background-image: url("../images/cityanimate-poster-mobile.jpg");
+    }
+
+    &.video-play {
+      @include desktop() {
+        opacity: 0;
+      }
+    }
   }
 }
 
