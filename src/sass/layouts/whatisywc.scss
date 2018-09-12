@@ -1,10 +1,12 @@
-.whatisywc__container__desc {
-  padding: 50px 100px;
-  color: #5a538e;
-}
-
-@include mobile() {
+.whatisywc {
+  margin-top: 50px;
   .whatisywc__container__desc {
-    padding: 50px 50px;
+    padding: 50px 100px;
+    color: #5a538e;
+  }
+  @include mobile() {
+    .whatisywc__container__desc {
+      padding: 30px;
+    }
   }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="svg848" version="1.1" height="2.6e+002" width="1366" viewBox="0 0 1366 2.6e+002">
+  <metadata id="metadata852">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs842">
+    <linearGradient gradientTransform="translate(-60,-930)" y2="1.2e+003" x2="9.7e+002" y1="0" x1="6.3e+002" gradientUnits="userSpaceOnUse" id="grd1">
+      <stop id="stop834" stop-opacity="0" stop-color="#ffffff" offset="0" />
+      <stop id="stop836" stop-color="#ebe9f5" offset="0.826" />
+    </linearGradient>
+    <linearGradient gradientTransform="translate(-60,-930)" y2="1.1e+003" x2="1.2e+003" y1="7.7e+002" x1="1.1e+003" gradientUnits="userSpaceOnUse" id="grd2">
+      <stop id="stop839" stop-opacity="0" stop-color="#e3dff1" offset="0.987" />
+    </linearGradient>
+    <clipPath id="clipPath1416" clipPathUnits="userSpaceOnUse">
+      <rect y="2.3" x="0" height="260" width="1366" id="rect1418" style="fill:#4682b4;fill-opacity:1" />
+    </clipPath>
+    <clipPath id="clipPath1420" clipPathUnits="userSpaceOnUse">
+      <rect y="2.3" x="0" height="260" width="1366" id="rect1422" style="fill:#4682b4;fill-opacity:1" />
+    </clipPath>
+  </defs>
+  <style id="style844">
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+		.shp1 { opacity: 0.6;fill: url(#grd2) } 
+	</style>
+  <path transform="translate(0,-2.3)" clip-path="url(#clipPath1420)" style="fill:url(#grd1)" d="m -50,72 c 0,0 320,168 590,68 C 970,-18 1400,32 1500,240 1700,430 1400,-930 1400,-930 H -60 Z" class="shp0" id="Shape 2 copy" />
+  <path transform="translate(0,-2.3)" clip-path="url(#clipPath1416)" style="opacity:0.6;fill:url(#grd2)" d="m 620,120 c 0,0 220,100 480,30 200,-78 300,-118 400,-50 100,60 0,-250 0,-250 0,0 -880,-20 -880,270 z" class="shp1" id="Shape 3 copy" />
+</svg>

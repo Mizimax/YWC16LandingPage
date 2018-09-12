@@ -4,6 +4,7 @@ $programming-color: #78c8f4;
 $marketing-color: #f797aa;
 
 .register {
+  margin-top: 30px;
   padding-bottom: 35%;
   background-image: url(../images/separator/separator_location.svg);
   background-repeat: no-repeat;
@@ -18,8 +19,12 @@ $marketing-color: #f797aa;
 .register__branch__name {
   @include headerFont();
   font-size: 18px;
+
+  @include mobile() {
+    font-size: 1.5rem;
+  }
   font-weight: 700;
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 5px;
 }
 
@@ -52,11 +57,13 @@ $marketing-color: #f797aa;
   background-color: $primary-color;
 }
 
-// .register__branch__image {
-//   transform: translateY(20px);
-// }
+.register__branch__image {
+  margin-top: 20px;
+  max-width: 85%;
+}
 
 .register__branch__content__name {
+  padding-top: 2px;
   color: $content-color;
 }
 
@@ -65,10 +72,12 @@ $marketing-color: #f797aa;
 }
 
 .register__branch__programming__name {
+  padding-top: 9px;
   color: $programming-color;
 }
 
 .register__branch__marketing__name {
+  padding-top: 9px;
   color: $marketing-color;
 }
 
@@ -95,5 +104,12 @@ $marketing-color: #f797aa;
     margin: 60px 12px 0 12px;
     border: 1.5px solid $sub-color;
     border-radius: 10px;
+  }
+}
+
+@if $is-register-open == false {
+  .register__branch__no,
+  .register__branch__detail {
+    display: none;
   }
 }

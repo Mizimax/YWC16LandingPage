@@ -1,20 +1,30 @@
 @import "../bulma/container.sass";
 @import "../bulma/elements/image.sass";
 
-.sponser-all {
-  margin-top: 90px;
-  .sponser-all--container {
-    max-width: 800px;
-    width: 90%;
+.sponsor-all {
+  margin-top: 80px;
+  @include mobile() {
+    .sponsor-all--container {
+      max-width: 800px;
+      width: 90%;
+    }
   }
-  .sponser-all__main,
-  .sponser-all__sub {
+  .sponsor-all__main,
+  .sponsor-all__sponsor,
+  .sponsor-all__partner {
     justify-content: center;
     align-items: center;
   }
-  .sponser-all__main__child,
-  .sponser-all__sub__child {
-    max-width: 250px;
+  .sponsor-all__main__child,
+  .sponsor-all__sponsor__child a img,
+  .sponsor-all__partner__child{
+    border-color: $primary-color;
+    border-width: 2px;
+    border-style: solid;
+    @extend .is-rounded;
+  }
+  .sponsor-all__main__child,
+  .sponsor-all__sponsor__child {
     a {
       /* background-color: white; */
       @extend .image;
@@ -25,46 +35,101 @@
     }
   }
 
-  .sponser-all__main {
-    margin-top: 60px;
+  .sponsor-all__main {
+    margin-top: 3.15rem;
 
-    .sponser-all__main__child {
-      @include desktop() {
-        height: 180px;
-        width: 180px;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        flex-grow: 0;
+    .sponsor-all__main__child {
+      // @include desktop() {
+      position: relative;
+      border-radius: 50%;
+      background: white;
+      flex: 0 0 $sponsor-size-vip;
+      height: $sponsor-size-vip;
+      width: $sponsor-size-vip;
+      margin: 1.5rem;
+      flex-grow: 0;
+
+      @include tablet() {
+        margin: 0 1.5rem;
       }
+
+      // }
       a {
-        @include desktop() {
-          height: 180px;
-          width: 180px;
-          padding: 0;
-        }
+        @extend .middle;
+        // @include desktop() {
+        width: $sponsor-size-vip * 0.889;
+        padding: 0;
+        // }
       }
     }
   }
 
-  .sponser-all__sub {
+  .sponsor-all__sponsor,
+  .sponsor-all__partner {
     margin-top: 5vh;
+    .sponsor-all__sponsor__child {
+      flex: 0 0 $sponsor-size-sponsor;
+      // @include desktop() {
+      height: $sponsor-size-sponsor;
+      width: $sponsor-size-sponsor;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      flex-grow: 0;
+      box-sizing: content-box;
+      // }
 
-    .sponser-all__sub__child {
-      @include desktop() {
-        height: 150px;
-        width: 150px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        flex-grow: 0;
+      @include mobile() {
+        margin: 1.5rem;
+      }
+
+      a,
+      img {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 50%;
+      }
+    }
+    .sponsor-all__partner__child {
+      background: white;
+      border-radius: 50%;
+      flex: 0 0 $sponsor-size-partner;
+      // @include desktop() {
+      height: $sponsor-size-partner;
+      width: $sponsor-size-partner;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      flex-grow: 0;
+      // }
+      @include mobile() {
+        margin: 1.5rem;
       }
 
       a {
         @include desktop() {
-          height: 150px;
-          width: 150px;
+          height: $sponsor-size-partner;
+          width: $sponsor-size-partner;
           padding: 0;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: white;
         }
       }
     }
+  }
+}
+
+.header__sponsor--main{
+  .sponsor--twa{
+    padding-bottom: 25px; /* Yes, you can set padding with <img> ! It's blew my mind! */
+  }
+}
+.sponsor-all .sponsor-all__main .sponsor-all__main__child{
+  .sponsor--twa{
+    border-radius: 0;
+    width: calc( 100% - 20px);
   }
 }

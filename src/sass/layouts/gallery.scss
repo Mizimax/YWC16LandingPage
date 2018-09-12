@@ -3,8 +3,13 @@ $slick-font-path: "../fonts/";
 $slick-loader-path: "../images/icon";
 @import "../slick/slick-theme.scss";
 
+.gallery__container {
+  max-width: 900px;
+  width: 90%;
+}
+
 .gallery__carousel {
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .carousel-nav-right,
@@ -17,6 +22,10 @@ $slick-loader-path: "../images/icon";
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slick-slide {
+  margin: 0 10px;
 }
 
 .carousel {
@@ -33,12 +42,10 @@ $slick-loader-path: "../images/icon";
 
 .carousel-nav-left {
   float: left;
-  margin-left: 8%;
 }
 
 .carousel-nav-right {
   float: right;
-  margin-right: 8%;
 }
 
 .carousel-nav-left,
@@ -47,8 +54,62 @@ $slick-loader-path: "../images/icon";
   color: #969393;
 }
 #carousel {
-  width: 80%;
+  .carousel-item{
+      @include from($desktop) {
+        height: 550px; /* I don't know why, but it doesn't work with `vh` :(  */
+        height: calc( 85vh - 3rem - 20vh);
+        width: auto;
+
+        img{
+          height: 100%;
+          width: auto;
+        }
+    }
+  }
 }
 #carousel-slide {
-  width: 80%;
+  // width: 80%;
+}
+
+/* For Slick  */
+#carousel-nav {
+  height: 20vh;
+  width: calc(100% - 100px);
+  margin-top: 2rem;
+
+  @include mobile(){
+    display: none;
+  }
+
+  .carousel-thumbnail {
+    height: 20vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+    line-height: 1;
+    color: $primary-color;
+    opacity: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 900;
+  }
+  .slick-prev {
+    left: -50px;
+  }
+  .slick-next {
+    right: -50px;
+  }
+  .slick-prev:before {
+    content: "\f104";
+  }
+  .slick-next:before {
+    content: "\f105";
+  }
 }
