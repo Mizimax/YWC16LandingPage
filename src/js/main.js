@@ -78,6 +78,10 @@ $(document).ready(function() {
     }, 500);
   }
 
+  document.querySelector("#header-video").addEventListener('play', function(e) {
+      $(".header__video__poster").fadeOut();
+  }, true);
+
   /*var windowSize = $(window).width();
   if (windowSize > 720) changeVideoSrc(1080);
   else if (windowSize > 480) changeVideoSrc(720);

@@ -88,6 +88,13 @@
 
 .header__video {
   position: relative;
+  .header__video__poster{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
 }
 
 .header__video__logo {
