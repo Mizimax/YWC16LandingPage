@@ -171,12 +171,14 @@ $(document).ready(function() {
     slidesToScroll: 1,
     asNavFor: "#carousel",
     dots: false,
+    autoplay: false,
     centerMode: true,
     focusOnSelect: true,
     responsive: [
       {
         breakpoint: 960,
         settings: {
+          autoplay: false,
           slidesToShow: 3,
           slidesToScroll: 1
         }
@@ -184,6 +186,7 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
+          autoplay: false,
           slidesToShow: 2,
           slidesToScroll: 1
         }
