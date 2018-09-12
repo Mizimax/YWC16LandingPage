@@ -12,12 +12,9 @@
     }
 
     @include mobile() {
-      .contact__social__label {
-        margin-bottom: 3rem;
-      }
       .contact__social__col {
         display: inline-block;
-        padding: 12px 5vw;
+        padding: 0 7.5vw;
       }
     }
     a {
