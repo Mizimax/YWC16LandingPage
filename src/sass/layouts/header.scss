@@ -32,8 +32,8 @@
 }
 
 .header__sponsor--main__child {
-  flex: 0 0 $sponsor-size-vip;
-  height: $sponsor-size-vip;
+  flex: 0 0 $sponsor-size-header;
+  height: $sponsor-size-header;
   border-radius: 50%;
   margin: 20px 35px;
   padding: 12px;
@@ -58,17 +58,15 @@
   @include mobile() {
     display: inline-block;
     &:first-child {
-      margin-left: 0;
-      margin-right: 3vw;
+      margin: 0 3vw 0 1.5vw;
     }
     &:last-child {
-      margin-right: 0;
-      margin-left: 3vw;
+      margin: 0 1.5vw 0 3vw;
     }
 
-    flex: 0 0 ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
-    height: ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
-    width: ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
+    flex: 0 0 ($sponsor-size-header * $sponsor-mobile-resize-ratio);
+    height: ($sponsor-size-header * $sponsor-mobile-resize-ratio);
+    width: ($sponsor-size-header * $sponsor-mobile-resize-ratio);
   }
 }
 
@@ -81,7 +79,7 @@
 }
 
 .header__sponsor--main__child img {
-  width: $sponsor-size-vip;
+  width: $sponsor-size-header;
   height: 100%;
   position: relative;
   z-index: 2;
