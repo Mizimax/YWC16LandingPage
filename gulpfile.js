@@ -23,7 +23,7 @@ gulp.task("sass", function() {
   return gulp
     .src("src/sass/*.scss")
     .pipe(wait(500))
-    .pipe(sass({ errLogToConsole: true }))
+    .pipe(sass({ errLogToConsole: true, outputStyle: 'compressed'}))
     .on("error", swallowError)
     .pipe(gulp.dest("src/css"));
 });
