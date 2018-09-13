@@ -1,0 +1,115 @@
+$zindex-0: 1 !default;
+//Variables
+$zindex-4: 400 !default;
+$control-width-sm: 320px !default;
+$control-width-md: 640px !default;
+$control-width-lg: 960px !default;
+$unit-h: 0.1rem !default;
+$unit-1: 0.2rem !default;
+$unit-2: 0.4rem !default;
+$unit-4: 0.8rem !default;
+$layout-spacing: $unit-2 !default;
+$border-radius: $unit-1 !default;
+
+$dark-color: #454d5d !default;
+$light-color: #fff !default;
+$bg-color: lighten($dark-color, 66%) !default;
+$bg-color-light: $light-color !default;
+
+// Modals
+.modal {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: $layout-spacing;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &:target,
+  &.active {
+    display: flex;
+    opacity: 1;
+    z-index: $zindex-4;
+    .modal-container {
+      max-height: 75vh;
+      max-width: $control-width-md;
+    }
+    .modal-overlay {
+      background: rgba($bg-color, 0.75);
+      bottom: 0;
+      cursor: default;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .modal-container {
+      animation: slide-down 0.2s ease 1;
+      z-index: $zindex-0;
+    }
+  }
+
+  &.modal-sm {
+    .modal-container {
+      max-width: $control-width-sm;
+      padding: 0 $unit-2;
+    }
+  }
+
+  &.modal-lg {
+    .modal-overlay {
+      background: $bg-color-light;
+    }
+
+    .modal-container {
+      box-shadow: none;
+      max-width: $control-width-lg;
+    }
+  }
+}
+
+.modal-container {
+  background: #fff;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  max-width: 0;
+  padding: 0 $unit-4;
+  width: 100%;
+  border: 2px solid $sub-color;
+  transition: 0.5s all;
+
+  &.modal-fullheight {
+    max-height: 100vh;
+  }
+
+  .modal-header {
+    color: $dark-color;
+    padding: 1rem $unit-4 2rem $unit-4;
+  }
+
+  .modal-body {
+    overflow-y: auto;
+    padding: $unit-4;
+    position: relative;
+  }
+
+  .modal-footer {
+    padding: $unit-4 $unit-4 2rem $unit-4;
+    text-align: center;
+  }
+}
+
+.modal-close {
+  float: right;
+  font-size: 24px;
+  color: $primary-color;
+}

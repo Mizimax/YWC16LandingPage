@@ -1,5 +1,11 @@
 var guruInterval;
-$(window).on('load', function () {
+var toggleModal = function() {
+  $(".modal").toggleClass("active");
+};
+var closeModal = function() {
+  $(".modal").removeClass("active");
+};
+$(window).on("load", function() {
   $(".loading-screen").fadeOut();
 });
 
@@ -78,9 +84,13 @@ $(document).ready(function() {
     }, 500);
   }
 
-  document.querySelector("#header-video").addEventListener('play', function(e) {
-      $(".header__video__poster").addClass('video-play');
-  }, true);
+  document.querySelector("#header-video").addEventListener(
+    "play",
+    function(e) {
+      $(".header__video__poster").addClass("video-play");
+    },
+    true
+  );
 
   /*var windowSize = $(window).width();
   if (windowSize > 720) changeVideoSrc(1080);
