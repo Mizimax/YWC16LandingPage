@@ -16,6 +16,18 @@ $light-color: #fff !default;
 $bg-color: lighten($dark-color, 66%) !default;
 $bg-color-light: $light-color !default;
 
+//Animation
+@keyframes zoomin {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 // Modals
 .modal {
   align-items: center;
@@ -35,10 +47,6 @@ $bg-color-light: $light-color !default;
     display: flex;
     opacity: 1;
     z-index: $zindex-4;
-    .modal-container {
-      max-height: 75vh;
-      max-width: $control-width-md;
-    }
     .modal-overlay {
       background: rgba($bg-color, 0.75);
       bottom: 0;
@@ -51,7 +59,7 @@ $bg-color-light: $light-color !default;
     }
 
     .modal-container {
-      animation: slide-down 0.2s ease 1;
+      animation: zoomin 0.2s ease 1;
       z-index: $zindex-0;
     }
   }
@@ -80,12 +88,11 @@ $bg-color-light: $light-color !default;
   border-radius: $border-radius;
   display: flex;
   flex-direction: column;
-  max-height: 0;
-  max-width: 0;
+  max-height: 75vh;
+  max-width: $control-width-md;
   padding: 0 $unit-4;
   width: 100%;
   border: 2px solid $sub-color;
-  transition: 0.5s all;
 
   &.modal-fullheight {
     max-height: 100vh;
