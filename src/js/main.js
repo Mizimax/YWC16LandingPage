@@ -3,7 +3,8 @@ var branchSelected;
 var branchQuestions;
 
 var goToRegis = function() {
-  window.location.href = "register?branch=" + branchSelected;
+  window.location.href =
+    "https://register-ywc16.ywc.in.th/major/" + branchSelected;
 };
 
 var parseQuestion = function(branch) {
@@ -272,21 +273,20 @@ $(document).ready(function() {
   });
 
   //Add registerd stat
-  
-  var registerStat = function(){
-    $.getJSON('https://api.ywc.in.th/users/stat', function(data){
-      if(data.status != "success")
-        return;
-      for(var major in data.payload){
+
+  var registerStat = function() {
+    $.getJSON("https://api.ywc.in.th/users/stat", function(data) {
+      if (data.status != "success") return;
+      for (var major in data.payload) {
         var registerCnt = data.payload[major];
-        if(major == "design")
-          major = "designer";
-        var statSelector = ".register__branch__" + major + " .register__branch__no__regis";
+        if (major == "design") major = "designer";
+        var statSelector =
+          ".register__branch__" + major + " .register__branch__no__regis";
         $(statSelector).text(registerCnt);
       }
-    })
+    });
   };
 
   registerStat();
-  setInterval(registerStat, 10 * 1000)
+  setInterval(registerStat, 10 * 1000);
 });
