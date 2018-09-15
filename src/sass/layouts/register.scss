@@ -116,7 +116,7 @@ $marketing-color: #f797aa;
 .register__branch {
   justify-content: center;
   & > div {
-    flex: 0 0 250px;
+    /* flex: 0 0 250px; */
     margin: 60px 12px 0 12px;
     border: 1.5px solid $sub-color;
     border-radius: 10px;
