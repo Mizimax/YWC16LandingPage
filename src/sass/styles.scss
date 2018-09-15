@@ -27,6 +27,10 @@ body {
   font-size: $sub-header-font-size;
 }
 
+.primary-color {
+  color: $primary-color;
+}
+
 .header-font {
   @include headerFont();
 }

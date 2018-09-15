@@ -176,7 +176,7 @@
                 หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" onclick="toggleModal()">
+                <a class="button button--regis" onclick="openModal('content')">
                   รายละเอียด
                 </a>
               </div>
@@ -194,7 +194,7 @@
                 เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" onclick="toggleModal()">
+                <a class="button button--regis" onclick="openModal('designer')">
                   รายละเอียด
                 </a>
               </div>
@@ -214,7 +214,7 @@
                 ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" onclick="toggleModal()">
+                <a class="button button--regis" onclick="openModal('programming')">
                   รายละเอียด
                 </a>
               </div>
@@ -233,7 +233,7 @@
 
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" onclick="toggleModal()">
+                <a class="button button--regis" onclick="openModal('marketing')">
                   รายละเอียด
                 </a>
               </div>
@@ -647,8 +647,8 @@
         </div>
       </footer>
     </section>
-    <div class="modal" id="modal-id">
-      <a href="#close" class="modal-overlay" aria-label="Close" onclick="toggleModal()"></a>
+    <div id="modal-main" class="modal modal-lg" id="modal-id">
+      <a class="modal-overlay" aria-label="Close" onclick="closeModal()"></a>
       <div class="modal-container">
         <div class="modal-header">
           <i class="fa fa-times modal-close pointer" aria-label="Close" onclick="closeModal()"></i>
@@ -656,20 +656,82 @@
         <div class="modal-body">
           <div class="content">
             <!-- content here -->
-            <div class="register__branch__designer" align="center">
-              <img src="images/branch/designer.svg" alt="Web DESIGN" width="200">
+            <div class="modal__web__content modal__content" align="center">
+              <img src="images/branch/content.svg" alt="Web Content" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__content__name">
+                  WEB CONTENT
+                </h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์</div>
+                  เพราะเนื้อหาในเว็บไซต์ คือหัวใจหลักของการดึงดูดความสนใจ ผ่านการใช้ความคิดสร้างสรรค์ กลั่นกรองเนื้อหาให้ออกมาได้ตรงใจกลุ่มเป้าหมาย
+                  ทำให้เว็บไซต์น่าติดตาม และสร้างประโยชน์ให้กับผู้บริโภค
+                </div>
+              </div>
+            </div>
+            <div class="modal__web__marketing modal__content" align="center">
+              <img src="images/branch/marketing.svg" alt="Web MARKETING" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__marketing__name">WEB MARKETING</h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด</div>
+                  สำหรับคนรุ่นใหม่ไฟแรงที่มีความสนใจการสร้างกลยุทธ์ทางการตลาด ที่จะสร้างให้เว็บไซต์โด่งดัง วางแผนธุรกิจให้กับทุกก้าวของเว็บไซต์
+                  พร้อมศึกษากลุ่มเป้าหมาย และสร้างคุณค่าให้เว็บไซต์และดึงดูดใจให้ทุกคนเข้ามาในเว็บไซต์ให้มากที่สุด
+                </div>
+              </div>
+            </div>
+            <div class="modal__web__programming modal__content" align="center">
+              <img src="images/branch/programming.svg" alt="Web PROGRAMMING" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__programming__name">WEB PROGRAMMING</h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง</div>
+                  นักพัฒนาเว็บไซต์ที่ใช้ทักษะและความเชี่ยวชาญในการ เปลี่ยนโค้ดนับพันบรรทัดให้กลายเป็นความอัศจรรย์บนโลกดิจิตัล พร้อมผลักดันให้เว็บไซต์เกิดขึ้นและใช้งานได้จริง
+                  พร้อมรับทุกการใช้งานจากทุกมุมโลก
+                </div>
+              </div>
+            </div>
+            <div class="modal__web__designer modal__content" align="center">
+              <img src="images/branch/designer.svg" alt="Web DESIGN" width="170">
               <div class="register__branch__content__detail">
                 <h3 class="register__branch__name register__branch__designer__name">WEB DESIGN</h3>
                 <div class="register__branch__desc">
-                  เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน
+                  <div class="modal__header">เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน</div>
+                  เพราะความสวยงามเป็นหน้าตาของเว็บไซต์ นี่สาขาสำหรับนักออกแบบที่พร้อมจะระเบิดจินตนาการและความคิดสร้างสรรค์
+                  <br>เพื่อออกแบบเว็บให้สวยงามสะดุดตา และตอบสนองทุกการใช้งาน สร้างความสะดวกให้แก่ผู้ใช้ได้
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__question">
+            <div class="primary-color pointer" align="center" onclick="toggleShowDetail()">ดูตัวอย่างคำถาม
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="modal__question__detail" align="left">
+              <div class="question">
+
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <a class="button button--regis font-normal" href="/register?branch=content">
+          <a class="button button--regis font-normal" onclick="openConfirmModal()">
             Register
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="modal-confirm" class="modal modal-sm">
+      <a class="modal-overlay" aria-label="Close" onclick="closeConfirmModal()"></a>
+      <div class="modal-container">
+        <div class="modal-body modal-confirm">
+          เมื่อน้อง ๆ กดยืนยันไปแล้ว
+          <br>จะไม่สามารถเปลี่ยนสาขาที่ต้องการสมัครได้ในภายหลัง
+          <br>น้อง ๆ แน่ใจแล้วใช่ไหม ?
+        </div>
+        <div class="modal-footer">
+          <a class="button button--regis font-normal" href="/register?branch=content">
+            Confirm
           </a>
         </div>
       </div>
