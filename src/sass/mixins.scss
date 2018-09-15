@@ -6,15 +6,15 @@
 }
 
 @mixin headerFont {
-  font-family: $header-font, sans-serif;
+  font-family: $header-font, "Helvetica", sans-serif;
 }
 
 @mixin subHeaderFont {
-  font-family: $subheader-font, sans-serif;
+  font-family: $subheader-font, "Arial", sans-serif;
 }
 
 @mixin contentFont {
-  font-family: $content-font, sans-serif;
+  font-family: $content-font, "Tahoma", sans-serif;
 }
 
 @mixin enableGrayscale {
