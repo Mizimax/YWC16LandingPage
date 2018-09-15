@@ -2,6 +2,10 @@ var guruInterval;
 var branchSelected;
 var branchQuestions;
 
+var goToRegis = function() {
+  window.location.href = "register?branch=" + branchSelected;
+};
+
 var parseQuestion = function(branch) {
   if (branch === "designer") branch = "design";
   var question = branchQuestions[branch];
