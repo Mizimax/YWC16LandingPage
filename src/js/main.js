@@ -11,6 +11,10 @@ var parseQuestion = function(branch) {
   if (branch === "designer") branch = "design";
   var question = branchQuestions[branch];
   var text = "";
+
+  // Hard coded: Dammit!
+  if(branch == "content")
+    text += '<div class="question-header"><div>ให้น้องตอบคำถามต่อไปนี้โดยกำหนดสถานการณ์ในฐานะ Content Creator มาให้ โดยอธิบายว่าจะทำคอนเทนต์รูปแบบไหน (ภาพ, บทความ, วิดีโอ หรืออื่น ๆ) เนื้อหาเป็นอย่างไร มีวิธีการสื่อสารแบบไหน เขียนตัวอย่างเนื้อหาที่จะใช้จริงมาพอเข้าใจ</div></div>';
   question.forEach(function(ele, i) {
     text += "<div class='question-header question" + i + 1 + "'>";
     text += "<div class='question-index'>คำถามข้อที่ " + i + "</div>";
