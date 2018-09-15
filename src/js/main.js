@@ -259,7 +259,7 @@ $(document).ready(function() {
 
   //api connect
   $.ajax({
-    url: "http://api.ywc.in.th/questions",
+    url: "https://api.ywc.in.th/questions",
     methods: "get",
     success: function(res) {
       if (res.status === "success") {

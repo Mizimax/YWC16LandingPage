@@ -50,10 +50,21 @@ $bg-color-light: $light-color !default;
   top: 0;
   width: 100vw;
 
+  .register__branch__name {
+    font-size: 22px;
+  }
+
+  .button {
+    @include headerFont();
+    font-weight: 600 !important;
+    padding: 10px 42px;
+  }
+
   &#modal-confirm {
     .modal-container {
       background: white;
       .modal-confirm {
+        margin-top: 20px;
         text-align: center;
         font-size: 22px;
         color: $primary-color;
@@ -125,7 +136,7 @@ $bg-color-light: $light-color !default;
   border-radius: $border-radius;
   display: flex;
   flex-direction: column;
-  max-height: 75vh;
+  max-height: 80vh;
   max-width: $control-width-md;
   padding: 0 $unit-4;
   width: 92%;
@@ -160,7 +171,7 @@ $bg-color-light: $light-color !default;
   }
 
   .modal-footer {
-    padding: $unit-4 $unit-4 2rem $unit-4;
+    padding: 1.5rem $unit-4 2.5rem $unit-4;
     text-align: center;
   }
 }
@@ -178,7 +189,6 @@ $bg-color-light: $light-color !default;
   .modal__question__detail {
     max-height: 0;
     background: white;
-    // margin: 20px 50px;
 
     border: 0;
     overflow: hidden;
@@ -191,6 +201,9 @@ $bg-color-light: $light-color !default;
   }
   .question-header {
     padding: 20px 30px 0 30px;
+    &:last-child {
+      padding-bottom: 20px;
+    }
     .question-index {
       font-size: 21px;
       font-weight: bold;
@@ -199,6 +212,7 @@ $bg-color-light: $light-color !default;
   &.active {
     .modal__question__detail {
       max-height: 100vh;
+      margin-top: 20px;
       // border: 3px solid $sub-color;
     }
     .fa-chevron-down {
