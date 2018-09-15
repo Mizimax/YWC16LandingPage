@@ -12,8 +12,8 @@ var parseQuestion = function(branch) {
   var question = branchQuestions[branch];
   var text = "";
   question.forEach(function(ele, i) {
-    text += "<div class='question-header question" + i + 1 + "'>";
-    text += "<div class='question-index'>คำถามข้อที่ " + i + "</div>";
+    text += "<div class='question-header question" + (i + 1) + "'>";
+    text += "<div class='question-index'>คำถามข้อที่ " + (i + 1) + "</div>";
     text += "<div>" + ele + "</div>";
     text += "</div>";
   });
