@@ -1,7 +1,66 @@
 var guruInterval;
-$(window).on('load', function () {
+var branchSelected;
+var branchQuestions;
+
+var goToRegis = function() {
+  window.location.href = "register?branch=" + branchSelected;
+};
+
+var parseQuestion = function(branch) {
+  if (branch === "designer") branch = "design";
+  var question = branchQuestions[branch];
+  var text = "";
+  question.forEach(function(ele, i) {
+    text += "<div class='question-header question" + i + 1 + "'>";
+    text += "<div class='question-index'>คำถามข้อที่ " + i + "</div>";
+    text += "<div>" + ele + "</div>";
+    text += "</div>";
+  });
+  $(".question").html(text);
+};
+
+var openModal = function(branch) {
+  var scrollBar = window.innerWidth - document.documentElement.clientWidth - 8;
+  $("html, body").css("overflowY", "hidden");
+  $("#modal-main").css("overflowY", "auto");
+  $("html, body").css("marginRight", scrollBar + "px");
+
+  $("#modal-main").addClass("active");
+  $(".modal__content.active").removeClass("active");
+  $(".modal__web__" + branch).toggleClass("active");
+  branchSelected = branch;
+  parseQuestion(branch);
+};
+
+var closeModal = function() {
+  closeDetail();
+  $("html, body").css("overflowY", "auto");
+  $("html, body").css("marginRight", "0");
+
+  $("#modal-main").removeClass("active");
+};
+
+var openConfirmModal = function() {
+  $("#modal-confirm").addClass("active");
+};
+
+$(window).on("load", function() {
   $(".loading-screen").fadeOut();
 });
+
+var closeConfirmModal = function() {
+  $("#modal-confirm").removeClass("active");
+};
+
+var toggleShowDetail = function() {
+  $(".modal__question").toggleClass("active");
+  $("#modal-main .modal-container").css("maxHeight", "initial");
+  $("#modal-main").css("overflowY", "auto");
+};
+
+var closeDetail = function() {
+  $(".modal__question").removeClass("active");
+};
 
 $(document).ready(function() {
   var scroll = new SmoothScroll('a[href*="#"]');
@@ -78,9 +137,13 @@ $(document).ready(function() {
     }, 500);
   }
 
-  document.querySelector("#header-video").addEventListener('play', function(e) {
-      $(".header__video__poster").addClass('video-play');
-  }, true);
+  document.querySelector("#header-video").addEventListener(
+    "play",
+    function(e) {
+      $(".header__video__poster").addClass("video-play");
+    },
+    true
+  );
 
   /*var windowSize = $(window).width();
   if (windowSize > 720) changeVideoSrc(1080);
@@ -192,5 +255,19 @@ $(document).ready(function() {
         }
       }
     ]
+  });
+
+  //api connect
+  $.ajax({
+    url: "http://api.ywc.in.th/questions",
+    methods: "get",
+    success: function(res) {
+      if (res.status === "success") {
+        branchQuestions = res.payload;
+      }
+    },
+    error: function(res) {
+      console.log(res);
+    }
   });
 });

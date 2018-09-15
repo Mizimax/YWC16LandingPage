@@ -9,14 +9,15 @@
   <meta property="og:url" content="https://ywc16.ywc.in.th" />
   <meta property="og:type" content="product" />
   <meta property="og:title" content="16th Young Webmaster Camp: Ready to Disrupt" />
-  <meta property="og:description" content="ค่ายสร้างเว็บเพียงหนึ่งเดียวของไทย พร้อมค้นหาสายเลือดใหม่ ที่พร้อมจะ Disrupt ทุกการความเคลื่อนไหวบนโลกดิจิทัลไปพร้อมกับพวกเรา" />
+  <meta property="og:description" content="ค่ายสร้างเว็บเพียงหนึ่งเดียวของไทย พร้อมค้นหาสายเลือดใหม่ ที่พร้อมจะ Disrupt ทุกการความเคลื่อนไหวบนโลกดิจิทัลไปพร้อมกับพวกเรา"
+  />
   <meta property="og:image" content="https://ywc16.ywc.in.th/images/OGImage.png" />
   <title>16th Young Webmaster Camp: Ready to Disrupt</title>
   <link rel="canonical" href="https://ywc16.ywc.in.th" />
   <link rel="preload" href="css/styles.css?_version=1.0" as="style">
   <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff"  as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.ttf"   as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.ttf" as="font" crossorigin="anonymous">
   <style>
     /* Loading screen - critical section */
 
@@ -33,7 +34,7 @@
     }
 
     .loading-screen:before {
-      content: " ";
+      content: "";
       position: absolute;
       width: 10vw;
       height: 10vw;
@@ -114,7 +115,7 @@
           <!-- fallback image in CSS -->
         </object>
       </div>
-      <div class="header__video">
+      <div class=" header__video">
         <div class="header__video__poster"></div>
         <video class="header__video__url" id="header-video" autoplay loop muted poster="images/cityanimate-poster.jpg">
           <source src="videos/cityanimate-1080p.webm" type="video/webm">
@@ -130,10 +131,14 @@
 
       <div class="header__sponsor--main header__logo--margin">
         <div class="header__sponsor--main__child">
-          <a href="https://www.webmaster.or.th/"><img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association"></a>
+          <a href="https://www.webmaster.or.th/">
+            <img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
+          </a>
         </div>
         <div class="header__sponsor--main__child">
-          <a href="https://www.cpall.co.th/"><img src="images/sponsor/CPALL.svg" alt="CP ALL"></a>
+          <a href="https://www.cpall.co.th/">
+            <img src="images/sponsor/CPALL.svg" alt="CP ALL">
+          </a>
         </div>
       </div>
     </div>
@@ -156,8 +161,8 @@
         <h2>Register</h2>
         <div class="register__label__sub label--sub">สมัครค่าย</div>
       </div>
-      <div class="register__container register__container--padding container">
-        <div class="register__branch columns is-multiline">
+      <div class="register__container columns is-multiline register__container--padding">
+        <div class="register__branch columns is-multiline column">
           <div class="register__branch__content column">
             <img class="register__branch__image" src="images/branch/content.svg" alt="Web Content" width="250">
             <div class="register__branch__content__detail">
@@ -172,7 +177,7 @@
                 หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" href="/register?branch=content">
+                <a class="button button--regis" onclick="openModal('content')">
                   รายละเอียด
                 </a>
               </div>
@@ -190,12 +195,14 @@
                 เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" href="/register?branch=design">
+                <a class="button button--regis" onclick="openModal('designer')">
                   รายละเอียด
                 </a>
               </div>
             </div>
           </div>
+        </div>
+        <div class="register__branch columns is-multiline column">
           <div class="register__branch__programming column">
             <img class="register__branch__image" src="images/branch/programming.svg" alt="Web PROGRAMMING" width="250">
             <div class="register__branch__content__detail">
@@ -208,7 +215,7 @@
                 ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" href="/register?branch=programming">
+                <a class="button button--regis" onclick="openModal('programming')">
                   รายละเอียด
                 </a>
               </div>
@@ -227,7 +234,7 @@
 
               </div>
               <div class="register__branch__detail">
-                <a class="button button--regis" href="/register?branch=marketing">
+                <a class="button button--regis" onclick="openModal('marketing')">
                   รายละเอียด
                 </a>
               </div>
@@ -308,32 +315,33 @@
             </div>
           </div>
           <div class="guru__children columns">
-            <div class="guru__child guru__child__img--1 column active" src="./images/speaker/1.jpg" style="background-image: url('./images/speaker/1.jpg');"
-              name="เจริญ ลักษณ์เลิศกุล (เจ)" corp="Assistant Director - Strategic planning and Digital business : Online Station, True Media"></div>
-            <div class="guru__child guru__child__img--2 column" src="./images/speaker/2.jpg" style="background-image: url('./images/speaker/2.jpg');"
-              name="วรัทธน์ วงศ์มณีกิจ (ตั้ง)" corp="Product owner of WISESIGHT Insight platform"></div>
-            <div class="guru__child guru__child__img--3 column" src="./images/speaker/3.jpg" style="background-image: url('./images/speaker/3.jpg');"
-              name="วโรรส โรจนะ (โน้ต)" corp="CEO Dek-D Interactive Co., LTD."></div>
-            <div class="guru__child guru__child__img--4 column" src="./images/speaker/4.jpg" style="background-image: url('./images/speaker/4.jpg');"
-              name="อภิศิลป์ ตรุงกานนท์ (บอย)" corp="Co-founder & CTO, Pantip.com"></div>
-            <div class="guru__child guru__child__img--5 column" src="./images/speaker/5.jpg" style="background-image: url('./images/speaker/5.jpg');"
-              name="อินทนนท์ ปัญญาโสภา (เบนซ์)" corp="Co-founder at Grappik"></div>
-            <div class="guru__child guru__child--final  guru__child__img--6  column" src="./images/speaker/6.jpg" style="background-image: url('./images/speaker/6.jpg');"
-              name="จักรพงษ์ คงมาลัย (ปอง)" corp="Managing Director, Moonshot Digital Co., Ltd"></div>
-            <div class="guru__child guru__child__img--7 column" src="./images/speaker/7.jpg" style="background-image: url('./images/speaker/7.jpg');"
-              name="ภาวุธ  พงษ์วิทยภานุ (ป้อม)" corp="CEO & Founder Tarad Dot Com Group"></div>
-            <div class="guru__child guru__child__img--8 column" src="./images/speaker/8.jpg" style="background-image: url('./images/speaker/8.jpg');"
-              name="ศิวัตร เชาวรียวงษ์ (ป้อม)" corp="นายกสมาคมโฆษณาดิจิทัล (ประเทศไทย)"></div>
-            <div class="guru__child guru__child__img--9 column" src="./images/speaker/9.jpg" style="background-image: url('./images/speaker/9.jpg');"
-              name="เมธปริยา คำนวนวุฒิ (ว่าน)" corp="ผู้จัดการฝ่ายการตลาด บริษัท แอลเอ็นดับเบิ้ลยู จำกัด และ กรรมการสมาคมผู้ดูแลเว็บไทย"></div>
-            <div class="guru__child guru__child__img--10 column" src="./images/speaker/10.jpg" style="background-image: url('./images/speaker/10.jpg');"
-              name="คนที่หนึ่ง แสงหิรัญ (หนึ่ง)" corp="Co-Founder - Fulfeel Design and Construction Co., Ltd"></div>
-            <div class="guru__child guru__child__img--11 column" src="./images/speaker/11.jpg" style="background-image: url('./images/speaker/11.jpg');"
-              name="ขจร เจียรนัยพานิชย์ (เอ็ม)" corp="Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker"></div>
-            <div class="guru__child guru__child--final guru__child__img--12 column" src="./images/speaker/12.jpg" style="background-image: url('./images/speaker/12.jpg');"
-              name="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)" corp="Managing Director of Bold Biznet Co., Ltd."></div>
-            <div class="guru__child guru__child__img--13 column" src="./images/speaker/13.jpg" style="background-image: url('./images/speaker/13.jpg');"
-              name="ศิระ สัจจินานนท์ (ฮันท์)" corp="CTO and Co-Founder Jitta"></div>
+            <div class="guru__child guru__child__img--1 column active" src="./images/speaker/1.jpg" style="background-image:
+          url( './images/speaker/1.jpg');" name="เจริญ ลักษณ์เลิศกุล (เจ)" corp="Assistant Director - Strategic planning and Digital business : Online
+          Station, True Media"></div>
+            <div class="guru__child guru__child__img--2 column" src="./images/speaker/2.jpg" style="background-image:
+          url( './images/speaker/2.jpg');" name="วรัทธน์ วงศ์มณีกิจ (ตั้ง)" corp="Product owner of WISESIGHT Insight platform"></div>
+            <div class="guru__child guru__child__img--3 column" src="./images/speaker/3.jpg" style="background-image:
+          url( './images/speaker/3.jpg');" name="วโรรส โรจนะ (โน้ต)" corp="CEO Dek-D Interactive Co., LTD."></div>
+            <div class="guru__child guru__child__img--4 column" src="./images/speaker/4.jpg" style="background-image:
+          url( './images/speaker/4.jpg');" name="อภิศิลป์ ตรุงกานนท์ (บอย)" corp="Co-founder & CTO, Pantip.com"></div>
+            <div class="guru__child guru__child__img--5 column" src="./images/speaker/5.jpg" style="background-image:
+          url( './images/speaker/5.jpg');" name="อินทนนท์ ปัญญาโสภา (เบนซ์)" corp="Co-founder at Grappik"></div>
+            <div class="guru__child guru__child--final guru__child__img--6 column" src="./images/speaker/6.jpg
+         " style="background-image: url( './images/speaker/6.jpg');" name="จักรพงษ์ คงมาลัย (ปอง)" corp="Managing Director, Moonshot Digital Co., Ltd"></div>
+            <div class="guru__child guru__child__img--7 column" src="./images/speaker/7.jpg" style="background-image:
+          url( './images/speaker/7.jpg');" name="ภาวุธ พงษ์วิทยภานุ (ป้อม)" corp="CEO & Founder Tarad Dot Com Group"></div>
+            <div class="guru__child guru__child__img--8 column" src="./images/speaker/8.jpg" style="background-image:
+          url( './images/speaker/8.jpg');" name="ศิวัตร เชาวรียวงษ์ (ป้อม)" corp="นายกสมาคมโฆษณาดิจิทัล (ประเทศไทย)"></div>
+            <div class="guru__child guru__child__img--9 column" src="./images/speaker/9.jpg" style="background-image:
+          url( './images/speaker/9.jpg');" name="เมธปริยา คำนวนวุฒิ (ว่าน)" corp="ผู้จัดการฝ่ายการตลาด บริษัท แอลเอ็นดับเบิ้ลยู จำกัด และ กรรมการสมาคมผู้ดูแลเว็บไทย"></div>
+            <div class="guru__child guru__child__img--10 column" src="./images/speaker/10.jpg" style="background-image:
+          url( './images/speaker/10.jpg');" name="คนที่หนึ่ง แสงหิรัญ (หนึ่ง)" corp="Co-Founder - Fulfeel Design and Construction Co., Ltd"></div>
+            <div class="guru__child guru__child__img--11 column" src="./images/speaker/11.jpg" style="background-image:
+          url( './images/speaker/11.jpg');" name="ขจร เจียรนัยพานิชย์ (เอ็ม)" corp="Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker"></div>
+            <div class="guru__child guru__child--final guru__child__img--12 column" src="./images/speaker/12.jpg
+         " style="background-image: url( './images/speaker/12.jpg');" name="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)" corp="Managing Director of Bold Biznet Co., Ltd."></div>
+            <div class="guru__child guru__child__img--13 column" src="./images/speaker/13.jpg" style="background-image:
+          url( './images/speaker/13.jpg');" name="ศิระ สัจจินานนท์ (ฮันท์)" corp="CTO and Co-Founder Jitta"></div>
           </div>
         </div>
       </div>
@@ -404,58 +412,58 @@
             </div>
             <div id="carousel-nav" class="carousel-container is-hidden-mobile">
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/1.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/1.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/2.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/2.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/3.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/3.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/4.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/4.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/5.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/5.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/6.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/6.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/7.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/7.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/8.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/8.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/9.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/9.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/10.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/10.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/11.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/11.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/12.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/12.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/13.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/13.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/14.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/14.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/15.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/15.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/16.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/16.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/17.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/17.jpg');"></div>
               </div>
               <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url('images/gallery/ywc15/18.jpg');"></div>
+                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15/18.jpg');"></div>
               </div>
             </div>
           </div>
@@ -619,10 +627,14 @@
       <footer class="footer">
         <div class="header__sponsor--main header__logo--margin">
           <div class="header__sponsor--main__child">
-            <a href="https://www.webmaster.or.th/"><img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association"></a>
+            <a href="https://www.webmaster.or.th/">
+              <img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
+            </a>
           </div>
           <div class="header__sponsor--main__child">
-            <a href="https://www.cpall.co.th/"><img src="images/sponsor/CPALL.svg" alt="CP ALL"></a>
+            <a href="https://www.cpall.co.th/">
+              <img src="images/sponsor/CPALL.svg" alt="CP ALL">
+            </a>
           </div>
         </div>
         <div class="footer__content container">
@@ -636,6 +648,95 @@
         </div>
       </footer>
     </section>
+    <div id="modal-main" class="modal modal-lg" id="modal-id">
+      <a class="modal-overlay" aria-label="Close" onclick="closeModal()"></a>
+      <div class="modal-container">
+        <div class="modal-header">
+          <i class="fa fa-times modal-close pointer" aria-label="Close" onclick="closeModal()"></i>
+        </div>
+        <div class="modal-body">
+          <div class="content">
+            <!-- content here -->
+            <div class="modal__web__content modal__content" align="center">
+              <img src="images/branch/content.svg" alt="Web Content" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__content__name">
+                  WEB CONTENT
+                </h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์</div>
+                  เพราะเนื้อหาในเว็บไซต์ คือหัวใจหลักของการดึงดูดความสนใจ ผ่านการใช้ความคิดสร้างสรรค์ กลั่นกรองเนื้อหาให้ออกมาได้ตรงใจกลุ่มเป้าหมาย
+                  ทำให้เว็บไซต์น่าติดตาม และสร้างประโยชน์ให้กับผู้บริโภค
+                </div>
+              </div>
+            </div>
+            <div class="modal__web__marketing modal__content" align="center">
+              <img src="images/branch/marketing.svg" alt="Web MARKETING" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__marketing__name">WEB MARKETING</h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด</div>
+                  สำหรับคนรุ่นใหม่ไฟแรงที่มีความสนใจการสร้างกลยุทธ์ทางการตลาด ที่จะสร้างให้เว็บไซต์โด่งดัง วางแผนธุรกิจให้กับทุกก้าวของเว็บไซต์
+                  พร้อมศึกษากลุ่มเป้าหมาย และสร้างคุณค่าให้เว็บไซต์และดึงดูดใจให้ทุกคนเข้ามาในเว็บไซต์ให้มากที่สุด
+                </div>
+              </div>
+            </div>
+            <div class="modal__web__programming modal__content" align="center">
+              <img src="images/branch/programming.svg" alt="Web PROGRAMMING" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__programming__name">WEB PROGRAMMING</h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง</div>
+                  นักพัฒนาเว็บไซต์ที่ใช้ทักษะและความเชี่ยวชาญในการ เปลี่ยนโค้ดนับพันบรรทัดให้กลายเป็นความอัศจรรย์บนโลกดิจิตัล พร้อมผลักดันให้เว็บไซต์เกิดขึ้นและใช้งานได้จริง
+                  พร้อมรับทุกการใช้งานจากทุกมุมโลก
+                </div>
+              </div>
+            </div>
+            <div class="modal__web__designer modal__content" align="center">
+              <img src="images/branch/designer.svg" alt="Web DESIGN" width="170">
+              <div class="register__branch__content__detail">
+                <h3 class="register__branch__name register__branch__designer__name">WEB DESIGN</h3>
+                <div class="register__branch__desc">
+                  <div class="modal__header">เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน</div>
+                  เพราะความสวยงามเป็นหน้าตาของเว็บไซต์ นี่สาขาสำหรับนักออกแบบที่พร้อมจะระเบิดจินตนาการและความคิดสร้างสรรค์
+                  <br>เพื่อออกแบบเว็บให้สวยงามสะดุดตา และตอบสนองทุกการใช้งาน สร้างความสะดวกให้แก่ผู้ใช้ได้
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__question">
+            <div class="primary-color pointer" align="center" onclick="toggleShowDetail()">ดูตัวอย่างคำถาม
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="modal__question__detail" align="left">
+              <div class="question">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="button button--regis font-normal" onclick="openConfirmModal()">
+            Register
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="modal-confirm" class="modal modal-sm">
+      <a class="modal-overlay" aria-label="Close" onclick="closeConfirmModal()"></a>
+      <div class="modal-container">
+        <div class="modal-body modal-confirm">
+          เมื่อน้อง ๆ กดยืนยันไปแล้ว
+          <br>จะไม่สามารถเปลี่ยนสาขาที่ต้องการสมัครได้ในภายหลัง
+          <br>น้อง ๆ แน่ใจแล้วใช่ไหม ?
+        </div>
+        <div class="modal-footer">
+          <a class="button button--regis font-normal" onclick="goToRegis()">
+            Confirm
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
 

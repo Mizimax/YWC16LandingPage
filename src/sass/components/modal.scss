@@ -1,0 +1,216 @@
+$zindex-0: 1 !default;
+//Variables
+$zindex-4: 400 !default;
+$control-width-sm: 480px !default;
+$control-width-md: 640px !default;
+$control-width-lg: 960px !default;
+$unit-h: 0.1rem !default;
+$unit-1: 0.2rem !default;
+$unit-2: 0.4rem !default;
+$unit-4: 0.8rem !default;
+$layout-spacing: $unit-2 !default;
+$border-radius: $unit-1 !default;
+
+$dark-color: #454d5d !default;
+$light-color: #fff !default;
+$bg-color: lighten($dark-color, 66%) !default;
+$bg-color-light: $light-color !default;
+
+//Animation
+@keyframes zoomin {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-scroll {
+  position: absolute;
+  top: 50px;
+  max-height: initial !important;
+  margin-bottom: 50px;
+}
+
+// Modals
+.modal {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: $layout-spacing;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+
+  &#modal-confirm {
+    .modal-container {
+      background: white;
+      .modal-confirm {
+        text-align: center;
+        font-size: 22px;
+        color: $primary-color;
+        @include subHeaderFont();
+      }
+    }
+    &.active {
+      .modal-overlay {
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  &:target,
+  &.active {
+    display: flex;
+    opacity: 1;
+    z-index: $zindex-4;
+    .modal-overlay {
+      background: rgba($bg-color, 0.75);
+      bottom: 0;
+      cursor: default;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .modal-container {
+      animation: zoomin 0.2s ease 1;
+      z-index: $zindex-0;
+      background-image: url("../../images/modal/modal-bg.png"),
+        url("../../images/modal/bg.png");
+      background-size: 100% auto, 100% 100%;
+      background-position: bottom center, center;
+      background-repeat: no-repeat, no-repeat;
+      transition: 0.2s all;
+      @include mobile() {
+        position: absolute;
+        top: 50px;
+        max-height: initial;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &.modal-sm {
+    .modal-container {
+      max-width: $control-width-sm;
+      padding: 0 $unit-2;
+    }
+  }
+
+  &.modal-lg {
+    .modal-overlay {
+      // background: $bg-color-light;
+    }
+
+    .modal-container {
+      box-shadow: none;
+      max-width: $control-width-lg;
+    }
+  }
+}
+
+.modal-container {
+  background: #fff;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  max-width: $control-width-md;
+  padding: 0 $unit-4;
+  width: 92%;
+  border: 2px solid $sub-color;
+
+  &.modal-fullheight {
+    max-height: 100vh;
+  }
+
+  .modal-header {
+    position: relative;
+    color: $dark-color;
+    padding: 1rem $unit-4 2rem $unit-4;
+  }
+
+  .modal-body {
+    padding: $unit-4;
+    position: relative;
+    .modal__header {
+      color: $primary-color;
+    }
+
+    .modal__content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .register__branch__desc {
+      font-size: 20px;
+    }
+  }
+
+  .modal-footer {
+    padding: $unit-4 $unit-4 2rem $unit-4;
+    text-align: center;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  right: 5vw;
+  top: 5vw;
+  z-index: 600;
+  font-size: 24px;
+  color: $primary-color;
+}
+
+.modal__question {
+  .modal__question__detail {
+    max-height: 0;
+    background: white;
+    // margin: 20px 50px;
+
+    border: 0;
+    overflow: hidden;
+    transition: 0.8s max-height;
+  }
+  .question {
+    color: $primary-color;
+    font-size: 20px;
+    @include subHeaderFont();
+  }
+  .question-header {
+    padding: 20px 30px 0 30px;
+    .question-index {
+      font-size: 21px;
+      font-weight: bold;
+    }
+  }
+  &.active {
+    .modal__question__detail {
+      max-height: 100vh;
+      // border: 3px solid $sub-color;
+    }
+    .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+    .primary-color {
+      font-weight: bold;
+    }
+  }
+  .fa-chevron-down {
+    margin-left: 8px;
+    transition: 0.3s all;
+    font-size: 20px;
+  }
+}

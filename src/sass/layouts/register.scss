@@ -10,10 +10,26 @@ $marketing-color: #f797aa;
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 100% auto;
-}
-
-.register__branch {
-  padding: 0 20px;
+  .register__container {
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width: $tablet) {
+      .register__branch {
+        &:first-child {
+          justify-content: flex-end;
+        }
+        &:last-child {
+          justify-content: flex-start;
+        }
+      }
+    }
+    .columns:last-child {
+      margin-bottom: 0;
+    }
+    .columns:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .register__branch__name {
@@ -99,7 +115,7 @@ $marketing-color: #f797aa;
 
 .register__branch {
   justify-content: center;
-  .column {
+  & > div {
     flex: 0 0 250px;
     margin: 60px 12px 0 12px;
     border: 1.5px solid $sub-color;

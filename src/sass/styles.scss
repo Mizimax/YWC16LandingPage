@@ -27,6 +27,10 @@ body {
   font-size: $sub-header-font-size;
 }
 
+.primary-color {
+  color: $primary-color;
+}
+
 .header-font {
   @include headerFont();
 }
@@ -51,15 +55,23 @@ body {
   cursor: pointer;
 }
 
+.font-bold {
+  font-weight: bold !important;
+}
+
+.font-normal {
+  font-weight: normal !important;
+}
+
 .hide {
   display: none;
 }
 
-.header-label{
+.header-label {
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
-  h2{
+  h2 {
     display: inline-block;
     box-sizing: content-box;
     position: relative;
@@ -70,7 +82,7 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     background-color: $light-color;
-    background-image: url('../images/title/title.png');
+    background-image: url("../images/title/title.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +96,8 @@ body {
     border-radius: 0.25em;
     text-transform: uppercase;
 
-    &:before, &:after{
+    &:before,
+    &:after {
       content: " ";
       width: 24px;
       height: 36px;
@@ -95,13 +108,13 @@ body {
       background-size: contain;
     }
 
-    &:before{
+    &:before {
       right: 1px;
       top: -18px;
       background-image: url(../images/title/title-right.svg);
     }
 
-    &:after{
+    &:after {
       left: -16px;
       bottom: -18px;
       width: 20px;
@@ -113,7 +126,6 @@ body {
 @import "layouts/header.scss";
 @import "layouts/grid.scss";
 @import "layouts/section.scss";
-
 @import "layouts/whatisywc.scss";
 @import "layouts/timeline.scss";
 @import "layouts/register.scss";
@@ -127,3 +139,4 @@ body {
 @import "components/label.scss";
 @import "components/navigator.scss";
 @import "components/free.scss";
+@import "components/modal.scss";
