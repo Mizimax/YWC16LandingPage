@@ -3,9 +3,7 @@ $separator-margin-ratio: (140/1366);
 section.contact-footer {
   overflow-x: hidden;
 
-  padding-top: calc(
-    (100vw * #{$separator-margin-ratio}) + 10.25vh
-  ) !important; /* fight with #main > div:not(.header) */
+  padding-top: calc( (100vw * #{$separator-margin-ratio}) + 10.25vh ) !important; /* fight with #main > div:not(.header) */
   padding-bottom: 10vh;
 
   background-color: #ebe9f5;
