@@ -183,7 +183,7 @@ $(document).ready(function() {
       $(".js--guru_fade").fadeOut(200, function() {
         $(".guru__main__pic").css("background-image", "url(" + pic + ")");
         $(".guru__main__info__name").text(name);
-        $(".guru__main__info__corp").text(corp);
+        $(".guru__main__info__corp").html(corp);
         $(".js--guru_fade").fadeIn(200);
       });
       next = next.next(":first");
@@ -207,7 +207,7 @@ $(document).ready(function() {
     $(".js--guru_fade").fadeOut(200, function() {
       $(".guru__main__pic").css("background-image", "url(" + pic + ")");
       $(".guru__main__info__name").text(name);
-      $(".guru__main__info__corp").text(corp);
+      $(".guru__main__info__corp").html(corp);
       $(".js--guru_fade").fadeIn(200);
     });
 
