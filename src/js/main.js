@@ -13,8 +13,9 @@ var parseQuestion = function(branch) {
   var text = "";
 
   // Hard coded: Dammit!
-  if(branch == "content")
-    text += '<div class="question-header"><div>ให้น้องตอบคำถามต่อไปนี้โดยกำหนดสถานการณ์ในฐานะ Content Creator มาให้ โดยอธิบายว่าจะทำคอนเทนต์รูปแบบไหน (ภาพ, บทความ, วิดีโอ หรืออื่น ๆ) เนื้อหาเป็นอย่างไร มีวิธีการสื่อสารแบบไหน เขียนตัวอย่างเนื้อหาที่จะใช้จริงมาพอเข้าใจ</div></div>';
+  if (branch == "content")
+    text +=
+      '<div class="question-header"><div>ให้น้องตอบคำถามต่อไปนี้โดยกำหนดสถานการณ์ในฐานะ Content Creator มาให้ โดยอธิบายว่าจะทำคอนเทนต์รูปแบบไหน (ภาพ, บทความ, วิดีโอ หรืออื่น ๆ) เนื้อหาเป็นอย่างไร มีวิธีการสื่อสารแบบไหน เขียนตัวอย่างเนื้อหาที่จะใช้จริงมาพอเข้าใจ</div></div>';
   question.forEach(function(ele, i) {
     text += "<div class='question-header question" + (i + 1) + "'>";
     text += "<div class='question-index'>คำถามข้อที่ " + (i + 1) + "</div>";
@@ -213,6 +214,9 @@ $(document).ready(function() {
 
     clearInterval(guruInterval);
     var nextEle = $(this).next(":first");
+    if (nextEle.length === 0) {
+      nextEle = $(".guru__child:first");
+    }
     guruInterval = setGuruInterval(nextEle);
   });
 
