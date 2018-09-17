@@ -53,6 +53,7 @@ gulp.task("copy", function() {
     '*src/js/**/*',
     '*src/images/**/*',
     '*src/videos/**/*',
+    '*src/robots.txt'
   ], {base: "./src/"})
   .pipe(gulp.dest('dist/'));
 });
