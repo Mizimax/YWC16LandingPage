@@ -17,7 +17,7 @@
     align-items: center;
   }
   .sponsor-all__main__child,
-  .sponsor-all__sponsor__child a img,
+  .sponsor-all__sponsor__child,
   .sponsor-all__partner__child {
     border-color: $primary-color;
     border-width: 2px;
@@ -99,14 +99,16 @@
   .sponsor-all__sponsor,
   .sponsor-all__partner {
     margin-top: 5vh;
-    @include mobile() {
-      margin-top: 0;
-    }
+    // @include mobile() {
+    //   margin-top: 0;
+    // }
     .sponsor-all__sponsor__child {
       flex: 0 0 $sponsor-size-sponsor;
       // @include desktop() {
       height: $sponsor-size-sponsor;
       width: $sponsor-size-sponsor;
+      border-radius: 50%;
+      background: white;
       margin-left: 1rem;
       margin-right: 1rem;
       flex-grow: 0;
