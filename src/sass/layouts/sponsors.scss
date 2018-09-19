@@ -30,6 +30,12 @@
     @include mobile() {
       display: inline-block;
     }
+    &.sponsor-all__partner__child--pantip img{
+      border-radius: 0;
+      /* -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 85%, 0 85%); */
+      /* clip-path: polygon(0 15%, 100% 15%, 100% 85%, 0 85%); */
+      background: none;
+    }
   }
   .sponsor-all__main__child,
   .sponsor-all__sponsor__child {
