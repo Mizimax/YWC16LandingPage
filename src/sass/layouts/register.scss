@@ -97,6 +97,12 @@ $marketing-color: #f797aa;
   color: $marketing-color;
 }
 
+.register__branch__no__text {
+  font-size: 21px;
+  display: block;
+  margin-bottom: -15px;
+}
+
 .register__branch__no {
   font-family: $subheader-font, sans-serif;
   color: $primary-color;
