@@ -36,6 +36,23 @@
       /* clip-path: polygon(0 15%, 100% 15%, 100% 85%, 0 85%); */
       background: none;
     }
+    
+    $upscale-pt-by: .5rem;
+    &.sponsor-all__partner__child--pt{
+      padding-left: .35rem;
+      padding-right: .35rem;
+
+      img{
+        border-radius: 0;
+        margin-left: $upscale-pt-by * -1;
+        margin-right: $upscale-pt-by * -1;
+        width: calc( 100% + #{ $upscale-pt-by * 2 } );
+        height: calc( 100% + #{ $upscale-pt-by * 2 } );
+        background: none;
+        margin-top: $upscale-pt-by * -1;
+        margin-bottom: $upscale-pt-by * -1;
+      }
+    }
   }
   .sponsor-all__main__child,
   .sponsor-all__sponsor__child {
