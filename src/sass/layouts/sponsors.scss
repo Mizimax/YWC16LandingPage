@@ -53,6 +53,18 @@
         margin-bottom: $upscale-pt-by * -1;
       }
     }
+    &.sponsor-all__partner__child--theflight19{
+      padding-left: .35rem;
+      padding-right: .35rem;
+
+      img{
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
   .sponsor-all__main__child,
   .sponsor-all__sponsor__child {
@@ -169,18 +181,18 @@
       @include mobile() {
         margin: 1.5rem;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
         flex: 0 0 ($sponsor-size-partner * $sponsor-mobile-resize-ratio);
         height: ($sponsor-size-partner * $sponsor-mobile-resize-ratio);
         width: ($sponsor-size-partner * $sponsor-mobile-resize-ratio);
       }
 
       a {
-        @include desktop() {
-          height: $sponsor-size-partner;
-          width: $sponsor-size-partner;
-          padding: 0;
-        }
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        width: 100%;
+        height: 100%;
         img {
           width: 100%;
           height: 100%;
