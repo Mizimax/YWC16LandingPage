@@ -1,60 +1,74 @@
+$bannerRatio: 640/400;
+$locationWidth: 90vw;
+
 @if $is-location-show == false {
   .location{
     display: none;
   }
 }
 
+.location__label{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .location__map {
   position: relative;
-  max-width: 900px;
   width: 90%;
+  width: $locationWidth;
+  height: calc( #{$locationWidth} / #{$bannerRatio} );
   margin-top: 25px;
   margin-bottom: 80px;
   cursor: pointer;
-}
-
-.location__map:hover > .location__map__icon {
-  background: rgba(255, 255, 255, 0.6);
-  opacity: 1;
-}
-
-.location__map__image {
-  max-width: 900px;
-  width: 100%;
-
   border: 3px solid $primary-color;
-}
 
-.location__map__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% + 6px);
-  height: 100%;
-  background: rgba(255, 255, 255, 0);
-  opacity: 0;
-  transition: 0.2s all;
-}
+  background-image: url('../images/IT-KMITL-banner.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
-.location__map__icon__container {
-  width: 100%;
-}
+  @media (min-width:1000px) {
+    $locationWidth: 900px;
+    width: $locationWidth;
+    height: calc( #{$locationWidth} / #{$bannerRatio} );
+  }
+  
+  &:hover > .location__map__icon {
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
+  .location__map__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: calc(100% + 6px); */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    transition: 0.2s all;
+  }
 
-.location__map__icon__container__image {
-  max-width: 160px;
-  width: 20%;
-  /* 
-   * Push Icon <object> below <span> to be able to use <a>. 
-   * I tried to use <img> but there's some conflict with dimension inside SVG.
-   * read: https://stackoverflow.com/a/12732030/5561570 for more detail 
-   */
-  position: relative;
-  z-index: -1;
-}
+  .location__map__icon__container {
+    width: 100%;
+  }
 
-.location__map__icon__container__openmap {
-  @include headerFont();
-  font-size: $header-font-size;
-  color: $primary-color;
-  text-shadow: 2px 2px 1px rgba(255, 255, 255, 1);
+  .location__map__icon__container__image {
+    max-width: 160px;
+    width: 20%;
+    /* 
+     * Push Icon <object> below <span> to be able to use <a>. 
+     * I tried to use <img> but there's some conflict with dimension inside SVG.
+     * read: https://stackoverflow.com/a/12732030/5561570 for more detail 
+     */
+    position: relative;
+    z-index: -1;
+  }
+
+  .location__map__icon__container__openmap {
+    @include headerFont();
+    text-transform: uppercase;
+    font-size: $header-font-size;
+    color: $primary-color;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 1);
+  }
 }
