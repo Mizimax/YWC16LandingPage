@@ -31,11 +31,19 @@ $locationWidth: 90vw;
     width: $locationWidth;
     height: calc( #{$locationWidth} / #{$bannerRatio} );
   }
-  
-  &:hover > .location__map__icon {
-    background: rgba(255, 255, 255, 0.6);
-    opacity: 1;
+
+  .location__map__copyright{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.25rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: rgba(0,0,0,0.5);
+    color: white;
   }
+  
   .location__map__icon {
     position: absolute;
     top: 0;
@@ -46,6 +54,19 @@ $locationWidth: 90vw;
     background: rgba(255, 255, 255, 0);
     opacity: 0;
     transition: 0.2s all;
+
+    @media (pointer: coarse) {
+      /* Touch-screen based device */
+      background: rgba(255, 255, 255, 0.6);
+      opacity: 1;
+      z-index: 99999;
+    }
+  }
+
+  &:hover > .location__map__icon {
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    z-index: 99999;
   }
 
   .location__map__icon__container {
@@ -70,5 +91,6 @@ $locationWidth: 90vw;
     font-size: $header-font-size;
     color: $primary-color;
     text-shadow: 2px 2px 1px rgba(255, 255, 255, 1);
+    font-weight: 600;
   }
 }
