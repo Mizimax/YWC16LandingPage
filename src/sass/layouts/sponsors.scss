@@ -128,6 +128,16 @@
         padding: 0;
         // }
       }
+      &.sponsor-all__main__child--it_kmitl a{
+        height: 100%;
+        width: calc( 100% + 2rem);
+
+        .sponsor--it_kmitl{
+          height: calc( 100% - 1rem);
+          margin-top: 1rem;
+          width: 100%;
+        }
+      }
     }
   }
 
