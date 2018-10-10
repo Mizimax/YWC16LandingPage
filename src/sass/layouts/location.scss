@@ -59,14 +59,14 @@ $locationWidth: 90vw;
       /* Touch-screen based device */
       background: rgba(255, 255, 255, 0.6);
       opacity: 1;
-      z-index: 99999;
+      z-index: 9;
     }
   }
 
   &:hover > .location__map__icon {
     background: rgba(255, 255, 255, 0.6);
     opacity: 1;
-    z-index: 99999;
+    z-index: 9;
   }
 
   .location__map__icon__container {

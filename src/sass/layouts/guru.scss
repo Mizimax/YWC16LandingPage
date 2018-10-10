@@ -84,6 +84,7 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
+  margin-bottom: -5px !important;
 }
 
 .guru__child,
@@ -153,6 +154,7 @@
   .guru__children {
     flex-wrap: wrap;
     overflow: hidden;
+    margin-bottom: -5px !important;
   }
   .guru__children .guru__child--final {
     margin-right: 0;
