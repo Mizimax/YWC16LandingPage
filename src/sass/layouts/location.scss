@@ -1,4 +1,4 @@
-$bannerRatio: 640/400;
+$bannerRatio: 1200/682;
 $locationWidth: 90vw;
 
 @if $is-location-show == false {
@@ -22,7 +22,7 @@ $locationWidth: 90vw;
   cursor: pointer;
   border: 3px solid $primary-color;
 
-  background-image: url('../images/IT-KMITL-banner.jpg');
+  background-image: url('../images/IT-KMITL-building.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
