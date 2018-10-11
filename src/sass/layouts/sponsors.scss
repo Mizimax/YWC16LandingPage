@@ -178,17 +178,17 @@
         border-radius: 50%;
       }
     }
+
+    $sponsor-partner-margin: 1rem;
     .sponsor-all__partner__child {
       background: white;
       border-radius: 50%;
       flex: 0 0 $sponsor-size-partner;
-      // @include desktop() {
       height: $sponsor-size-partner;
       width: $sponsor-size-partner;
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-left: $sponsor-partner-margin;
+      margin-right: $sponsor-partner-margin;
       flex-grow: 0;
-      // }
       @include mobile() {
         margin: 1.5rem;
         margin-top: 0;
@@ -196,6 +196,17 @@
         flex: 0 0 ($sponsor-size-partner * $sponsor-mobile-resize-ratio);
         height: ($sponsor-size-partner * $sponsor-mobile-resize-ratio);
         width: ($sponsor-size-partner * $sponsor-mobile-resize-ratio);
+      }
+      
+      @include desktop() {
+        margin-bottom: 1rem;
+        &:first-child,
+        &:nth-child(3n+1){
+          margin-left: calc( 50% - #{$sponsor-partner-perRow*$sponsor-size-partner} - #{($sponsor-partner-perRow - 1)*$sponsor-partner-margin} );
+        }
+        &:nth-child(3n){
+          margin-right: calc( 50% - #{$sponsor-partner-perRow*$sponsor-size-partner} - #{($sponsor-partner-perRow - 1)*$sponsor-partner-margin} );
+        }
       }
 
       a {
