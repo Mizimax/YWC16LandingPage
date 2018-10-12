@@ -3,6 +3,10 @@
 
 .sponsor-all {
   margin-top: 80px;
+  .sponsor-all--container{
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
   @include mobile() {
     .sponsor-all--container {
       max-width: 800px;
@@ -206,6 +210,15 @@
         }
         &:nth-child(3n){
           margin-right: calc( 50% - #{$sponsor-partner-perRow*$sponsor-size-partner} - #{($sponsor-partner-perRow - 1)*$sponsor-partner-margin} );
+        }
+        @media (max-width: 1500px) {
+          &:first-child,
+          &:nth-child(3n+1){
+            margin-left: calc( 50% - #{$sponsor-partner-perRow*$sponsor-size-partner} - #{($sponsor-partner-perRow - 1)*$sponsor-partner-margin} + 5rem);
+          }
+          &:nth-child(3n){
+            margin-right: calc( 50% - #{$sponsor-partner-perRow*$sponsor-size-partner} - #{($sponsor-partner-perRow - 1)*$sponsor-partner-margin} + 5rem);
+          }
         }
       }
 
