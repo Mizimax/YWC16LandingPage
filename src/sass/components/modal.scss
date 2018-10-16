@@ -245,6 +245,9 @@ $bg-color-light: $light-color !default;
   .modal-banner--body{
     overflow-y: auto;
     overflow-x: hidden;
+    @include mobile(){
+      max-height: 75vh;
+    }
 
     .banner-element{
       margin-top: 1rem;
@@ -262,8 +265,26 @@ $bg-color-light: $light-color !default;
         object-fit: contain;
       }
 
+      .banner-element--preview{
+        @include mobile(){
+          text-align: center;
+        }
+      }
+
+      .banner-element--detail{
+        @include mobile(){
+          text-align: center;
+        }
+        .columns{
+          @include mobile(){
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
       .button{
         margin-bottom: 0.5rem;
+        display: inline-block;
         @include subHeaderFont();
         font-size: $content-font-size;
         font-weight: bold;
