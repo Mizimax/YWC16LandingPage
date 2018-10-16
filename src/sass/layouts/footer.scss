@@ -26,10 +26,11 @@
   }
 
   .footer__content--banner_show{
-    border-radius: 40px;
-    padding: 6px 42px;
+    border-radius: 5rem;
+    padding: 0.75rem 5rem;
+    padding-top: 1.1rem;
     border: 2px solid;
-    font-size: 21px;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: $subheader-font, sans-serif;
     background-color: white;

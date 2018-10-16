@@ -307,7 +307,7 @@ $(document).ready(function() {
     "720_300.jpg": "720x300 px",
     "728_90.jpg":  "728x90 px",
     "Banner.jpg":  "1024x1024 px (Banner)",
-    "Square.jpg":  "1024x1024 px (Square)"
+    // "Square.jpg":  "1024x1024 px (Square)"
   };
 
   var webLocation = window.location.protocol + "//" + window.location.host;
