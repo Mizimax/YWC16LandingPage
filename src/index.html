@@ -2,846 +2,886 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" type="image/png" href="/images/favicons/favicon.png" />
-  <meta property="og:url" content="https://ywc16.ywc.in.th" />
-  <meta property="og:type" content="product" />
-  <meta property="og:title" content="16th Young Webmaster Camp: Ready to Disrupt" />
-  <meta property="og:description" content="ค่ายสร้างเว็บเพียงหนึ่งเดียวของไทย พร้อมค้นหาสายเลือดใหม่ ที่พร้อมจะ Disrupt ทุกความเคลื่อนไหวบนโลกดิจิทัลไปพร้อมกับพวกเรา" />
-  <meta property="og:image" content="https://ywc16.ywc.in.th/images/OGImage.png" />
-  <title>16th Young Webmaster Camp: Ready to Disrupt</title>
-  <link rel="canonical" href="https://ywc16.ywc.in.th" />
-  <link rel="preload" href="css/styles.css?_version=1.9.2" as="style">
-  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/Supermarket/supermarket-webfont.ttf" as="font" crossorigin="anonymous">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png?_version=1.9.2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png?_version=1.9.2">
-  <link rel="icon" type="image/png" sizes="194x194" href="/images/favicons/favicon-194x194.png?_version=1.9.2">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png?_version=1.9.2">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png?_version=1.9.2">
-  <link rel="manifest" href="/images/favicons/site.webmanifest?_version=1.9.2">
-  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg?_version=1.9.2" color="#6d65ac">
-  <link rel="shortcut icon" href="/images/favicons/favicon.ico?_version=1.9.2">
-  <meta name="msapplication-TileColor" content="#6d65ac">
-  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png?_version=1.9.2">
-  <meta name="msapplication-config" content="/images/favicons/browserconfig.xml?_version=1.9.2">
-  <meta name="theme-color" content="#6d65ac">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/png" href="/images/favicons/favicon.png" />
+	<meta property="og:url" content="https://ywc16.ywc.in.th" />
+	<meta property="og:type" content="product" />
+	<meta property="og:title" content="16th Young Webmaster Camp: Ready to Disrupt" />
+	<meta property="og:description" content="ค่ายสร้างเว็บเพียงหนึ่งเดียวของไทย พร้อมค้นหาสายเลือดใหม่ ที่พร้อมจะ Disrupt ทุกความเคลื่อนไหวบนโลกดิจิทัลไปพร้อมกับพวกเรา" />
+	<meta property="og:image" content="https://ywc16.ywc.in.th/images/OGImage.png" />
+	<title>16th Young Webmaster Camp: Ready to Disrupt</title>
+	<link rel="canonical" href="https://ywc16.ywc.in.th" />
+	<link rel="preload" href="css/styles.css?_version=1.10.0" as="style">
+	<link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/Supermarket/supermarket-webfont.woff" as="font" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/Supermarket/supermarket-webfont.ttf" as="font" crossorigin="anonymous">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png?_version=1.10.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png?_version=1.10.0">
+	<link rel="icon" type="image/png" sizes="194x194" href="/images/favicons/favicon-194x194.png?_version=1.10.0">
+	<link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png?_version=1.10.0">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png?_version=1.10.0">
+	<link rel="manifest" href="/images/favicons/site.webmanifest?_version=1.10.0">
+	<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg?_version=1.10.0" color="#6d65ac">
+	<link rel="shortcut icon" href="/images/favicons/favicon.ico?_version=1.10.0">
+	<meta name="msapplication-TileColor" content="#6d65ac">
+	<meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png?_version=1.10.0">
+	<meta name="msapplication-config" content="/images/favicons/browserconfig.xml?_version=1.10.0">
+	<meta name="theme-color" content="#6d65ac">
 
-  <style>
-    /* Loading screen - critical section */
+	<style>
+		/* Loading screen - critical section */
 
-    .loading-screen {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: white;
-      z-index: 9998;
-    }
+		.loading-screen {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background: white;
+			z-index: 9998;
+		}
 
-    .loading-screen:before {
-      content: "";
-      position: absolute;
-      width: 10vw;
-      height: 10vw;
-      left: calc( 50% - 5vw);
-      top: calc( 50% - 5vw);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url(data:image/png;base64,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);
-    }
-  </style>
-  <link rel="stylesheet" async href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">
-  <link rel="stylesheet" async href="css/styles.css?_version=1.9.2">
+		.loading-screen:before {
+			content: "";
+			position: absolute;
+			width: 10vw;
+			height: 10vw;
+			left: calc( 50% - 5vw);
+			top: calc( 50% - 5vw);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url(data:image/png;base64,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);
+		}
+	</style>
+	<link rel="stylesheet" async href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+		crossorigin="anonymous">
+	<link rel="stylesheet" async href="css/styles.css?_version=1.10.0">
 </head>
 
 <body>
-  <div class="loading-screen"></div>
-  <div id="main">
-    <div class="navbar">
-      <div class="navbar__sidenav">
-        <ul class="navbar__sidenav__menu">
-          <a data-scroll href="#whatisywc">
-            <li id="whatisywc-nav" class="active">
-              <span>What is YWC ?</span>
-            </li>
-          </a>
-          <a data-scroll href="#register">
-            <li id="register-nav">
-              <span>Register</span>
-            </li>
-          </a>
-          <a data-scroll href="#timeline">
-            <li id="timeline-nav">
-              <span>Timeline</span>
-            </li>
-          </a>
-          <a data-scroll href="#location">
-            <li id="location-nav">
-              <span>Location</span>
-            </li>
-          </a>
-          <a data-scroll href="#guru">
-            <li id="guru-nav">
-              <span>Guru</span>
-            </li>
-          </a>
-          <a data-scroll href="#gallery">
-            <li id="gallery-nav">
-              <span>Gallery</span>
-            </li>
-          </a>
-          <a data-scroll href="#sponsor">
-            <li id="sponsor-nav">
-              <span>Sponsor</span>
-            </li>
-          </a>
-          <a data-scroll href="#qa">
-            <li id="qa-nav">
-              <span>Q & A</span>
-            </li>
-          </a>
-        </ul>
-      </div>
-    </div>
-    <div class="header" align="center">
-      <div class="navbar">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <!-- navbar items, navbar burger... -->
-          </div>
-          <div class="navbar-menu is-active">
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-        </nav>
-      </div>
-      <div class="free">
-        <object type="image/svg+xml" data="images/free2.svg" class="free__image">
-          ฟรีตลอดค่าย
-          <!-- fallback image in CSS -->
-        </object>
-      </div>
-      <div class=" header__video">
-        <div class="header__video__poster"></div>
-        <video class="header__video__url" id="header-video" autoplay loop muted poster="images/cityanimate-poster.jpg">
-          <source src="videos/cityanimate-1080p.webm" type="video/webm">
-          <source src="videos/cityanimate-1080p.mp4" type="video/mp4">
-          <img src="images/cityanimate-poster.jpg" alt="YWC#16: Ready to Disrupt">
-        </video>
-        <div class="header__video__logo" style="z-index: 99;">
-          <div class="header__video__logo--camp_name">16th Young Webmaster Camp</div>
-          <div class="header__video__logo--slogan">Ready to Disrupt</div>
-          <div class="header__video__logo--taglines">นวัตกรรมเว็บเปลี่ยนโลก</div>
-        </div>
-      </div>
+	<div class="loading-screen"></div>
+	<div id="main">
+		<div class="navbar">
+			<div class="navbar__sidenav">
+				<ul class="navbar__sidenav__menu">
+					<a data-scroll href="#whatisywc">
+						<li id="whatisywc-nav" class="active">
+							<span>What is YWC ?</span>
+						</li>
+					</a>
+					<a data-scroll href="#register">
+						<li id="register-nav">
+							<span>Register</span>
+						</li>
+					</a>
+					<a data-scroll href="#timeline">
+						<li id="timeline-nav">
+							<span>Timeline</span>
+						</li>
+					</a>
+					<a data-scroll href="#location">
+						<li id="location-nav">
+							<span>Location</span>
+						</li>
+					</a>
+					<a data-scroll href="#guru">
+						<li id="guru-nav">
+							<span>Guru</span>
+						</li>
+					</a>
+					<a data-scroll href="#gallery">
+						<li id="gallery-nav">
+							<span>Gallery</span>
+						</li>
+					</a>
+					<a data-scroll href="#sponsor">
+						<li id="sponsor-nav">
+							<span>Sponsor</span>
+						</li>
+					</a>
+					<a data-scroll href="#qa">
+						<li id="qa-nav">
+							<span>Q & A</span>
+						</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+		<div class="header" align="center">
+			<div class="navbar">
+				<nav class="navbar" role="navigation" aria-label="main navigation">
+					<div class="navbar-brand">
+						<!-- navbar items, navbar burger... -->
+					</div>
+					<div class="navbar-menu is-active">
+						<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div class="free">
+				<object type="image/svg+xml" data="images/free2.svg" class="free__image">
+					ฟรีตลอดค่าย
+					<!-- fallback image in CSS -->
+				</object>
+			</div>
+			<div class=" header__video">
+				<div class="header__video__poster"></div>
+				<video class="header__video__url" id="header-video" autoplay loop muted poster="images/cityanimate-poster.jpg">
+					<source src="videos/cityanimate-1080p.webm" type="video/webm">
+					<source src="videos/cityanimate-1080p.mp4" type="video/mp4">
+					<img src="images/cityanimate-poster.jpg" alt="YWC#16: Ready to Disrupt">
+				</video>
+				<div class="header__video__logo" style="z-index: 99;">
+					<div class="header__video__logo--camp_name">16th Young Webmaster Camp</div>
+					<div class="header__video__logo--slogan">Ready to Disrupt</div>
+					<div class="header__video__logo--taglines">นวัตกรรมเว็บเปลี่ยนโลก</div>
+				</div>
+			</div>
 
-      <div class="header__sponsor--main header__logo--margin">
-        <div class="header__sponsor--main__child">
-          <a href="https://www.webmaster.or.th/">
-            <img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
-          </a>
-        </div>
-        <div class="header__sponsor--main__child">
-          <a href="https://it.kmitl.ac.th/">
-            <img class="sponsor--it_kmitl" src="images/sponsor/vip-it_kmitl.svg" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง">
-          </a>
-        </div>
-        <div class="header__sponsor--main__child">
-          <a href="https://www.cpall.co.th/">
-            <img src="images/sponsor/CPALL.svg" alt="CP ALL">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div id="whatisywc" class="whatisywc" align="center">
-      <div class="whatisywc__label header-label">
-        <h2>What is YWC ?</h2>
-      </div>
-      <div class="whatisywc__container container">
-        <div class="whatisywc__container__desc">
-          เมื่อเทคโนโลยีที่เปลี่ยนไปได้เข้ามาสร้างการเปลี่ยนแปลง จนทำให้หลายๆ สิ่งที่เคยมีอยู่ในอดีต ถูกแย่งชิงบทบาทจนแทบจะหายไป ในฐานะของค่ายสร้างเว็บหนึ่งเดียวของไทย
-          เรากำลังตามหาคนทำเว็บสายเลือดใหม่ ที่พร้อมตะลุยไปในโลกดิจิตัลและ Disrupt ทุกความเคลื่อนไหวด้วยเทคโนโลยีไปพร้อมกับพวกเรา
-          และเพื่อนๆ จากหลากหลายสาขา ไม่ว่าจะเป็น Content, Design, Marketing และ Programming และยังได้ใกล้ชิดกูรูจากวงการเว็บไทย
-          ที่จะมาแนะแนวทาง พร้อมให้คำวิจารณ์ที่ไม่เคยมีใครได้สัมผัสมาก่อน หากคุณคือคนรุ่นใหม่ ที่อยากจะลุกขึ้นมาสร้างนวัตกรรมใหม่ที่จะเปลี่ยนแปลงโลก
-          นี่คือโอกาสของคุณ! กับ Young Webmaster Camp ครั้งที่ 16 Ready to Disrupt
-        </div>
-      </div>
-    </div>
-    <div id="register" class="register" align="center">
-      <div class="register__label header-label">
-        <h2>Majors</h2>
-        <div class="register__label__sub label--sub">สาขาที่รับสมัคร</div>
-      </div>
-      <div class="register__container columns is-multiline register__container--padding">
-        <div class="register__branch columns is-multiline column">
-          <div class="register__branch__content column">
-            <img class="register__branch__image" src="images/branch/content.svg" alt="Web Content" width="250">
-            <div class="register__branch__content__detail">
-              <h3 class="register__branch__name register__branch__content__name">
-                WEB CONTENT
-              </h3>
-              <div class="register__branch__no">
-                <span class="register__branch__no__text">สมัครแล้ว</span>
-                <span class="register__branch__no__regis">0</span>
-                <span class="register__branch__no__person"> คน</span>
-              </div>
-              <div class="register__branch__desc">
-                หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์
-              </div>
-              <div class="register__branch__detail">
-                <a class="button button--regis" onclick="openModal('content')">
-                  รายละเอียด
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="register__branch__designer column">
-            <img class="register__branch__image" src="images/branch/designer.svg" alt="Web DESIGN" width="250">
-            <div class="register__branch__content__detail">
-              <h3 class="register__branch__name register__branch__designer__name">WEB DESIGN</h3>
-              <div class="register__branch__no">
-                <span class="register__branch__no__text">สมัครแล้ว</span>
-                <span class="register__branch__no__regis">0</span>
-                <span class="register__branch__no__person"> คน</span>
-              </div>
-              <div class="register__branch__desc">
-                เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน
-              </div>
-              <div class="register__branch__detail">
-                <a class="button button--regis" onclick="openModal('design')">
-                  รายละเอียด
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="register__branch columns is-multiline column">
-          <div class="register__branch__programming column">
-            <img class="register__branch__image" src="images/branch/programming.svg" alt="Web PROGRAMMING" width="250">
-            <div class="register__branch__content__detail">
-              <h3 class="register__branch__name register__branch__programming__name">WEB PROGRAMMING</h3>
-              <div class="register__branch__no">
-                <span class="register__branch__no__text">สมัครแล้ว</span>
-                <span class="register__branch__no__regis">0</span>
-                <span class="register__branch__no__person"> คน</span>
-              </div>
-              <div class="register__branch__desc">
-                ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง
-              </div>
-              <div class="register__branch__detail">
-                <a class="button button--regis" onclick="openModal('programming')">
-                  รายละเอียด
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="register__branch__marketing column">
-            <img class="register__branch__image" src="images/branch/marketing.svg" alt="Web MARKETING" width="250">
-            <div class="register__branch__content__detail">
-              <h3 class="register__branch__name register__branch__marketing__name">WEB MARKETING</h3>
-              <div class="register__branch__no">
-                <span class="register__branch__no__text">สมัครแล้ว</span>
-                <span class="register__branch__no__regis">0</span>
-                <span class="register__branch__no__person"> คน</span>
-              </div>
-              <div class="register__branch__desc">
-                เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด
-              </div>
-              <div class="register__branch__detail">
-                <a class="button button--regis" onclick="openModal('marketing')">
-                  รายละเอียด
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section id="ywc--bg">
-      <div class="ywc--bg__image"></div>
-      <div id="timeline" class="timeline" align="center">
-        <div class="timeline__label header-label">
-          <h2>Timeline</h2>
-        </div>
-        <div class="timeline__container timeline__container--padding container container">
-          <div class="timeline__phase columns is-multiline">
-            <div class="timeline__phase_1 column active-color">
-              <img src="images/step/step1.svg" alt="รับสมัคร" width="130">
-              <div class="timeline__phase__step">รับสมัคร</div>
-              <div class="timeline__phase__date">15 กันยายน — 30 ตุลาคม 2561</div>
-            </div>
-            <div class="timeline__phase_2 column">
-              <img class="has-grayscale" src="images/step/step2.svg" alt="รับสมัคร" width="130">
-              <div class="timeline__phase__step">ประกาศผล</div>
-              <div class="timeline__phase__date">4 พฤศจิกายน 2561</div>
-            </div>
-            <div class="timeline__phase_3 column">
-              <img class="has-grayscale" src="images/step/step3.svg" alt="รับสมัคร" width="130">
-              <div class="timeline__phase__3__step timeline__phase__step">สัมภาษณ์</div>
-              <div class="timeline__phase__date">11 พฤศจิกายน 2561</div>
-            </div>
-            <div class="timeline__phase_4 column">
-              <img class="has-grayscale" src="images/step/step4.svg" alt="รับสมัคร" width="130">
-              <div class="timeline__phase__step" style="font-size: 24px;">ประกาศผลสัมภาษณ์</div>
-              <div class="timeline__phase__date">13 พฤศจิกายน 2561</div>
-            </div>
-            <div class="timeline__phase_5 column">
-              <img class="has-grayscale" src="images/step/step5.svg" alt="รับสมัคร" width="130">
-              <div class="timeline__phase__5__step timeline__phase__step">วันค่าย</div>
-              <div class="timeline__phase__date">22-25 ธันวาคม 2561</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="location" class="location" align="center">
-        <div class="location__label header-label">
-          <h2>Location</h2>
-          <div class="label--sub">คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
-        </div>
-        <div class="location__map">
-          <!-- <img src="images/IT-KMITL-banner.jpg" class="location__map__image" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง"> -->
-          <a href="https://medium.com/@jacktnp/%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%88%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B9%84%E0%B8%AD%E0%B8%97%E0%B8%B5-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87-71352f724bc" target="_blank" class="location__map__copyright">&copy; 2018 Jack’tnp</a>
-          <a href="https://goo.gl/maps/y9maMTFGHPJ2" target="_blank" class="location__map__icon">
-            <div class="location__map__icon__container middle">
-              <span>
-                <object class="location__map__icon__container__image" data="images/icon/iconLocation.svg" type="image/svg+xml">
-                </object>
-              </span>
-              <div class="location__map__icon__container__openmap">Open map</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div id="guru" class="guru" align="center">
-        <div class="guru__label header-label">
-          <h2>Guru</h2>
-        </div>
-        <div class="guru__container">
-          <div class="guru__main">
-            <div class="js--guru_fade columns">
-              <div class="guru__main__pic column" style="background-image: url( './images/speaker/3.jpg');">
-              </div>
-              <div class="guru__main__info column" align="left">
-                <div class="guru__middle">
-                  <div class="guru__main__info__name">วโรรส โรจนะ (โน้ต)</div>
-                  <div class="guru__main__info__corp">CEO Dek-D Interactive Co., LTD.
-                    <br> นายกสมาคมผู้ดูแลเว็บไทย</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="guru__children columns">
-            <div class="guru__child guru__child__img--1 column active" src="./images/speaker/3.jpg" style="background-image: url( './images/speaker/3.jpg');"
-              name="วโรรส โรจนะ (โน้ต)" corp="CEO Dek-D Interactive Co., LTD.<br> นายกสมาคมผู้ดูแลเว็บไทย"></div>
-            <div class="guru__child guru__child__img--2 column" src="./images/speaker/9.jpg" style="background-image: url( './images/speaker/9.jpg');"
-              name="เมธปริยา คำนวนวุฒิ (ว่าน)" corp="ผู้จัดการฝ่ายการตลาด บริษัท แอลเอ็นดับเบิ้ลยู จำกัด และ กรรมการสมาคมผู้ดูแลเว็บไทย"></div>
-            <div class="guru__child guru__child__img--3 column" src="./images/speaker/1.jpg" style="background-image: url( './images/speaker/1.jpg');"
-              name="เจริญ ลักษณ์เลิศกุล (เจ)" corp="Assistant Director - Strategic planning and Digital business : Online Station, True Media"></div>
-            <div class="guru__child guru__child__img--4 column" src="./images/speaker/23.jpg" style="background-image: url( './images/speaker/23.jpg');"
-              name="วรัทธน์ วงศ์มณีกิจ (ตั้ง)" corp="Product owner of WISESIGHT Insight platform"></div>
-            <div class="guru__child guru__child__img--5 column" src="./images/speaker/4.jpg" style="background-image: url( './images/speaker/4.jpg');"
-              name="อภิศิลป์ ตรุงกานนท์ (บอย)" corp="Co-founder & CTO, Pantip.com"></div>
-            <div class="guru__child guru__child--final guru__child__img--6 column" src="./images/speaker/6.jpg" style="background-image: url( './images/speaker/6.jpg');"
-              name="จักรพงษ์ คงมาลัย (ปอง)" corp="Managing Director, Moonshot Digital Co., Ltd"></div>
-            <div class="guru__child guru__child__img--7 column" src="./images/speaker/7.jpg" style="background-image: url( './images/speaker/7.jpg');"
-              name="ภาวุธ พงษ์วิทยภานุ (ป้อม)" corp="CEO & Founder Tarad Dot Com Group"></div>
-            <div class="guru__child guru__child__img--8 column" src="./images/speaker/8.jpg" style="background-image: url( './images/speaker/8.jpg');"
-              name="ศิวัตร เชาวรียวงษ์ (ป้อม)" corp="นายกสมาคมโฆษณาดิจิทัล (ประเทศไทย)"></div>
-            <div class="guru__child guru__child__img--9 column" src="./images/speaker/10.jpg" style="background-image: url( './images/speaker/10.jpg');"
-              name="คนที่หนึ่ง แสงหิรัญ (หนึ่ง)" corp="อาจารย์ประจำภาควิชาการออกแบบนิเทศศิลป์<br>คณะนิเทศศาสตร์ มหาวิทยาลัยอัสสัมชัญ"></div>
-            <div class="guru__child guru__child__img--10 column" src="./images/speaker/11.jpg" style="background-image: url( './images/speaker/11.jpg');"
-              name="ขจร เจียรนัยพานิชย์ (เอ็ม)" corp="Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker"></div>
-            <div class="guru__child guru__child__img--11 column" src="./images/speaker/12.jpg" style="background-image: url( './images/speaker/12.jpg');"
-              name="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)" corp="Managing Director of Bold Biznet Co., Ltd."></div>
-            <div class="guru__child guru__child--final guru__child__img--12 column" src="./images/speaker/13.jpg" style="background-image: url( './images/speaker/13.jpg');"
-              name="ศิระ สัจจินานนท์ (ฮันท์)" corp="CTO and Co-Founder Jitta"></div>
-            <div class="guru__child guru__child__img--13 column" src="./images/speaker/14.jpg" style="background-image: url( './images/speaker/14.jpg');"
-              name="อัครวุฒิ​ ตำราเรียง​ (บัง)" corp="อุปนายก​สมาคมศึกษาและพัฒนาโอเพ่นซอร์ส (OSEDA) <br>กรรมการ​ผู้จัดการ​ บ.มาร์เวลิค​ เอ็นจิ้น​ จก."></div>
-            <div class="guru__child guru__child__img--14 column" src="./images/speaker/5.jpg" style="background-image: url( './images/speaker/5.jpg');"
-              name="อินทนนท์ ปัญญาโสภา (เบนซ์)" corp="Co-founder at Grappik"></div>
-            <div class="guru__child guru__child__img--15 column" src="./images/speaker/15.jpg" style="background-image:
-          url( './images/speaker/15.jpg');" name="ศุภเดช สุทธิพงศ์คณาสัย (โก๋)" corp="พิธีกรรายการล้ำหน้าโชว์ Tech Blogger - Freeware.in.th"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+			<div class="header__sponsor--main header__logo--margin">
+				<div class="header__sponsor--main__child">
+					<a href="https://www.webmaster.or.th/">
+						<img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
+					</a>
+				</div>
+				<div class="header__sponsor--main__child">
+					<a href="https://it.kmitl.ac.th/">
+						<img class="sponsor--it_kmitl" src="images/sponsor/vip-it_kmitl.svg" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง">
+					</a>
+				</div>
+				<div class="header__sponsor--main__child">
+					<a href="https://www.cpall.co.th/">
+						<img src="images/sponsor/CPALL.svg" alt="CP ALL">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="whatisywc" class="whatisywc" align="center">
+			<div class="whatisywc__label header-label">
+				<h2>What is YWC ?</h2>
+			</div>
+			<div class="whatisywc__container container">
+				<div class="whatisywc__container__desc">
+					เมื่อเทคโนโลยีที่เปลี่ยนไปได้เข้ามาสร้างการเปลี่ยนแปลง จนทำให้หลายๆ สิ่งที่เคยมีอยู่ในอดีต ถูกแย่งชิงบทบาทจนแทบจะหายไป ในฐานะของค่ายสร้างเว็บหนึ่งเดียวของไทย
+					เรากำลังตามหาคนทำเว็บสายเลือดใหม่ ที่พร้อมตะลุยไปในโลกดิจิตัลและ Disrupt ทุกความเคลื่อนไหวด้วยเทคโนโลยีไปพร้อมกับพวกเรา
+					และเพื่อนๆ จากหลากหลายสาขา ไม่ว่าจะเป็น Content, Design, Marketing และ Programming และยังได้ใกล้ชิดกูรูจากวงการเว็บไทย
+					ที่จะมาแนะแนวทาง พร้อมให้คำวิจารณ์ที่ไม่เคยมีใครได้สัมผัสมาก่อน หากคุณคือคนรุ่นใหม่ ที่อยากจะลุกขึ้นมาสร้างนวัตกรรมใหม่ที่จะเปลี่ยนแปลงโลก
+					นี่คือโอกาสของคุณ! กับ Young Webmaster Camp ครั้งที่ 16 Ready to Disrupt
+				</div>
+			</div>
+		</div>
+		<div id="register" class="register" align="center">
+			<div class="register__label header-label">
+				<h2>Majors</h2>
+				<div class="register__label__sub label--sub">สาขาที่รับสมัคร</div>
+			</div>
+			<div class="register__container columns is-multiline register__container--padding">
+				<div class="register__branch columns is-multiline column">
+					<div class="register__branch__content column">
+						<img class="register__branch__image" src="images/branch/content.svg" alt="Web Content" width="250">
+						<div class="register__branch__content__detail">
+							<h3 class="register__branch__name register__branch__content__name">
+								WEB CONTENT
+							</h3>
+							<div class="register__branch__no">
+								<span class="register__branch__no__text">สมัครแล้ว</span>
+								<span class="register__branch__no__regis">0</span>
+								<span class="register__branch__no__person"> คน</span>
+							</div>
+							<div class="register__branch__desc">
+								หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์
+							</div>
+							<div class="register__branch__detail">
+								<a class="button button--regis" onclick="openModal('content')">
+									รายละเอียด
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="register__branch__designer column">
+						<img class="register__branch__image" src="images/branch/designer.svg" alt="Web DESIGN" width="250">
+						<div class="register__branch__content__detail">
+							<h3 class="register__branch__name register__branch__designer__name">WEB DESIGN</h3>
+							<div class="register__branch__no">
+								<span class="register__branch__no__text">สมัครแล้ว</span>
+								<span class="register__branch__no__regis">0</span>
+								<span class="register__branch__no__person"> คน</span>
+							</div>
+							<div class="register__branch__desc">
+								เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน
+							</div>
+							<div class="register__branch__detail">
+								<a class="button button--regis" onclick="openModal('design')">
+									รายละเอียด
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="register__branch columns is-multiline column">
+					<div class="register__branch__programming column">
+						<img class="register__branch__image" src="images/branch/programming.svg" alt="Web PROGRAMMING" width="250">
+						<div class="register__branch__content__detail">
+							<h3 class="register__branch__name register__branch__programming__name">WEB PROGRAMMING</h3>
+							<div class="register__branch__no">
+								<span class="register__branch__no__text">สมัครแล้ว</span>
+								<span class="register__branch__no__regis">0</span>
+								<span class="register__branch__no__person"> คน</span>
+							</div>
+							<div class="register__branch__desc">
+								ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง
+							</div>
+							<div class="register__branch__detail">
+								<a class="button button--regis" onclick="openModal('programming')">
+									รายละเอียด
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="register__branch__marketing column">
+						<img class="register__branch__image" src="images/branch/marketing.svg" alt="Web MARKETING" width="250">
+						<div class="register__branch__content__detail">
+							<h3 class="register__branch__name register__branch__marketing__name">WEB MARKETING</h3>
+							<div class="register__branch__no">
+								<span class="register__branch__no__text">สมัครแล้ว</span>
+								<span class="register__branch__no__regis">0</span>
+								<span class="register__branch__no__person"> คน</span>
+							</div>
+							<div class="register__branch__desc">
+								เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด
+							</div>
+							<div class="register__branch__detail">
+								<a class="button button--regis" onclick="openModal('marketing')">
+									รายละเอียด
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section id="ywc--bg">
+			<div class="ywc--bg__image"></div>
+			<div id="timeline" class="timeline" align="center">
+				<div class="timeline__label header-label">
+					<h2>Timeline</h2>
+				</div>
+				<div class="timeline__container timeline__container--padding container container">
+					<div class="timeline__phase columns is-multiline">
+						<div class="timeline__phase_1 column active-color">
+							<img src="images/step/step1.svg" alt="รับสมัคร" width="130">
+							<div class="timeline__phase__step">รับสมัคร</div>
+							<div class="timeline__phase__date">15 กันยายน — 30 ตุลาคม 2561</div>
+						</div>
+						<div class="timeline__phase_2 column">
+							<img class="has-grayscale" src="images/step/step2.svg" alt="รับสมัคร" width="130">
+							<div class="timeline__phase__step">ประกาศผล</div>
+							<div class="timeline__phase__date">4 พฤศจิกายน 2561</div>
+						</div>
+						<div class="timeline__phase_3 column">
+							<img class="has-grayscale" src="images/step/step3.svg" alt="รับสมัคร" width="130">
+							<div class="timeline__phase__3__step timeline__phase__step">สัมภาษณ์</div>
+							<div class="timeline__phase__date">11 พฤศจิกายน 2561</div>
+						</div>
+						<div class="timeline__phase_4 column">
+							<img class="has-grayscale" src="images/step/step4.svg" alt="รับสมัคร" width="130">
+							<div class="timeline__phase__step" style="font-size: 24px;">ประกาศผลสัมภาษณ์</div>
+							<div class="timeline__phase__date">13 พฤศจิกายน 2561</div>
+						</div>
+						<div class="timeline__phase_5 column">
+							<img class="has-grayscale" src="images/step/step5.svg" alt="รับสมัคร" width="130">
+							<div class="timeline__phase__5__step timeline__phase__step">วันค่าย</div>
+							<div class="timeline__phase__date">22-25 ธันวาคม 2561</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="location" class="location" align="center">
+				<div class="location__label header-label">
+					<h2>Location</h2>
+					<div class="label--sub">คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
+				</div>
+				<div class="location__map">
+					<!-- <img src="images/IT-KMITL-banner.jpg" class="location__map__image" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง"> -->
+					<a href="https://medium.com/@jacktnp/%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%88%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B9%84%E0%B8%AD%E0%B8%97%E0%B8%B5-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87-71352f724bc" target="_blank" class="location__map__copyright">&copy; 2018 Jack’tnp</a>
+					<a href="https://goo.gl/maps/y9maMTFGHPJ2" target="_blank" class="location__map__icon">
+						<div class="location__map__icon__container middle">
+							<span>
+								<object class="location__map__icon__container__image" data="images/icon/iconLocation.svg" type="image/svg+xml">
+								</object>
+							</span>
+							<div class="location__map__icon__container__openmap">Open map</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div id="guru" class="guru" align="center">
+				<div class="guru__label header-label">
+					<h2>Guru</h2>
+				</div>
+				<div class="guru__container">
+					<div class="guru__main">
+						<div class="js--guru_fade columns">
+							<div class="guru__main__pic column" style="background-image: url( './images/speaker/3.jpg');">
+							</div>
+							<div class="guru__main__info column" align="left">
+								<div class="guru__middle">
+									<div class="guru__main__info__name">วโรรส โรจนะ (โน้ต)</div>
+									<div class="guru__main__info__corp">CEO Dek-D Interactive Co., LTD.
+										<br> นายกสมาคมผู้ดูแลเว็บไทย</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="guru__children columns">
+						<div class="guru__child guru__child__img--1 column active" src="./images/speaker/3.jpg" style="background-image: url( './images/speaker/3.jpg');"
+							name="วโรรส โรจนะ (โน้ต)" corp="CEO Dek-D Interactive Co., LTD.<br> นายกสมาคมผู้ดูแลเว็บไทย"></div>
+						<div class="guru__child guru__child__img--2 column" src="./images/speaker/9.jpg" style="background-image: url( './images/speaker/9.jpg');"
+							name="เมธปริยา คำนวนวุฒิ (ว่าน)" corp="ผู้จัดการฝ่ายการตลาด บริษัท แอลเอ็นดับเบิ้ลยู จำกัด และ กรรมการสมาคมผู้ดูแลเว็บไทย"></div>
+						<div class="guru__child guru__child__img--3 column" src="./images/speaker/1.jpg" style="background-image: url( './images/speaker/1.jpg');"
+							name="เจริญ ลักษณ์เลิศกุล (เจ)" corp="Assistant Director - Strategic planning and Digital business : Online Station, True Media"></div>
+						<div class="guru__child guru__child__img--4 column" src="./images/speaker/23.jpg" style="background-image: url( './images/speaker/23.jpg');"
+							name="วรัทธน์ วงศ์มณีกิจ (ตั้ง)" corp="Product owner of WISESIGHT Insight platform"></div>
+						<div class="guru__child guru__child__img--5 column" src="./images/speaker/4.jpg" style="background-image: url( './images/speaker/4.jpg');"
+							name="อภิศิลป์ ตรุงกานนท์ (บอย)" corp="Co-founder & CTO, Pantip.com"></div>
+						<div class="guru__child guru__child--final guru__child__img--6 column" src="./images/speaker/6.jpg" style="background-image: url( './images/speaker/6.jpg');"
+							name="จักรพงษ์ คงมาลัย (ปอง)" corp="Managing Director, Moonshot Digital Co., Ltd"></div>
+						<div class="guru__child guru__child__img--7 column" src="./images/speaker/7.jpg" style="background-image: url( './images/speaker/7.jpg');"
+							name="ภาวุธ พงษ์วิทยภานุ (ป้อม)" corp="CEO & Founder Tarad Dot Com Group"></div>
+						<div class="guru__child guru__child__img--8 column" src="./images/speaker/8.jpg" style="background-image: url( './images/speaker/8.jpg');"
+							name="ศิวัตร เชาวรียวงษ์ (ป้อม)" corp="นายกสมาคมโฆษณาดิจิทัล (ประเทศไทย)"></div>
+						<div class="guru__child guru__child__img--9 column" src="./images/speaker/10.jpg" style="background-image: url( './images/speaker/10.jpg');"
+							name="คนที่หนึ่ง แสงหิรัญ (หนึ่ง)" corp="อาจารย์ประจำภาควิชาการออกแบบนิเทศศิลป์<br>คณะนิเทศศาสตร์ มหาวิทยาลัยอัสสัมชัญ"></div>
+						<div class="guru__child guru__child__img--10 column" src="./images/speaker/11.jpg" style="background-image: url( './images/speaker/11.jpg');"
+							name="ขจร เจียรนัยพานิชย์ (เอ็ม)" corp="Blogger & Managing Director : Mango Zero, MacThai, RAiNMaker"></div>
+						<div class="guru__child guru__child__img--11 column" src="./images/speaker/12.jpg" style="background-image: url( './images/speaker/12.jpg');"
+							name="จิรัสย์ พิพัฒน์วศิน (เอิร์ธ)" corp="Managing Director of Bold Biznet Co., Ltd."></div>
+						<div class="guru__child guru__child--final guru__child__img--12 column" src="./images/speaker/13.jpg" style="background-image: url( './images/speaker/13.jpg');"
+							name="ศิระ สัจจินานนท์ (ฮันท์)" corp="CTO and Co-Founder Jitta"></div>
+						<div class="guru__child guru__child__img--13 column" src="./images/speaker/14.jpg" style="background-image: url( './images/speaker/14.jpg');"
+							name="อัครวุฒิ​ ตำราเรียง​ (บัง)" corp="อุปนายก​สมาคมศึกษาและพัฒนาโอเพ่นซอร์ส (OSEDA) <br>กรรมการ​ผู้จัดการ​ บ.มาร์เวลิค​ เอ็นจิ้น​ จก."></div>
+						<div class="guru__child guru__child__img--14 column" src="./images/speaker/5.jpg" style="background-image: url( './images/speaker/5.jpg');"
+							name="อินทนนท์ ปัญญาโสภา (เบนซ์)" corp="Co-founder at Grappik"></div>
+						<div class="guru__child guru__child__img--15 column" src="./images/speaker/15.jpg" style="background-image:
+					url( './images/speaker/15.jpg');" name="ศุภเดช สุทธิพงศ์คณาสัย (โก๋)" corp="พิธีกรรายการล้ำหน้าโชว์ Tech Blogger - Freeware.in.th"></div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="gallery-sponsor-faq">
-      <div id="gallery" class="gallery" align="center">
-        <div class="gallery__label header-label">
-          <h2>Gallery</h2>
-        </div>
-        <div class="gallery__carousel">
-          <div class="gallery__container">
-            <div id="carousel" class="carousel-container">
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/1.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/2.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/3.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/4.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/5.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/6.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/7.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/8.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/9.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/10.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/11.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/12.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/13.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/14.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/15.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/16.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/17.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/18.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/19.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/20.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/21.jpg" alt="" height="310" />
-              </div>
-              <div class="carousel-item">
-                <img data-lazy="images/gallery/ywc15_new/22.jpg" alt="" height="310" />
-              </div>
-            </div>
-            <div id="carousel-nav" class="carousel-container is-hidden-mobile">
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/1.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/2.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/3.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/4.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/5.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/6.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/7.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/8.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/9.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/10.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/11.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/12.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/13.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/14.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/15.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/16.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/17.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/18.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/19.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/20.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/21.jpg');"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/22.jpg');"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="sponsor" class="sponsor-all" align="center">
-        <div class="sponsor-all__label header-label">
-          <h2>Sponsors</h2>
-        </div>
-        <div class="sponsor-all--container container">
-          <div class="sponsor-all__main columns is-multiline">
-            <div class="sponsor-all__main__child column">
-              <a href="https://www.webmaster.or.th/" target="_blank">
-                <img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
-              </a>
-            </div>
-            <div class="sponsor-all__main__child column sponsor-all__main__child--it_kmitl">
-              <a href="https://it.kmitl.ac.th/" target="_blank">
-                <img class="sponsor--it_kmitl" src="images/sponsor/vip-it_kmitl.svg" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง">
-              </a>
-            </div>
-            <div class="sponsor-all__main__child column">
-              <a href="https://www.cpall.co.th/" target="_blank">
-                <img src="images/sponsor/CPALL.svg" alt="CP ALL">
-              </a>
-            </div>
-          </div>
-          <div class="sponsor-all__sponsor columns">
-            <div class="sponsor-all__sponsor__child column">
-              <a href="https://www.uppercuz.com/" target="_blank">
-                <img src="images/sponsor/Uppercuz.svg" alt="Uppercuz">
-              </a>
-            </div>
-            <div class="sponsor-all__sponsor__child column">
-              <a href="http://www.brilliantmillion.com/" target="_blank">
-                <img src="images/sponsor/AWBMLOGO.svg" alt="Brilliant Million">
-              </a>
-            </div>
-          </div>
-          <div class="sponsor-all__partner columns is-multiline">
-            <div class="sponsor-all__partner__child column">
-              <a href="https://www.mangozero.com/" target="_blank">
-                <img src="images/sponsor/Mangozero.svg" alt="Mango Zero">
-              </a>
-            </div>
-            <div class="sponsor-all__partner__child column sponsor-all__partner__child--pantip">
-              <a href="https://pantip.com/" target="_blank">
-                <img src="images/sponsor/Pantip.svg" alt="Pantip">
-              </a>
-            </div>
-            <div class="sponsor-all__partner__child column">
-              <a href="https://dek-d.com/" target="_blank">
-                <img src="images/sponsor/Dek-D.svg" alt="Dek-D">
-              </a>
-            </div>
-            <div class="sponsor-all__partner__child column sponsor-all__partner__child--pt">
-              <a href="https://www.pathosting.co.th/" target="_blank">
-                <img src="images/sponsor/PT.svg" alt="P&T Hosting">
-              </a>
-            </div>
-            <div class="sponsor-all__partner__child column sponsor-all__partner__child--theflight19">
-              <a href="https://theflight19.com/" target="_blank">
-                <img src="images/sponsor/TheFlight19.png" alt="The Flight19">
-              </a>
-            </div>
-            <div class="sponsor-all__partner__child column sponsor-all__partner__child--moonshot">
-              <a href="https://moonshot.co.th/" target="_blank">
-                <img src="images/sponsor/Moonshot.svg" alt="Moonshot">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="qa" class="faq" align="center">
-        <div class="faq__label header-label">
-          <h2>Q & A</h2>
-        </div>
-        <div class="faq__container faq__container--margin">
-          <div class="faq__question">
-            <header class="faq__question--header pointer">
-              <p class="faq__question--header--title">
-                เขียนโค้ดไม่เป็น ไม่เคยทำเว็บเลย สมัครได้ไหม ?
-              </p>
-              <span class="faq__question--header-icon" aria-label="View answer">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </span>
-            </header>
-            <div class="faq__question--content">
-              ได้แน่นอนค่ะ เพราะในค่าย YWC เราเปิดโอกาสให้คนที่มีความสามารถที่หลากหลาย โดยไม่จำเป็นต้องเขียนโปรแกรมเป็นเท่านั้น เพราะการสร้างเว็บไซต์นั้น
-              มีองค์ประกอบจากความร่วมมือทั้ง 4 สาขา คือสาขา Content เหมาะสำหรับคนที่ชอบคิด ชอบเขียน ชอบเล่าเรื่องสนุก ๆ ให้คนอ่านหรือดู
-              สาขา Marketing เหมาะสำหรับคนชอบจัดการ วิเคราะห์ วางระบบธุรกิจในเว็บของเรา สาขา Design เหมาะสำหรับคนที่ชอบวาด
-              ชอบออกแบบ ขีดเขียนทุกจินตนาการให้กลายเป็นจริง และสาขา Programming เหมาะสำหรับคนที่ชอบเขียนเว็บและมีพื้นฐานในระดับหนึ่ง
-              เห็นไหมว่า หากต้องการมาเข้าร่วมครอบครัว YWC นั้นไม่จำเป็นต้องเขียนโค้ดเป็นก็ได้
-            </div>
-          </div>
-          <div class="faq__question">
-            <header class="faq__question--header pointer">
-              <p class="faq__question--header--title">
-                ถ้าไม่มี Facebook จะสามารถสมัครค่ายได้ไหม ?
-              </p>
-              <span class="faq__question--header-icon" aria-label="View answer">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </span>
-            </header>
-            <div class="faq__question--content">
-              ไม่สามารถสมัครได้ เพราะในการสมัครค่ายจำเป็นต้องมีการยืนยันตัวเองผ่าน Facebook เท่านั้น และเรายังใช้ Facebook Group ในการรับข่าวสารเกี่ยวกับค่าย
-              Young Webmaster Camp อีกด้วยค่ะ
-            </div>
-          </div>
-          <div class="faq__question">
-            <header class="faq__question--header pointer">
-              <p class="faq__question--header--title">
-                เราจะรู้ผลการคัดเลือกได้จากช่องทางไหน และเมื่อไหร่ ?
-              </p>
-              <span class="faq__question--header-icon" aria-label="View answer">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </span>
-            </header>
-            <div class="faq__question--content">
-              การประกาศผลจะแบ่งเป็น 2 รอบ คือการคัดน้อง ๆ เข้ามาสัมภาษณ์ ซึ่งจะประกาศผลในวันที่ 4 พฤศจิกายน หลังจากผ่านการสัมภาษณ์ไปเรียบร้อยแล้ว
-              เราจะประกาศผลคนที่ผ่านสัมภาษณ์ในวันที่ 13 พฤษจิกายน ซึ่งใครผ่านรอบนี้ไปได้ก็จะได้เข้าค่าย YWC16 เลยค่ะ โดยเราจะประกาศผลทางเว็บไซต์
-              ywc.in.th หรือก็ คือเว็บที่น้องใช่สมัครค่ายนั่นเอง
-            </div>
-          </div>
-          <div class="faq__question">
-            <header class="faq__question--header pointer">
-              <p class="faq__question--header--title">
-                ค่าย YWC รับสมัครใครบ้าง ?
-              </p>
-              <span class="faq__question--header-icon" aria-label="View answer">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </span>
-            </header>
-            <div class="faq__question--content">
-              ค่าย YWC รับสมัครกลุ่มคนที่มีอายุระหว่าง 18 — 24 ปี (นับตั้งแต่ปี พ.ศ. 2537 — 2543) ที่มีความสนใจในงานด้านเว็บไซต์และงานในวงการดิจิทัล
-              ไม่จำกัดวุฒิการศึกษา
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact-footer">
-      <div class="contact" align="center">
-        <div class="contact__content"></div>
-        <div class="contact__social container">
-          <div class="contact__social__label header-label">
-            <h2>Follow YWCTH on</h2>
-          </div>
-          <div class="contact__social__cols columns is-multiline">
-            <div class="contact__social__col contact__social--twitter column">
-              <a href="https://twitter.com/ywcth">
-                <i class="ywc16-icon ywc16-tw"></i>
-              </a>
-            </div>
-            <div class="contact__social__col contact__social--facebook column">
-              <a href="https://www.facebook.com/ywcth">
-                <i class="ywc16-icon ywc16-fb"></i>
-              </a>
-            </div>
-            <div class="contact__social__col contact__social--ig column">
-              <a href="https://www.instagram.com/ywcth">
-                <i class="ywc16-icon ywc16-ig"></i>
-              </a>
-            </div>
-            <div class="contact__social__col contact__social--youtube column">
-              <a href="https://www.youtube.com/ywcth">
-                <i class="ywc16-icon ywc16-yt"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer class="footer">
-        <div class="header__sponsor--main header__logo--margin">
-          <div class="header__sponsor--main__child">
-            <a href="https://www.webmaster.or.th/">
-              <img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
-            </a>
-          </div>
-          <div class="header__sponsor--main__child">
-            <a href="https://it.kmitl.ac.th/">
-              <img class="sponsor--it_kmitl" src="images/sponsor/vip-it_kmitl.svg" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง">
-            </a>
-          </div>
-          <div class="header__sponsor--main__child">
-            <a href="https://www.cpall.co.th/">
-              <img src="images/sponsor/CPALL.svg" alt="CP ALL">
-            </a>
-          </div>
-        </div>
-        <div class="footer__content container">
-          <div class="footer__content--copyright">
-            <p>Copyright 2003 - 2018</p>
-          </div>
-          <div class="footer__content--sosumi" align="center">
-            <p align="center">Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.</p>
-          </div>
+		<section class="gallery-sponsor-faq">
+			<div id="gallery" class="gallery" align="center">
+				<div class="gallery__label header-label">
+					<h2>Gallery</h2>
+				</div>
+				<div class="gallery__carousel">
+					<div class="gallery__container">
+						<div id="carousel" class="carousel-container">
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/1.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/2.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/3.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/4.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/5.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/6.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/7.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/8.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/9.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/10.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/11.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/12.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/13.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/14.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/15.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/16.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/17.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/18.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/19.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/20.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/21.jpg" alt="" height="310" />
+							</div>
+							<div class="carousel-item">
+								<img data-lazy="images/gallery/ywc15_new/22.jpg" alt="" height="310" />
+							</div>
+						</div>
+						<div id="carousel-nav" class="carousel-container is-hidden-mobile">
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/1.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/2.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/3.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/4.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/5.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/6.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/7.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/8.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/9.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/10.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/11.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/12.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/13.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/14.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/15.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/16.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/17.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/18.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/19.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/20.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/21.jpg');"></div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-thumbnail" style="background-image:url( 'images/gallery/ywc15_new/22.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sponsor" class="sponsor-all" align="center">
+				<div class="sponsor-all__label header-label">
+					<h2>Sponsors</h2>
+				</div>
+				<div class="sponsor-all--container container">
+					<div class="sponsor-all__main columns is-multiline">
+						<div class="sponsor-all__main__child column">
+							<a href="https://www.webmaster.or.th/" target="_blank">
+								<img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
+							</a>
+						</div>
+						<div class="sponsor-all__main__child column sponsor-all__main__child--it_kmitl">
+							<a href="https://it.kmitl.ac.th/" target="_blank">
+								<img class="sponsor--it_kmitl" src="images/sponsor/vip-it_kmitl.svg" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง">
+							</a>
+						</div>
+						<div class="sponsor-all__main__child column">
+							<a href="https://www.cpall.co.th/" target="_blank">
+								<img src="images/sponsor/CPALL.svg" alt="CP ALL">
+							</a>
+						</div>
+					</div>
+					<div class="sponsor-all__sponsor columns">
+						<div class="sponsor-all__sponsor__child column">
+							<a href="https://www.uppercuz.com/" target="_blank">
+								<img src="images/sponsor/Uppercuz.svg" alt="Uppercuz">
+							</a>
+						</div>
+						<div class="sponsor-all__sponsor__child column">
+							<a href="http://www.brilliantmillion.com/" target="_blank">
+								<img src="images/sponsor/AWBMLOGO.svg" alt="Brilliant Million">
+							</a>
+						</div>
+					</div>
+					<div class="sponsor-all__partner columns is-multiline">
+						<div class="sponsor-all__partner__child column">
+							<a href="https://www.mangozero.com/" target="_blank">
+								<img src="images/sponsor/Mangozero.svg" alt="Mango Zero">
+							</a>
+						</div>
+						<div class="sponsor-all__partner__child column sponsor-all__partner__child--pantip">
+							<a href="https://pantip.com/" target="_blank">
+								<img src="images/sponsor/Pantip.svg" alt="Pantip">
+							</a>
+						</div>
+						<div class="sponsor-all__partner__child column">
+							<a href="https://dek-d.com/" target="_blank">
+								<img src="images/sponsor/Dek-D.svg" alt="Dek-D">
+							</a>
+						</div>
+						<div class="sponsor-all__partner__child column sponsor-all__partner__child--pt">
+							<a href="https://www.pathosting.co.th/" target="_blank">
+								<img src="images/sponsor/PT.svg" alt="P&T Hosting">
+							</a>
+						</div>
+						<div class="sponsor-all__partner__child column sponsor-all__partner__child--theflight19">
+							<a href="https://theflight19.com/" target="_blank">
+								<img src="images/sponsor/TheFlight19.png" alt="The Flight19">
+							</a>
+						</div>
+						<div class="sponsor-all__partner__child column sponsor-all__partner__child--moonshot">
+							<a href="https://moonshot.co.th/" target="_blank">
+								<img src="images/sponsor/Moonshot.svg" alt="Moonshot">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="qa" class="faq" align="center">
+				<div class="faq__label header-label">
+					<h2>Q & A</h2>
+				</div>
+				<div class="faq__container faq__container--margin">
+					<div class="faq__question">
+						<header class="faq__question--header pointer">
+							<p class="faq__question--header--title">
+								เขียนโค้ดไม่เป็น ไม่เคยทำเว็บเลย สมัครได้ไหม ?
+							</p>
+							<span class="faq__question--header-icon" aria-label="View answer">
+								<span class="icon">
+									<i class="fas fa-angle-down" aria-hidden="true"></i>
+								</span>
+							</span>
+						</header>
+						<div class="faq__question--content">
+							ได้แน่นอนค่ะ เพราะในค่าย YWC เราเปิดโอกาสให้คนที่มีความสามารถที่หลากหลาย โดยไม่จำเป็นต้องเขียนโปรแกรมเป็นเท่านั้น เพราะการสร้างเว็บไซต์นั้น
+							มีองค์ประกอบจากความร่วมมือทั้ง 4 สาขา คือสาขา Content เหมาะสำหรับคนที่ชอบคิด ชอบเขียน ชอบเล่าเรื่องสนุก ๆ ให้คนอ่านหรือดู
+							สาขา Marketing เหมาะสำหรับคนชอบจัดการ วิเคราะห์ วางระบบธุรกิจในเว็บของเรา สาขา Design เหมาะสำหรับคนที่ชอบวาด
+							ชอบออกแบบ ขีดเขียนทุกจินตนาการให้กลายเป็นจริง และสาขา Programming เหมาะสำหรับคนที่ชอบเขียนเว็บและมีพื้นฐานในระดับหนึ่ง
+							เห็นไหมว่า หากต้องการมาเข้าร่วมครอบครัว YWC นั้นไม่จำเป็นต้องเขียนโค้ดเป็นก็ได้
+						</div>
+					</div>
+					<div class="faq__question">
+						<header class="faq__question--header pointer">
+							<p class="faq__question--header--title">
+								ถ้าไม่มี Facebook จะสามารถสมัครค่ายได้ไหม ?
+							</p>
+							<span class="faq__question--header-icon" aria-label="View answer">
+								<span class="icon">
+									<i class="fas fa-angle-down" aria-hidden="true"></i>
+								</span>
+							</span>
+						</header>
+						<div class="faq__question--content">
+							ไม่สามารถสมัครได้ เพราะในการสมัครค่ายจำเป็นต้องมีการยืนยันตัวเองผ่าน Facebook เท่านั้น และเรายังใช้ Facebook Group ในการรับข่าวสารเกี่ยวกับค่าย
+							Young Webmaster Camp อีกด้วยค่ะ
+						</div>
+					</div>
+					<div class="faq__question">
+						<header class="faq__question--header pointer">
+							<p class="faq__question--header--title">
+								เราจะรู้ผลการคัดเลือกได้จากช่องทางไหน และเมื่อไหร่ ?
+							</p>
+							<span class="faq__question--header-icon" aria-label="View answer">
+								<span class="icon">
+									<i class="fas fa-angle-down" aria-hidden="true"></i>
+								</span>
+							</span>
+						</header>
+						<div class="faq__question--content">
+							การประกาศผลจะแบ่งเป็น 2 รอบ คือการคัดน้อง ๆ เข้ามาสัมภาษณ์ ซึ่งจะประกาศผลในวันที่ 4 พฤศจิกายน หลังจากผ่านการสัมภาษณ์ไปเรียบร้อยแล้ว
+							เราจะประกาศผลคนที่ผ่านสัมภาษณ์ในวันที่ 13 พฤษจิกายน ซึ่งใครผ่านรอบนี้ไปได้ก็จะได้เข้าค่าย YWC16 เลยค่ะ โดยเราจะประกาศผลทางเว็บไซต์
+							ywc.in.th หรือก็ คือเว็บที่น้องใช่สมัครค่ายนั่นเอง
+						</div>
+					</div>
+					<div class="faq__question">
+						<header class="faq__question--header pointer">
+							<p class="faq__question--header--title">
+								ค่าย YWC รับสมัครใครบ้าง ?
+							</p>
+							<span class="faq__question--header-icon" aria-label="View answer">
+								<span class="icon">
+									<i class="fas fa-angle-down" aria-hidden="true"></i>
+								</span>
+							</span>
+						</header>
+						<div class="faq__question--content">
+							ค่าย YWC รับสมัครกลุ่มคนที่มีอายุระหว่าง 18 — 24 ปี (นับตั้งแต่ปี พ.ศ. 2537 — 2543) ที่มีความสนใจในงานด้านเว็บไซต์และงานในวงการดิจิทัล
+							ไม่จำกัดวุฒิการศึกษา
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact-footer">
+			<div class="contact" align="center">
+				<div class="contact__content"></div>
+				<div class="contact__social container">
+					<div class="contact__social__label header-label">
+						<h2>Follow YWCTH on</h2>
+					</div>
+					<div class="contact__social__cols columns is-multiline">
+						<div class="contact__social__col contact__social--twitter column">
+							<a href="https://twitter.com/ywcth">
+								<i class="ywc16-icon ywc16-tw"></i>
+							</a>
+						</div>
+						<div class="contact__social__col contact__social--facebook column">
+							<a href="https://www.facebook.com/ywcth">
+								<i class="ywc16-icon ywc16-fb"></i>
+							</a>
+						</div>
+						<div class="contact__social__col contact__social--ig column">
+							<a href="https://www.instagram.com/ywcth">
+								<i class="ywc16-icon ywc16-ig"></i>
+							</a>
+						</div>
+						<div class="contact__social__col contact__social--youtube column">
+							<a href="https://www.youtube.com/ywcth">
+								<i class="ywc16-icon ywc16-yt"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="header__sponsor--main header__logo--margin">
+					<div class="header__sponsor--main__child">
+						<a href="https://www.webmaster.or.th/">
+							<img class="sponsor--twa" src="images/sponsor/vip-twa.svg" alt="Thai Webmaster Association">
+						</a>
+					</div>
+					<div class="header__sponsor--main__child">
+						<a href="https://it.kmitl.ac.th/">
+							<img class="sponsor--it_kmitl" src="images/sponsor/vip-it_kmitl.svg" alt="คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง">
+						</a>
+					</div>
+					<div class="header__sponsor--main__child">
+						<a href="https://www.cpall.co.th/">
+							<img src="images/sponsor/CPALL.svg" alt="CP ALL">
+						</a>
+					</div>
+				</div>
+				<div class="footer__content container">
+					<div class="footer__content--copyright">
+						<p>Copyright 2003 - 2018</p>
+					</div>
+					<div class="footer__content--sosumi" align="center">
+						<p align="center">Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.</p>
+						<p><a href="#banner" class="footer__content--banner_show">ร่วมประชาสัมพันธ์โครการ</a></p>
+					</div>
 
-        </div>
-      </footer>
-    </section>
-    <div id="modal-main" class="modal modal-lg" id="modal-id">
-      <a class="modal-overlay" aria-label="Close" onclick="closeModal()"></a>
-      <div class="modal-container">
-        <div class="modal-header">
-          <i class="fa fa-times modal-close pointer" aria-label="Close" onclick="closeModal()"></i>
-        </div>
-        <div class="modal-body">
-          <div class="content">
-            <!-- content here -->
-            <div class="modal__web__content modal__content" align="center">
-              <img src="images/branch/content.svg" alt="Web Content" width="170">
-              <div class="register__branch__content__detail">
-                <h3 class="register__branch__name register__branch__content__name">
-                  WEB CONTENT
-                </h3>
-                <div class="register__branch__desc">
-                  <div class="modal__header">หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์</div>
-                  เพราะเนื้อหาในเว็บไซต์ คือหัวใจหลักของการดึงดูดความสนใจ ผ่านการใช้ความคิดสร้างสรรค์
-                  <br>กลั่นกรองเนื้อหาให้ออกมาได้ตรงใจกลุ่มเป้าหมาย ทำให้เว็บไซต์น่าติดตาม และสร้างประโยชน์ให้กับผู้บริโภค
-                </div>
-              </div>
-            </div>
-            <div class="modal__web__marketing modal__content" align="center">
-              <img src="images/branch/marketing.svg" alt="Web MARKETING" width="170">
-              <div class="register__branch__content__detail">
-                <h3 class="register__branch__name register__branch__marketing__name">WEB MARKETING</h3>
-                <div class="register__branch__desc">
-                  <div class="modal__header">เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด</div>
-                  สำหรับคนรุ่นใหม่ไฟแรงที่มีความสนใจการสร้างกลยุทธ์ทางการตลาด ที่จะสร้างให้เว็บไซต์โด่งดัง วางแผนธุรกิจให้กับทุกก้าวของเว็บไซต์
-                  <br>พร้อมศึกษากลุ่มเป้าหมาย และสร้างคุณค่าให้เว็บไซต์และดึงดูดใจให้ทุกคนเข้ามาในเว็บไซต์ให้มากที่สุด
-                </div>
-              </div>
-            </div>
-            <div class="modal__web__programming modal__content" align="center">
-              <img src="images/branch/programming.svg" alt="Web PROGRAMMING" width="170">
-              <div class="register__branch__content__detail">
-                <h3 class="register__branch__name register__branch__programming__name">WEB PROGRAMMING</h3>
-                <div class="register__branch__desc">
-                  <div class="modal__header">ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง</div>
-                  นักพัฒนาเว็บไซต์ที่ใช้ทักษะและความเชี่ยวชาญในการ เปลี่ยนโค้ดนับพันบรรทัดให้กลายเป็นความอัศจรรย์บนโลกดิจิตัล
-                  <br>พร้อมผลักดันให้เว็บไซต์เกิดขึ้นและใช้งานได้จริง พร้อมรับทุกการใช้งานจากทุกมุมโลก
-                </div>
-              </div>
-            </div>
-            <div class="modal__web__design modal__content" align="center">
-              <img src="images/branch/designer.svg" alt="Web DESIGN" width="170">
-              <div class="register__branch__content__detail">
-                <h3 class="register__branch__name register__branch__designer__name">WEB DESIGN</h3>
-                <div class="register__branch__desc">
-                  <div class="modal__header">เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน</div>
-                  เพราะความสวยงามเป็นหน้าตาของเว็บไซต์ นี่สาขาสำหรับนักออกแบบที่พร้อมจะระเบิดจินตนาการและความคิดสร้างสรรค์
-                  <br>เพื่อออกแบบเว็บให้สวยงามสะดุดตา และตอบสนองทุกการใช้งาน สร้างความสะดวกให้แก่ผู้ใช้ได้
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal__question">
-            <div class="primary-color pointer" align="center" onclick="toggleShowDetail()">ดูตัวอย่างคำถาม
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="modal__question__detail" align="left">
-              <div class="question">
+				</div>
+			</footer>
+		</section>
+		<div id="modal-main" class="modal modal-lg" id="modal-id">
+			<a class="modal-overlay" aria-label="Close" onclick="closeModal()"></a>
+			<div class="modal-container">
+				<div class="modal-header">
+					<i class="fa fa-times modal-close pointer" aria-label="Close" onclick="closeModal()"></i>
+				</div>
+				<div class="modal-body">
+					<div class="content">
+						<!-- content here -->
+						<div class="modal__web__content modal__content" align="center">
+							<img src="images/branch/content.svg" alt="Web Content" width="170">
+							<div class="register__branch__content__detail">
+								<h3 class="register__branch__name register__branch__content__name">
+									WEB CONTENT
+								</h3>
+								<div class="register__branch__desc">
+									<div class="modal__header">หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์</div>
+									เพราะเนื้อหาในเว็บไซต์ คือหัวใจหลักของการดึงดูดความสนใจ ผ่านการใช้ความคิดสร้างสรรค์
+									<br>กลั่นกรองเนื้อหาให้ออกมาได้ตรงใจกลุ่มเป้าหมาย ทำให้เว็บไซต์น่าติดตาม และสร้างประโยชน์ให้กับผู้บริโภค
+								</div>
+							</div>
+						</div>
+						<div class="modal__web__marketing modal__content" align="center">
+							<img src="images/branch/marketing.svg" alt="Web MARKETING" width="170">
+							<div class="register__branch__content__detail">
+								<h3 class="register__branch__name register__branch__marketing__name">WEB MARKETING</h3>
+								<div class="register__branch__desc">
+									<div class="modal__header">เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด</div>
+									สำหรับคนรุ่นใหม่ไฟแรงที่มีความสนใจการสร้างกลยุทธ์ทางการตลาด ที่จะสร้างให้เว็บไซต์โด่งดัง วางแผนธุรกิจให้กับทุกก้าวของเว็บไซต์
+									<br>พร้อมศึกษากลุ่มเป้าหมาย และสร้างคุณค่าให้เว็บไซต์และดึงดูดใจให้ทุกคนเข้ามาในเว็บไซต์ให้มากที่สุด
+								</div>
+							</div>
+						</div>
+						<div class="modal__web__programming modal__content" align="center">
+							<img src="images/branch/programming.svg" alt="Web PROGRAMMING" width="170">
+							<div class="register__branch__content__detail">
+								<h3 class="register__branch__name register__branch__programming__name">WEB PROGRAMMING</h3>
+								<div class="register__branch__desc">
+									<div class="modal__header">ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง</div>
+									นักพัฒนาเว็บไซต์ที่ใช้ทักษะและความเชี่ยวชาญในการ เปลี่ยนโค้ดนับพันบรรทัดให้กลายเป็นความอัศจรรย์บนโลกดิจิตัล
+									<br>พร้อมผลักดันให้เว็บไซต์เกิดขึ้นและใช้งานได้จริง พร้อมรับทุกการใช้งานจากทุกมุมโลก
+								</div>
+							</div>
+						</div>
+						<div class="modal__web__design modal__content" align="center">
+							<img src="images/branch/designer.svg" alt="Web DESIGN" width="170">
+							<div class="register__branch__content__detail">
+								<h3 class="register__branch__name register__branch__designer__name">WEB DESIGN</h3>
+								<div class="register__branch__desc">
+									<div class="modal__header">เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน</div>
+									เพราะความสวยงามเป็นหน้าตาของเว็บไซต์ นี่สาขาสำหรับนักออกแบบที่พร้อมจะระเบิดจินตนาการและความคิดสร้างสรรค์
+									<br>เพื่อออกแบบเว็บให้สวยงามสะดุดตา และตอบสนองทุกการใช้งาน สร้างความสะดวกให้แก่ผู้ใช้ได้
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal__question">
+						<div class="primary-color pointer" align="center" onclick="toggleShowDetail()">ดูตัวอย่างคำถาม
+							<i class="fas fa-chevron-down"></i>
+						</div>
+						<div class="modal__question__detail" align="left">
+							<div class="question">
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="button button--regis font-normal" onclick="openConfirmModal()">
-            Register
-          </a>
-        </div>
-      </div>
-    </div>
-    <div id="modal-confirm" class="modal modal-sm">
-      <a class="modal-overlay" aria-label="Close" onclick="closeConfirmModal()"></a>
-      <div class="modal-container">
-        <div class="modal-header">
-          <i class="fa fa-times modal-close pointer" aria-label="Close" onclick="closeConfirmModal()"></i>
-        </div>
-        <div class="modal-body modal-confirm">
-          <img src="images/modal/icon-confirm.svg" width="130" alt="Are you sure ?">
-          <br> เมื่อน้อง ๆ กดยืนยันไปแล้ว
-          <br>จะไม่สามารถเปลี่ยนสาขาที่ต้องการสมัครได้ในภายหลัง
-          <br>น้อง ๆ แน่ใจแล้วใช่ไหม ?
-        </div>
-        <div class="modal-footer">
-          <a class="button button--regis font-normal" onclick="goToRegis()">
-            Confirm
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a class="button button--regis font-normal" onclick="openConfirmModal()">
+						Register
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal-confirm" class="modal modal-sm">
+			<a class="modal-overlay" aria-label="Close" onclick="closeConfirmModal()"></a>
+			<div class="modal-container">
+				<div class="modal-header">
+					<i class="fa fa-times modal-close pointer" aria-label="Close" onclick="closeConfirmModal()"></i>
+				</div>
+				<div class="modal-body modal-confirm">
+					<img src="images/modal/icon-confirm.svg" width="130" alt="Are you sure ?">
+					<br> เมื่อน้อง ๆ กดยืนยันไปแล้ว
+					<br>จะไม่สามารถเปลี่ยนสาขาที่ต้องการสมัครได้ในภายหลัง
+					<br>น้อง ๆ แน่ใจแล้วใช่ไหม ?
+				</div>
+				<div class="modal-footer">
+					<a class="button button--regis font-normal" onclick="goToRegis()">
+						Confirm
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal-banner" class="modal modal-banner modal-lg">
+			<a class="modal-overlay" aria-label="Close"></a>
+			<div class="modal-container">
+				<div class="modal-header">
+					<h2>ร่วมประชาสัมพันธ์โครการ</h2>
+					<i class="fa fa-times modal-close pointer" aria-label="Close"></i>
+				</div>
+				<div class="modal-body modal-banner--body">					
+					<div class="banner-element--wrapper">
+						<div class="banner-element banner-element-template">
+							<div class="columns">
+								<div class="column is-three-quarters is-full-mobile banner-element--preview">
+									<a href="/">
+										<img src="#" alt="16th Young Webmaster Camp: Ready to Disrupt">
+									</a>
+								</div>
+								<div class="column is-one-quarters is-full-mobile">
+									<div class="columns">
+										<h3>ขนาด <span class="banner-element--image_size"></span></h3>
+									</div>
+									<div class="columns">
+										<a href="#" target="_blank" download="banner.jpg" class="button banner-element--download">Download</a>
+									</div>
+									<div class="columns">
+										<a class="button banner-element--show_code" href="javascript:void();">แสดง code</a>
+									</div>
+								</div>
+							</div>
+							<div class="columns">
+								<div class="column is-full banner-element--code-wrapper" style="display: none;">
+									<textarea class="banner-element--code-textarea" type="text" readonly></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src='js/slick.min.js'></script>
-  <script src="js/smooth-scroll.min.js"></script>
-  <script defer src="js/main.js?_version=1.9.2"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42284958-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src='js/slick.min.js'></script>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script defer src="js/main.js?_version=1.10.0"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42284958-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-    gtag('config', 'UA-42284958-1');
-  </script>
-  <script>
-    (function(h,e,a,t,m,p) {
-      m=e.createElement(a);m.async=!0;m.src=t;
-      p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
-    })(window,document,'script','https://u.heatmap.it/log.js');
-  </script>
+		gtag('config', 'UA-42284958-1');
+	</script>
+	<script>
+		(function(h,e,a,t,m,p) {
+			m=e.createElement(a);m.async=!0;m.src=t;
+			p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+		})(window,document,'script','https://u.heatmap.it/log.js');
+	</script>
 </body>
 
 </html>

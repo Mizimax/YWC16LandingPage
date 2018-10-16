@@ -297,4 +297,75 @@ $(document).ready(function() {
 
   registerStat();
   setInterval(registerStat, 10 * 1000);
+
+  var bannerList = {
+    "160_600.jpg": "160x600 px",
+    "300_250.jpg": "300x250 px",
+    "300_600.jpg": "300x600 px",
+    "468_60.jpg":  "468x60 px" ,
+    "600_500_forPantip.jpg":  "600x500 px (สำหรับ Pantip)",
+    "720_300.jpg": "720x300 px",
+    "728_90.jpg":  "728x90 px",
+    "Banner.jpg":  "1024x1024 px (Banner)",
+    "Square.jpg":  "1024x1024 px (Square)"
+  };
+
+  var webLocation = window.location.protocol + "//" + window.location.host;
+  var bannerLocation = webLocation + "/images/banner/";
+
+  var bannerTemplate = $("#modal-banner .banner-element.banner-element-template").detach();
+  $.each(bannerList, function(fileName, description){
+    var currBannerElem = bannerTemplate.clone();
+    currBannerElem.removeClass("banner-element-template");
+
+    currBannerElem.find(".banner-element--preview a").attr("href", webLocation);
+    currBannerElem.find(".banner-element--preview img").attr("src", bannerLocation + fileName);
+    currBannerElem.find(".banner-element--image_size").text(description);
+    currBannerElem.find(".banner-element--download").attr("href", bannerLocation + fileName);
+    currBannerElem.find(".banner-element--code-textarea").val($.trim(currBannerElem.find(".banner-element--preview").html()).replace(/\s+(?=\s)/g,'').replace(/\t/g, ''));
+
+    currBannerElem.appendTo("#modal-banner .banner-element--wrapper");
+  });
+
+  $("a[href='#banner']").click(function(e){ $("#modal-banner").addClass("active"); e.preventDefault(); });
+  if(window.location.hash === "#banner") $("#modal-banner").addClass("active");
+
+  $("body").on("click", ".banner-element:has(.banner-element--code-wrapper) .banner-element--show_code", function(e){
+    e.preventDefault();
+    var bannerCodeObj = $(this).parent().parent().parent().parent().find(".banner-element--code-wrapper");
+    if(bannerCodeObj.is(":visible")){
+      bannerCodeObj.hide();
+      $(this).text("แสดง code");
+    }else {
+      bannerCodeObj.show();
+      $(this).text("ซ่อน code");
+      var textAreaObj = bannerCodeObj.find(".banner-element--code-textarea");
+      textAreaObj.select();
+
+      window.setTimeout(function() {
+          textAreaObj.select();
+      }, 1);
+
+      // Work around WebKit's little problem
+      function mouseUpHandler() {
+          // Prevent further mouseup intervention
+          textAreaObj.off("mouseup", mouseUpHandler);
+          return false;
+      }
+
+      textAreaObj.mouseup(mouseUpHandler);
+
+    }
+  });
+
+  $("body").on("click", "#modal-banner.active .modal-overlay, #modal-banner.active .modal-close", function(e){
+    $("#modal-banner").removeClass("active");
+    e.preventDefault();
+  });
+  $(document).keyup(function(e) {
+    if (e.key === "Escape" && $("#modal-banner").hasClass("active")) { // escape key maps to keycode `27`
+      $("#modal-banner").removeClass("active");
+    }
+  });
+
 });
