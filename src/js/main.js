@@ -318,7 +318,7 @@ $(document).ready(function() {
     var currBannerElem = bannerTemplate.clone();
     currBannerElem.removeClass("banner-element-template");
 
-    currBannerElem.find(".banner-element--preview a").attr("href", webLocation);
+    currBannerElem.find(".banner-element--preview a").attr("href", "http://bit.ly/YWC16-banner");
     currBannerElem.find(".banner-element--preview img").attr("src", bannerLocation + fileName);
     currBannerElem.find(".banner-element--image_size").text(description);
     currBannerElem.find(".banner-element--download").attr("href", bannerLocation + fileName);
