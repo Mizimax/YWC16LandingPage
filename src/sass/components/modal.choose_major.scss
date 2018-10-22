@@ -1,0 +1,48 @@
+.modal-choose_major{
+  .modal-header{
+    @include subHeaderFont();
+    font-size: $header-font-size;
+    font-weight: bold;
+    color: $primary-color;
+    padding-bottom: 1rem;
+
+    .fa.modal-close{
+      top: 24px;
+    }
+
+  }
+  .modal-choose_major--body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include mobile(){
+      max-height: 75vh;
+    }
+
+    .choose_major-element{
+      display: flex;
+      text-align: center;
+      .button{
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        @include subHeaderFont();
+        font-size: $content-font-size;
+        font-weight: bold;
+        background-color: transparent;
+        color: $primary-color;
+        border-radius: calc( #{$border-radius} + #{$content-font-size});
+
+        padding: 6px 42px;
+        border: 2px solid;
+        border-color: $light-color;
+        transition: 0.3s all;
+        &:hover,
+        &:focus,
+        &:active {
+          color: $light-color;
+          background-color: $primary-color;
+          border-color: $light-color;
+        }
+      }
+    }
+  }
+}

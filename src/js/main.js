@@ -1,6 +1,7 @@
 var guruInterval;
 var branchSelected;
 var branchQuestions;
+var branchQuestionsCallback = function(){};
 
 var goToRegis = function() {
   window.location.href =
@@ -9,6 +10,11 @@ var goToRegis = function() {
 
 var parseQuestion = function(branch) {
   if (branch === "designer") branch = "design";
+  if(!branchQuestions){
+    branchQuestionsCallback = function(){ parseQuestion(branch); };
+    return;
+  }
+
   var question = branchQuestions[branch];
   var text = "";
 
@@ -273,6 +279,8 @@ $(document).ready(function() {
     success: function(res) {
       if (res.status === "success") {
         branchQuestions = res.payload;
+        branchQuestionsCallback();
+        branchQuestionsCallback = undefined;
       }
     },
     error: function(res) {
@@ -327,8 +335,7 @@ $(document).ready(function() {
     currBannerElem.appendTo("#modal-banner .banner-element--wrapper");
   });
 
-  $("a[href='#banner']").click(function(e){ $("#modal-banner").addClass("active"); e.preventDefault(); });
-  if(window.location.hash === "#banner") $("#modal-banner").addClass("active");
+  
 
   $("body").on("click", ".banner-element:has(.banner-element--code-wrapper) .banner-element--show_code", function(e){
     e.preventDefault();
@@ -358,13 +365,30 @@ $(document).ready(function() {
     }
   });
 
-  $("body").on("click", "#modal-banner.active .modal-overlay, #modal-banner.active .modal-close", function(e){
-    $("#modal-banner").removeClass("active");
-    e.preventDefault();
+  ["banner", "choose_major"].forEach(function(selector){
+    $("body").on("click", "#modal-"+selector + ".active .modal-overlay, "+"#modal-"+selector+".active .modal-close", function(e){
+      $("#modal-"+selector).removeClass("active");
+      e.preventDefault();
+    });
+    $("a[href='#"+ selector +"']").click(function(e){ $("#modal-"+ selector).addClass("active"); });
+    if(window.location.hash === "#"+ selector) $("#modal-"+ selector).addClass("active");
   });
+
+  function openDetailModal(hash){
+    openModal(hash.replace('#detail-major=', ''));
+    $("#modal-choose_major").removeClass("active");
+  }
+
+  $("a[href^='#detail-major']").click(function(e){ openDetailModal(this.hash) });
+  if(window.location.hash.indexOf("#detail-major=") !== -1 ) openDetailModal(window.location.hash);
+
+
   $(document).keyup(function(e) {
-    if (e.key === "Escape" && $("#modal-banner").hasClass("active")) { // escape key maps to keycode `27`
-      $("#modal-banner").removeClass("active");
+    if (e.key === "Escape") { // escape key maps to keycode `27`
+      ["#modal-banner", "#modal-choose_major"].forEach(function(selector){
+        if($(selector).hasClass("active"))
+          $(selector).removeClass("active");
+      });
     }
   });
 

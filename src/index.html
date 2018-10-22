@@ -200,7 +200,7 @@
 								หัวใจหลักของการดึงคนเข้าเว็บไซต์ ด้วยเนื้อหาและวิธีการนำเสนอที่แตกต่าง และสร้างสรรค์
 							</div>
 							<div class="register__branch__detail">
-								<a class="button button--regis" onclick="openModal('content')">
+								<a class="button button--regis" href="#detail-major=content">
 									รายละเอียด
 								</a>
 							</div>
@@ -219,7 +219,7 @@
 								เติมเต็มทุกจินตนาการ สร้างสรรค์เว็บไซต์ให้สวยงาม สะกดทุกสายตา และตรงใจทุกการใช้งาน
 							</div>
 							<div class="register__branch__detail">
-								<a class="button button--regis" onclick="openModal('design')">
+								<a class="button button--regis" href="#detail-major=design">
 									รายละเอียด
 								</a>
 							</div>
@@ -240,7 +240,7 @@
 								ด้วยสองมือและหนึ่งใจ ใช้ทุกความเชี่ยวชาญในด้านการเขียนโปรแกรม เพื่อขับเคลื่อนเว็บไซต์ให้กลายเป็นจริง
 							</div>
 							<div class="register__branch__detail">
-								<a class="button button--regis" onclick="openModal('programming')">
+								<a class="button button--regis" href="#detail-major=programming">
 									รายละเอียด
 								</a>
 							</div>
@@ -259,12 +259,19 @@
 								เข้าใจทุกก้าวของการตลาด สร้างคุณค่า และวางแผนเพื่อพาเว็บไซต์ให้ถึงกลุ่มเป้าหมายอย่างตรงจุด
 							</div>
 							<div class="register__branch__detail">
-								<a class="button button--regis" onclick="openModal('marketing')">
+								<a class="button button--regis" href="#detail-major=marketing">
 									รายละเอียด
 								</a>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="columns container">
+				<div class="column register__branch__detail">
+					<a class="button button--regis button--choose_major" href="#choose_major">
+						สมัคร
+					</a>
 				</div>
 			</div>
 		</div>
@@ -797,7 +804,7 @@
 				</div>
 				<div class="modal-footer">
 					<a class="button button--regis font-normal" onclick="openConfirmModal()">
-						Register
+						สมัครสาขานี้
 					</a>
 				</div>
 			</div>
@@ -854,6 +861,43 @@
 									<textarea class="banner-element--code-textarea" type="text" readonly></textarea>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-choose_major" class="modal modal-choose_major modal-lg">
+			<a class="modal-overlay" aria-label="Close"></a>
+			<div class="modal-container">
+				<div class="modal-header">
+					<h2>เลือกสาขาที่จะสมัคร</h2>
+					<i class="fa fa-times modal-close pointer" aria-label="Close"></i>
+				</div>
+				<div class="modal-body modal-choose_major--body">
+					<div class="columns">
+						<div class="column choose_major-element">
+							<a href="#detail-major=content" class="button">
+								<img src="images/branch/content.svg" alt="Web Content" width="170">
+								<h3 class="major__name">web content</h3>
+							</a>
+						</div>
+						<div class="column choose_major-element">
+							<a href="#detail-major=design" class="button">
+								<img src="images/branch/designer.svg" alt="Web design" width="170">
+								<h3 class="major__name">web design</h3>
+							</a>
+						</div>
+						<div class="column choose_major-element">
+							<a href="#detail-major=programming" class="button">
+								<img src="images/branch/programming.svg" alt="Web programming" width="170">
+								<h3 class="major__name">web programming</h3>
+							</a>
+						</div>
+						<div class="column choose_major-element">
+							<a href="#detail-major=marketing" class="button">
+								<img src="images/branch/marketing.svg" alt="Web marketing" width="170">
+								<h3 class="major__name">web marketing</h3>
+							</a>
 						</div>
 					</div>
 				</div>

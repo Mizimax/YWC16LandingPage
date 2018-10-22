@@ -64,6 +64,11 @@ $marketing-color: #f797aa;
   border-color: $primary-color;
   color: $primary-color;
   transition: 0.3s all;
+
+  &.button--choose_major{
+    width: 90%;
+    display: block;
+  }
 }
 
 .button--regis:hover,
