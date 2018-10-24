@@ -66,6 +66,11 @@
     height: ($sponsor-size-vip * $sponsor-header-mobile-resize-ratio);
     width: ($sponsor-size-vip * $sponsor-header-mobile-resize-ratio);
   }
+  @if $is-sponsor-scb-show != true {
+    &.header__sponsor--child--scb{
+      display: none;
+    }
+  }
 }
 
 .uppercuz {

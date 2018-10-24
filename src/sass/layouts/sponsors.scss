@@ -112,10 +112,12 @@
 
       @include tablet() {
         margin: 0 1.5rem;
+        margin-bottom: 1rem;
       }
 
       @include mobile() {
         margin: 0 1rem;
+        margin-bottom: 1rem;      
         flex: 0 0 ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
         height: ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
         width: ($sponsor-size-vip * $sponsor-mobile-resize-ratio);
@@ -126,6 +128,8 @@
 
       @media (max-width: 375px) {
         margin: 0;
+
+        margin-bottom: 1rem;
         &:first-child {
           margin-right: 3vw;
         }
@@ -150,6 +154,26 @@
           height: calc( 100% - 1rem);
           margin-top: 1rem;
           width: 100%;
+        }
+      }
+      &.sponsor-all__main__child--scb{
+        @if $is-sponsor-scb-show != true {
+          display: none;
+        }@else{
+          padding: 0 0.35rem;
+
+          a{
+            position: relative;
+            transform: none;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+
+            img{
+              height: 100%;
+            }
+          }
         }
       }
     }
