@@ -35,7 +35,7 @@ gulp.task('minify_html', () => {
       collapseWhitespace: true,
       minifyCSS: true,
       minifyJS: true,
-      removeComments: false
+      removeComments: true
     }))
     .pipe(gulp.dest('dist'));
 });
