@@ -890,12 +890,25 @@
 			<a class="modal-overlay" aria-label="Close"></a>
 			<div class="modal-container">
 				<div class="modal-header">
-					<h2>เลือกสาขาที่จะสมัคร</h2>
+					<!-- <h2>เลือกสาขาที่จะสมัคร</h2> -->
+					<h2>&nbsp;&nbsp;&nbsp;ขออภัยในความไม่สะดวก</h2>
 					<i class="fa fa-times modal-close pointer" aria-label="Close"></i>
 				</div>
 				<div class="modal-body modal-choose_major--body">
 					<div class="columns">
-						<div class="column choose_major-element">
+						<div class="column is-8 is-offset-2">
+							<p>ขณะนี้ระบบรับสมัครฯ ขัดข้องกระทันหัน ทำให้ต้องหยุดการรับสมัครเป็นการชั่วคราว</p>
+							<p>ทีมงานกำลังแก้ไขอย่างเร่งด่วน <strong>และจะกลับมาเปิดรับสมัครอีกครั้ง</strong>เมื่อแก้ปัญหาแล้วเสร็จ<br></p>
+							<p style="margin-top: 1.5rem;">ขออภัยในความไม่สะดวก และขอขอบคุณทุกท่านที่ให้ความสนใจโครงการฯ</p>
+							<br>
+							<p align="right">โครงการ Young Webmaster Camp</p>
+							<br>
+							<br>
+							<br>
+							<br>
+
+						</div>
+						<!-- <div class="column choose_major-element">
 							<a href="#detail-major=content" class="button">
 								<img src="images/branch/content.svg" alt="Web Content" width="170">
 								<h3 class="major__name">web content</h3>
@@ -918,7 +931,7 @@
 								<img src="images/branch/marketing.svg" alt="Web marketing" width="170">
 								<h3 class="major__name">web marketing</h3>
 							</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -947,6 +960,9 @@
 			m=e.createElement(a);m.async=!0;m.src=t;
 			p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
 		})(window,document,'script','https://u.heatmap.it/log.js');
+	</script>
+	<script>
+		$(document).ready(function(){ $("#modal-choose_major").addClass('active'); $(".register__branch__no, .register__branch__detail a").hide(); });
 	</script>
 </body>
 
