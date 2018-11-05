@@ -1,0 +1,30 @@
+.annoucement{
+	.annoucement__container{
+		.dataTables_paginate .pagination-list li{
+			display: inline-block;
+
+			.pagination-link{
+				padding: 0.25rem 1rem;
+				margin-right: 0.25rem;
+				border: 2px solid $primary-color;
+
+				border-radius: 0.5rem;
+				color: $primary-color;
+				background-color: $light-color;
+
+				transition: background-color 0.35s, color 0.35s;
+
+				&.is-current{
+					background-color: $primary-color;
+					color: $light-color;
+
+				}
+			}
+		}
+	}
+	table.dataTable{
+		thead th:after{
+			display: none;
+		}
+	}
+}

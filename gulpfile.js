@@ -40,6 +40,17 @@ gulp.task('minify_html', () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('minify_interview_html', () => {
+  return gulp.src('src/interview.html')
+    .pipe(htmlmin({ 
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: true
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('minify_js', () => {
   return gulp.src('src/js/main.js')
     .pipe(uglify())
@@ -69,7 +80,7 @@ gulp.task("watch", function() {
 
 gulp.task("build", 
   gulp.series(
-    gulp.parallel("minify_html", "sass"),
+    gulp.parallel("minify_html", "minify_interview_html", "sass"),
     gulp.series('copy', 'minify_js')
   )
 );

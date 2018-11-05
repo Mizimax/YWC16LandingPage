@@ -1,0 +1,36 @@
+$content-color: #81b77d;
+$designer-color: #f7c778;
+$programming-color: #78c8f4;
+$marketing-color: #f797aa;
+
+.result-annoucement {
+  margin-top: 30px;
+  padding-bottom: 35%;
+  .result-annoucement__container {
+    width: 90%;
+    margin: 0 auto;
+
+    .result-annoucement__detail {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .button--result_annoucement {
+      border-radius: 40px;
+      padding: 6px 42px;
+      border: 2px solid;
+      font-size: 21px;
+      font-weight: bold;
+      font-family: $subheader-font, sans-serif;
+      background-color: white;
+      border-color: $primary-color;
+      color: $primary-color;
+      transition: 0.3s all;
+
+      &:hover,&:focus,&:active {
+        color: white;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
