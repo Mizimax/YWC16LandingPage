@@ -21,99 +21,29 @@
     color: $primary-color;
     font-size: $sub-header-font-size;
     font-weight: normal;
+    margin-top: 1rem;
   }
 
   u, a{
     color: $primary-color;
-  }
-  u{
     font-weight: bold;
   }
   .ica__camp-icon{
     font-size: 0;
+    margin-bottom: 2rem;
     :before{
       font-size: $header-font-size * 2;
     }
     text-align: center;
   }
   .ica__container__desc {
-    padding: 20px 0;
+    padding: 20px 1rem;
+    padding-left: 2rem;
     color: #5a538e;
   }
   @include mobile() {
     .ica__container__desc {
       padding: 30px;
-    }
-  }
-
-  .ica__question__wrapper{
-    margin-top: 30px;
-    margin-left: -1rem;
-
-    transform: scale(0);
-    opacity: 0;
-
-    transition: all 0.5s;
-
-    &.active{
-      transform: scale(1);
-      opacity: 1;
-
-      &.expanded{
-        .ica__question__detail{
-          max-height: initial;
-        }
-        .ica__question__readmore{
-          margin-top: 0;
-          .readmore--collapsed{
-            display: none;
-          }
-          .readmore--expanded{
-            display: initial;
-          }
-        }
-      }
-    }
-    
-    .ica__question__detail{
-      max-height: 4rem;
-      overflow-y: hidden;
-      transition: max-height 0.5s;
-    }
-
-    .ica__question__readmore{
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+50 */
-      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-      height: 4.5rem;
-      margin-top: -1.5rem;
-      padding-top: 2rem;
-      width: 100%;
-      display: block;
-      transition: all 0.5s;
-
-      .readmore--collapsed{
-        display: initial;
-      }
-      .readmore--expanded{
-        display: none;
-      }
-    }
-    .ica__question__major{
-      display: none;
-      > * {
-        padding-left: 0;
-      }
-
-      ol{
-        margin-left: 1rem;
-        padding-left: 0;
-      }
-      &.active{
-        display: initial;
-      }
     }
   }
 }

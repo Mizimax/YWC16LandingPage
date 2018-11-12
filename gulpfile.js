@@ -57,6 +57,12 @@ gulp.task('minify_js', () => {
     .pipe(gulp.dest('dist/js'));
 });
 
+gulp.task('minify_interview_js', () => {
+  return gulp.src('src/js/main.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
+});
+
 gulp.task("copy", function() {
   return gulp.src([
     '*src/css/**/*',
@@ -64,6 +70,7 @@ gulp.task("copy", function() {
     '*src/js/**/*',
     '*src/images/**/*',
     '*src/videos/**/*',
+    '*src/interview-list/**/*',
     '*src/robots.txt'
   ], {base: "./src/"})
   .pipe(gulp.dest('dist/'));
@@ -81,7 +88,7 @@ gulp.task("watch", function() {
 gulp.task("build", 
   gulp.series(
     gulp.parallel("minify_html", "minify_interview_html", "sass"),
-    gulp.series('copy', 'minify_js')
+    gulp.series('copy', 'minify_js', 'minify_interview_js')
   )
 );
 

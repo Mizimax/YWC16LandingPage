@@ -19,7 +19,11 @@ body {
   font-size: $content-font-size;
   min-height: 100%;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+body, #main{
+  height: 100%;
 }
 
 .label--sub {
@@ -138,10 +142,14 @@ body {
   background: -webkit-linear-gradient(top, $light-color 0%,$light-color 98%,#ebe9f5 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, $light-color 0%,$light-color 98%,#ebe9f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f6fb', endColorstr='#ebe9f5',GradientType=0 ); /* IE6-9 */
-  overflow: -webkit-paged-y;
+  overflow-y: auto;
 }
 
 .register{
   background: none;
   padding-bottom: 30px;
+}
+
+.footer{
+  margin-bottom: 3rem;
 }

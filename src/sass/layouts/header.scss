@@ -1,9 +1,12 @@
 .header {
   padding-top: 0;
+  @include mobile() {
+    padding-bottom: 10vw;
+  }
   .header__logo--margin {
     margin-top: calc(20vh);
     @include mobile() {
-      margin-top: 7.5vh;
+      margin-top: 16vh;
     }
   }
   .header__video {
@@ -216,4 +219,37 @@
   .footer > .header__sponsor--main {
     transform: translateY(0);
   }
+}
+
+
+
+.header__list-annoucement{
+  width: 100%;
+  margin-top: 2.5rem;
+  .header__list--annoucement-btn{
+    border-radius: 7rem;
+    padding: 0.5rem 7rem;
+    border: 2px solid;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: $subheader-font, sans-serif;
+    background-color: $primary-color;
+    border-color: $light-color;
+    color: $light-color;
+    transition: 0.3s all;
+    margin: 1rem auto;
+    display: inline-block;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary-color;
+      background-color: $light-color;
+    }
+
+    @include mobile(){
+      padding: 0.5rem 2rem;
+      font-size: 2rem;
+    }
+  }  
 }

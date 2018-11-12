@@ -188,6 +188,7 @@
   }
 
   .sponsor-all__sponsor{
+    flex-wrap: wrap;
     .sponsor-all__sponsor__child {
       flex: 0 0 $sponsor-size-sponsor;
       // @include desktop() {
@@ -202,9 +203,8 @@
       // }
 
       @include mobile() {
-        margin: 1.5rem;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin: 1.5rem 1rem;
+        margin-bottom: 0.75rem;
         flex: 0 0 ($sponsor-size-sponsor * $sponsor-mobile-resize-ratio);
         height: ($sponsor-size-sponsor * $sponsor-mobile-resize-ratio);
         width: ($sponsor-size-sponsor * $sponsor-mobile-resize-ratio);
