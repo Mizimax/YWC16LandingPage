@@ -19,6 +19,7 @@
     "datatables-bulma": "^1.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.1"
   }
 }

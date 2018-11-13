@@ -1,0 +1,257 @@
+@include keyframes('YWCgradient') {
+	from { background-position:90% 0%; };
+	50% { background-position:11% 100%; };
+	to { background-position:90% 0%; };
+}
+.ca_section{
+	transform: scale(0);
+	opacity: 0;
+	display: none;
+	transition:       transform 0.001s, opacity 0.5s, display 0.001s;
+	transition-delay: 4.999s, 0s, 4.999s;
+
+	&.active{
+		display: block;
+		opacity: 1;
+		transform:        translateY(0) scale(1);
+		transition-delay: 0s, 0s, 0s;
+	}
+
+	&.ca--search{
+		h3{
+			@include subHeaderFont();
+			font-size: $header-font-size;
+			font-weight: bolder;
+			color: $primary-color;
+		}
+		.ca__search--form{
+			@include desktop(){
+				width: 50vw;
+			};
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 2rem;
+			.ca__form--input{
+				margin-top: $header-font-size;
+				padding-left: $header-font-size * 1.25;
+				border: 2px solid $primary-color;
+				@include subHeaderFont();
+				font-size: $header-font-size * 1.25;
+				color: $primary-color;
+				border-radius: $header-font-size * 3;
+				text-transform: uppercase;
+
+				&::placeholder{
+					color: $secondary-color;
+				}
+			}
+			.icon{
+				height: 100%;
+				background: transparent;
+				border: 0;
+				pointer-events: auto;
+				z-index: 999;
+				cursor: pointer;
+				color: $primary-color;
+				font-size: $header-font-size * 1.25;
+				padding-top: $header-font-size * 0.75;
+			}
+		}
+		.ca__search--viewall{
+			@include subHeaderFont;
+			font-size: $sub-header-font-size;
+			color: $primary-color;
+			text-decoration: underline;
+		}
+	}
+
+	&.ca__result{
+		@include subHeaderFont();
+		color: $primary-color;
+		.ca__result--code{
+			font-size: $sub-header-font-size;
+			font-weight: bolder;
+		}
+		.ca__result--header{
+			margin-top: $header-font-size * 0.5;
+			.header-content{
+				@include subHeaderFont();
+				font-size: $header-font-size * 1.25;
+				line-height: $header-font-size * 1.25;
+				font-weight: bold;
+				padding-top: $header-font-size * 1;
+				padding-bottom: $header-font-size * 1;
+
+				.ca__header--youpass{
+					font-size: $header-font-size * 1.5;
+					line-height: $header-font-size * 1.5;
+				}
+				.fancy-text-color{
+					/** @apiDescription See https://www.gradient-animator.com/ for more info. */
+					background: linear-gradient(270deg, $primary-color, $sub-color);
+					background-size: 400% 400%;
+					-webkit-animation: YWCgradient 5s ease infinite;
+					-moz-animation: YWCgradient 5s ease infinite;
+					-o-animation: YWCgradient 5s ease infinite;
+					animation: YWCgradient 5s ease infinite;
+					background-clip: text;
+					-webkit-background-clip: text;
+					color: rgba($primary-color, 0.5);
+				}
+			}
+		}
+		.ca__result--detail{
+			font-size: $header-font-size;
+			font-weight: bolder;
+			color: $primary-color;
+		}
+		.ca__result--pleasepay{
+			margin: $sub-header-font-size 0;
+			font-size: $sub-header-font-size;
+			line-height: $sub-header-font-size * 1.25;
+			strong{
+				color: $primary-color !important;
+			}
+		}
+
+		.ca__result--payment_detail{
+			display: inline-block;
+			clear: both;
+			float: left;
+			margin: 0 auto;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@include mobile(){
+				margin-bottom: 2rem;
+			}
+			h4{
+				text-align: left;
+				font-weight: bold;
+				margin-bottom: $sub-header-font-size * 0.5;
+			}
+			.ca__payment_detail--bankacc{
+				border: solid 2px $primary-color;
+				padding: $sub-header-font-size*0.5 2rem;
+				font-size: $sub-header-font-size;
+				border-radius: 2rem;
+				margin-bottom:  $content-font-size;
+
+				@include mobile(){
+					u{
+						display: block;
+					}
+				}
+			}
+		}
+
+		.ca__pass-type--real, 
+		.ca__pass-type--reserve{
+			display: none;
+		}
+
+		&.ca--real .ca__pass-type--real,
+		&.ca--reserve .ca__pass-type--reserve{
+			display: initial;
+		}
+	}
+
+	&.ca--annoucement{
+		text-align: left;
+		h3{
+			@include subHeaderFont();
+			color: $primary-color;
+			font-size: $sub-header-font-size;
+			font-weight: normal;
+			margin-top: 1rem;
+		}
+		.annoucement__container{
+			.dataTables_paginate {
+				margin-top: 1rem;
+				@include mobile(){
+					margin-top: 0;
+				}
+				.pagination-list li{
+					display: inline-block;
+
+					.pagination-link{
+						padding: 0.25rem 1rem;
+						margin-right: 0.25rem;
+						border: 2px solid $primary-color;
+
+						border-radius: 0.5rem;
+						color: $primary-color;
+						background-color: $light-color;
+
+						transition: background-color 0.35s, color 0.35s;
+
+						&.is-current{
+							background-color: $primary-color;
+							color: $light-color;
+
+						}
+					}
+				}
+			}
+		}
+
+		.dataTables_wrapper{
+			padding: 2rem;
+			background: white;
+			border-radius: 2rem;
+			max-width: 85vw;
+
+			@include mobile(){
+				padding: 2rem 1rem;
+			};
+
+			.toolbar h3{
+				margin-bottom: -2rem;
+				@include mobile(){
+					margin-bottom: 0;
+				}
+			}
+		}
+		table.dataTable{
+			thead th{
+				@include subHeaderFont();
+				color: $primary-color;
+				font-size: 1.5rem;
+				text-align: center;
+				vertical-align: middle;
+				&:after{
+					display: none;
+				}
+
+				@include mobile(){
+					font-size: 1rem;
+				};
+			}
+
+			tbody{
+				tr{
+					background-color: transparent;
+				}
+				td{
+					border: 1px solid $primary-color;
+				}
+			}
+		}
+
+		.header-content{
+			@include subHeaderFont();
+		}
+
+		h2{
+			@include subHeaderFont();
+			color: $primary-color;
+			font-size: $sub-header-font-size;
+		}
+		table{
+			td{
+				padding: 0.25rem;
+			}
+		}
+	}
+}

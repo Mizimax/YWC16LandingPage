@@ -27,3 +27,23 @@
   -webkit-filter: grayscale(0);
   filter: none;
 }
+
+@mixin minHeightPage {
+  min-height: calc(100vh - #{$navbar-height} - 3rem - 3rem);
+}
+
+@mixin keyframes($animationName)
+{
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName}  {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

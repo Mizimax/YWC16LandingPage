@@ -1,0 +1,61 @@
+/*** Our framework ***/
+@import "../variables.scss";
+@import "../fonts";
+@import "../mixins";
+
+.ca_header {
+  margin-top: 0;
+  margin-bottom: -30px;
+  padding: 30px 0;
+  padding-bottom: 0;
+  position: relative;
+
+  p, li, h3{
+    text-align: left;
+  }
+  p[align="center"]{
+    text-align: center;
+  }
+
+  h3{
+    @include subHeaderFont();
+    color: $primary-color;
+    font-size: $sub-header-font-size;
+    font-weight: normal;
+    margin-top: 1rem;
+  }
+
+  u, a{
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  .ca_header__camp-icon{
+    font-size: 0;
+    margin-bottom: 2rem;
+    :before{
+      font-size: $header-font-size * 2;
+    }
+    text-align: center;
+  }
+  .ca_header__container__desc {
+    padding: 20px 1rem;
+    padding-left: 2rem;
+    color: #5a538e;
+  }
+  @include mobile() {
+    .ca_header__container__desc {
+      padding: 30px;
+    }
+  }
+
+  .ca_header--back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5rem;
+    font-size: 3rem;
+    display: none;
+  }
+}

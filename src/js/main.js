@@ -273,7 +273,7 @@ $(document).ready(function() {
   });
 
   //api connect
-  $.ajax({
+ /* $.ajax({
     url: "https://api.ywc.in.th/questions",
     methods: "get",
     success: function(res) {
@@ -286,11 +286,12 @@ $(document).ready(function() {
     error: function(res) {
       console.log(res);
     }
-  });
+  });*/
 
   //Add registerd stat
 
   var registerStat = function() {
+    return; //พอดี api ดับไปแล้ว เงินหมด
     $.getJSON("https://api.ywc.in.th/users/stat", function(data) {
       if (data.status != "success") return;
       for (var major in data.payload) {

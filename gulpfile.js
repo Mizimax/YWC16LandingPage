@@ -5,6 +5,7 @@ var wait = require("gulp-wait");
 var plumber = require("gulp-plumber");
 const htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 
 function swallowError(error) {
   console.log(error.toString());
@@ -51,6 +52,18 @@ gulp.task('minify_interview_html', () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('minify_ca_html', () => {
+  return gulp.src('src/camper-annoucement.html')
+    .pipe(htmlmin({ 
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: true
+    }))
+    // .pipe(rename('charlie-alpha-yankee-whiskey-charlie.html'))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('minify_js', () => {
   return gulp.src('src/js/main.js')
     .pipe(uglify())
@@ -58,7 +71,12 @@ gulp.task('minify_js', () => {
 });
 
 gulp.task('minify_interview_js', () => {
-  return gulp.src('src/js/main.js')
+  return gulp.src('src/js/interview.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
+});
+gulp.task('minify_ca_js', () => {
+  return gulp.src('src/js/camper-annoucement.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
@@ -87,8 +105,8 @@ gulp.task("watch", function() {
 
 gulp.task("build", 
   gulp.series(
-    gulp.parallel("minify_html", "minify_interview_html", "sass"),
-    gulp.series('copy', 'minify_js', 'minify_interview_js')
+    gulp.parallel("minify_html", "minify_interview_html", "minify_ca_html", "sass"),
+    gulp.series('copy', 'minify_js', 'minify_interview_js', 'minify_ca_js')
   )
 );
 
